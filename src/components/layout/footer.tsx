@@ -1,3 +1,5 @@
+'use client';
+
 import Link from "next/link";
 import { NewsletterForm } from "@/components/shared/newsletter-form";
 import { Leaf } from "lucide-react";
@@ -23,7 +25,7 @@ export function Footer() {
 
         </div>
         <div className="mt-8 pt-8 border-t border-border/40 flex flex-col sm:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Roba Ceylon Tea. All rights reserved.</p>
+          <p suppressHydrationWarning>&copy; {new Date().getFullYear()} Roba Ceylon Tea. All rights reserved.</p>
           <div className="flex items-center space-x-4 mt-4 sm:mt-0">
             <Link href="#" className="hover:text-accent transition-colors">Privacy Policy</Link>
             <Link href="#" className="hover:text-accent transition-colors">Terms of Service</Link>
