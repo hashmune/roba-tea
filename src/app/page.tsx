@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <div className="flex flex-col animate-in fade-in duration-500">
-      <section className="relative h-[60vh] md:h-[80vh] w-full flex items-center justify-center text-center text-white">
+      <section className="relative h-screen w-full flex items-center justify-center text-center text-white">
         <Image
           src="https://placehold.co/1800x1200.png"
           data-ai-hint="tea plantation"
@@ -18,13 +18,13 @@ export default function Home() {
           className="z-0 brightness-50"
         />
         <div className="relative z-10 p-4 animate-in fade-in-0 slide-in-from-bottom-12 duration-1000">
-          <h1 className="text-4xl md:text-6xl font-headline font-bold mb-4 tracking-tight">
+          <h1 className="text-5xl md:text-7xl font-headline font-bold mb-4 tracking-tight">
             The Soul of Ceylon, in a Cup
           </h1>
           <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-foreground/80">
             Experience the unparalleled quality and rich heritage of Roba Ceylon Tea, cultivated in the pristine highlands of Sri Lanka.
           </p>
-          <Button asChild size="lg" className="bg-accent text-background hover:bg-accent/90">
+          <Button asChild size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">
             <Link href="/store">Explore Our Teas <ArrowRight className="ml-2 h-5 w-5" /></Link>
           </Button>
         </div>
@@ -74,7 +74,7 @@ export default function Home() {
               <p className="text-lg mb-6 text-muted-foreground">
                 Our story is one of dedication to the art of tea making. From the careful selection of leaves to our ethical practices, we honor a tradition of excellence passed down through generations.
               </p>
-              <Button asChild size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-background">
+              <Button asChild size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">
                 <Link href="/our-story">Our Story</Link>
               </Button>
             </div>

@@ -24,7 +24,7 @@ export function NewsletterForm() {
           className="bg-background border-border focus:border-accent"
           aria-label="Email for newsletter"
         />
-        <Button type="submit" className="bg-accent text-background hover:bg-accent/90">
+        <Button type="submit" className="bg-accent text-accent-foreground hover:bg-accent/90">
           Subscribe
         </Button>
       </div>
