@@ -23,9 +23,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className={cn("dark", literata.variable)}>
       <head />
-      <body className={cn("font-body antialiased bg-background text-foreground min-h-screen flex flex-col", literata.variable)}>
+      <body className={cn("antialiased bg-background text-foreground min-h-screen flex flex-col")}>
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
