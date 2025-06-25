@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
+import { Logo } from "./logo";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -47,8 +48,7 @@ export function Header() {
             <SheetContent side="left" className="w-[300px] sm:w-[400px] bg-background">
               <div className="p-6">
                 <Link href="/" className="flex flex-col items-start mb-10" passHref>
-                    <span className="font-headline text-4xl font-bold text-primary tracking-tighter">ROBA</span>
-                    <span className="text-[0.5rem] text-muted-foreground tracking-[0.2em] mt-1">A TEA ADVENTURE AWAITS</span>
+                    <Logo className="text-primary" />
                 </Link>
                 <nav className="flex flex-col space-y-6">
                   {navLinks.map((link) => (
@@ -65,8 +65,7 @@ export function Header() {
         {/* Center: Logo */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
             <Link href="/" className="flex flex-col items-center" passHref>
-                <span className="font-headline text-5xl font-bold text-primary tracking-tighter">ROBA</span>
-                <span className="text-[0.6rem] text-muted-foreground tracking-[0.2em] mt-1">A TEA ADVENTURE AWAITS</span>
+                <Logo className="text-primary" />
             </Link>
         </div>
         
