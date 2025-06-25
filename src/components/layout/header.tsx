@@ -48,16 +48,6 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="left" className="w-full max-w-none p-0 sm:max-w-none">
               <div className="grid h-full md:grid-cols-2">
-                <div className="relative hidden h-full bg-muted md:block">
-                  <Image
-                    src="https://placehold.co/800x1200.png"
-                    data-ai-hint="tea ceremony"
-                    alt="A serene tea ceremony setting"
-                    layout="fill"
-                    objectFit="cover"
-                    className="object-center"
-                  />
-                </div>
                 <div className="col-span-2 flex flex-col bg-background p-8 sm:p-12 md:col-span-1">
                     <div className="mb-16">
                         <SheetClose asChild>
@@ -90,6 +80,16 @@ export function Header() {
                         </div>
                         <p>&copy; {new Date().getFullYear()} Roba Ceylon Tea</p>
                     </div>
+                </div>
+                <div className="relative hidden h-full bg-muted md:block">
+                  <Image
+                    src="https://placehold.co/800x1200.png"
+                    data-ai-hint="tea ceremony"
+                    alt="A serene tea ceremony setting"
+                    layout="fill"
+                    objectFit="cover"
+                    className="object-center"
+                  />
                 </div>
               </div>
             </SheetContent>
