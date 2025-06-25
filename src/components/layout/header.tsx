@@ -40,9 +40,8 @@ export function Header() {
         <div className="flex items-center justify-start">
            <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" className="flex items-center gap-2 pl-0 hover:bg-transparent text-foreground">
-                  <i className="ri-menu-line text-2xl leading-none"></i>
-                  <span className="text-sm font-medium uppercase tracking-wider">Menu</span>
+              <Button variant="ghost" className="hover:bg-transparent text-foreground hover:text-secondary">
+                  <i className="ri-menu-4-line text-2xl leading-none"></i>
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="w-[300px] sm:w-[400px] bg-background">
