@@ -26,20 +26,6 @@ export function Header() {
     setYear(new Date().getFullYear());
   }, []);
 
-  const NavLink = ({ href, label, className }: { href: string; label:string, className?: string }) => (
-    <Link href={href} passHref>
-      <span
-        className={cn(
-          "font-medium transition-colors hover:text-accent",
-          pathname === href ? "text-accent font-semibold" : "text-foreground/80",
-          className
-        )}
-      >
-        {label}
-      </span>
-    </Link>
-  );
-
   return (
     <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 max-h-[88px]">
       <div className="container flex items-center justify-between py-2">
@@ -65,7 +51,15 @@ export function Header() {
                     <nav className="flex mt-16 flex-grow flex-col space-y-8 px-8 sm:px-12">
                     {navLinks.map((link) => (
                         <SheetClose asChild key={link.href}>
-                            <NavLink {...link} className="text-4xl font-light tracking-wide"/>
+                          <Link
+                            href={link.href}
+                            className={cn(
+                              "font-medium transition-colors hover:text-accent text-4xl font-light tracking-wide",
+                              pathname === link.href ? "text-accent font-semibold" : "text-foreground/80"
+                            )}
+                          >
+                            {link.label}
+                          </Link>
                         </SheetClose>
                     ))}
                     </nav>
