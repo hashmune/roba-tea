@@ -54,7 +54,7 @@ export function Header() {
                             <Logo className="text-primary max-h-[40px]" />
                         </Link>
                     </SheetClose>
-                    <nav className="mt-16 flex flex-grow flex-col space-y-8">
+                    <nav className="flex mt-16 flex-grow flex-col space-y-8">
                     {navLinks.map((link) => (
                         <SheetClose asChild key={link.href}>
                             <NavLink {...link} className="text-4xl font-light tracking-wide"/>
