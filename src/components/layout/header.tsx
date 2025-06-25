@@ -49,14 +49,12 @@ export function Header() {
             <SheetContent side="left" className="w-full max-w-none p-0 sm:max-w-none">
               <div className="grid h-full md:grid-cols-2">
                 <div className="col-span-2 flex flex-col bg-background p-8 sm:p-12 md:col-span-1">
-                    <div className="mb-16">
-                        <SheetClose asChild>
-                            <Link href="/" passHref>
-                                <Logo className="text-primary max-h-[40px]" />
-                            </Link>
-                        </SheetClose>
-                    </div>
-                    <nav className="flex flex-grow flex-col space-y-8">
+                    <SheetClose asChild>
+                        <Link href="/" passHref>
+                            <Logo className="text-primary max-h-[40px]" />
+                        </Link>
+                    </SheetClose>
+                    <nav className="mt-16 flex flex-grow flex-col space-y-8">
                     {navLinks.map((link) => (
                         <SheetClose asChild key={link.href}>
                             <NavLink {...link} className="text-4xl font-light tracking-wide"/>
