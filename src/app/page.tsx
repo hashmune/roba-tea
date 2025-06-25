@@ -98,7 +98,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-lg font-semibold text-accent">{product.price}</p>
-                  <Button asChild className="w-full mt-4 bg-primary hover:bg-primary/80">
+                  <Button asChild className="w-full mt-4" variant="primary">
                     <Link href="/store">View Product</Link>
                   </Button>
                 </CardContent>

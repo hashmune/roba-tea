@@ -34,7 +34,7 @@ export default function StorePage() {
               </CardHeader>
               <CardContent>
                 <p className="text-xl font-semibold text-accent mb-4">{product.price}</p>
-                <Button className="w-full bg-primary hover:bg-primary/80">
+                <Button className="w-full" variant="primary">
                   <i className="ri-shopping-cart-line mr-2 text-base leading-none"></i> Add to Cart
                 </Button>
               </CardContent>

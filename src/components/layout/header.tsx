@@ -41,8 +41,8 @@ export function Header() {
   );
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
+    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 max-h-[88px]">
+      <div className="container flex items-center justify-between py-2">
         {/* Left Side: Menu */}
         <div className="flex items-center justify-start">
            <Sheet>
@@ -103,16 +103,14 @@ export function Header() {
         </div>
 
         {/* Center: Logo */}
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+        <div>
             <Link href="/" className="flex flex-col items-center" passHref>
-                <Logo className="text-primary max-h-[40px]" />
+                <Logo className="text-primary" />
             </Link>
         </div>
         
         {/* Right Side: Empty for balance */}
-        <div className="flex items-center justify-end">
-        </div>
-
+        <div className="flex items-center justify-end"></div>
       </div>
     </header>
   );
