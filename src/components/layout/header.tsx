@@ -33,36 +33,47 @@ export function Header() {
   );
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center justify-between">
-        <Link href="/" className="flex items-center gap-2" passHref>
-            <i className="ri-leaf-line text-2xl leading-none text-accent"></i>
-            <span className="font-bold font-headline text-lg">Roba Ceylon Tea</span>
-        </Link>
-        <nav className="hidden md:flex items-center space-x-6">
-          {navLinks.map((link) => (
-            <NavLink key={link.href} {...link} />
-          ))}
-        </nav>
-        <div className="md:hidden">
-          <Sheet>
+    <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+      <div className="container flex h-24 items-center justify-between">
+        {/* Left Side: Menu */}
+        <div className="flex items-center justify-start">
+           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon">
-                <i className="ri-menu-line text-2xl leading-none"></i>
-                <span className="sr-only">Toggle navigation menu</span>
+              <Button variant="ghost" className="flex items-center gap-2 pl-0 hover:bg-transparent text-foreground">
+                  <i className="ri-menu-line text-2xl leading-none"></i>
+                  <span className="text-sm font-medium uppercase tracking-wider">Menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="w-[300px] sm:w-[400px] bg-background">
-              <nav className="flex flex-col space-y-6 pt-10">
-                {navLinks.map((link) => (
-                   <SheetClose asChild key={link.href}>
-                     <NavLink {...link} className="text-xl"/>
-                   </SheetClose>
-                ))}
-              </nav>
+            <SheetContent side="left" className="w-[300px] sm:w-[400px] bg-background">
+              <div className="p-6">
+                <Link href="/" className="flex flex-col items-start mb-10" passHref>
+                    <span className="font-headline text-4xl font-bold text-primary tracking-tighter">ROBA</span>
+                    <span className="text-[0.5rem] text-muted-foreground tracking-[0.2em] mt-1">A TEA ADVENTURE AWAITS</span>
+                </Link>
+                <nav className="flex flex-col space-y-6">
+                  {navLinks.map((link) => (
+                    <SheetClose asChild key={link.href}>
+                      <NavLink {...link} className="text-2xl"/>
+                    </SheetClose>
+                  ))}
+                </nav>
+              </div>
             </SheetContent>
           </Sheet>
         </div>
+
+        {/* Center: Logo */}
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+            <Link href="/" className="flex flex-col items-center" passHref>
+                <span className="font-headline text-5xl font-bold text-primary tracking-tighter">ROBA</span>
+                <span className="text-[0.6rem] text-muted-foreground tracking-[0.2em] mt-1">A TEA ADVENTURE AWAITS</span>
+            </Link>
+        </div>
+        
+        {/* Right Side: Empty for balance */}
+        <div className="flex items-center justify-end">
+        </div>
+
       </div>
     </header>
   );
