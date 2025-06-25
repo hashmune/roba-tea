@@ -1,15 +1,15 @@
 import type { Metadata } from 'next';
-import { Literata } from 'next/font/google';
+import { Nunito_Sans } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from "@/components/ui/toaster"
 import { cn } from '@/lib/utils';
 
-const literata = Literata({
+const nunitoSans = Nunito_Sans({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-literata',
+  variable: '--font-nunito-sans',
 });
 
 export const metadata: Metadata = {
@@ -23,11 +23,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn(literata.variable)}>
+    <html lang="en" className={cn(nunitoSans.variable)}>
       <head>
         <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
       </head>
-      <body className={cn("antialiased bg-background text-foreground min-h-screen flex flex-col", literata.variable)}>
+      <body className={cn("antialiased bg-background text-foreground min-h-screen flex flex-col")}>
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />
