@@ -30,7 +30,7 @@ export function Header() {
       <span
         className={cn(
           "font-medium transition-colors hover:text-accent",
-          pathname === href ? "text-accent font-bold" : "text-foreground/80",
+          pathname === href ? "text-accent font-semibold" : "text-foreground/80",
           className
         )}
       >
