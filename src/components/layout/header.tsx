@@ -35,7 +35,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-24 items-center justify-between">
+      <div className="container flex h-20 items-center justify-between">
         {/* Left Side: Menu */}
         <div className="flex items-center justify-start">
            <Sheet>
