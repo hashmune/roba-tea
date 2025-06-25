@@ -39,9 +39,8 @@ export function HeroCarousel() {
                 src={slide.imageUrl}
                 data-ai-hint={slide.dataAiHint}
                 alt={slide.title}
-                layout="fill"
-                objectFit="cover"
-                className="z-0"
+                fill
+                className="object-cover z-0"
               />
               <div className="absolute inset-0 bg-black/40 z-10" />
               <div className="relative z-20 flex h-full items-center justify-center text-white md:justify-start">

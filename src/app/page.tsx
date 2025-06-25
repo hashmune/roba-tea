@@ -22,7 +22,7 @@ export default function Home() {
               <Card key={tea.slug} className="bg-card border-border hover:border-accent/50 transition-colors duration-300 overflow-hidden group">
                 <CardHeader>
                   <div className="relative h-48 w-full mb-4">
-                    <Image src={tea.imageUrl} alt={tea.name} layout="fill" objectFit="cover" className="group-hover:scale-105 transition-transform duration-500"/>
+                    <Image src={tea.imageUrl} alt={tea.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500"/>
                   </div>
                   <CardTitle className="font-headline text-2xl text-primary-foreground">{tea.name}</CardTitle>
                 </CardHeader>
@@ -46,8 +46,8 @@ export default function Home() {
                 src="https://images.unsplash.com/photo-1491497895121-1334fc14d8c9"
                 data-ai-hint="ceylon history"
                 alt="Vintage map of Ceylon"
-                layout="fill"
-                objectFit="cover"
+                fill
+                className="object-cover"
                 />
             </div>
             <div>
@@ -73,7 +73,7 @@ export default function Home() {
             {products.slice(0, 3).map((product) => (
               <Card key={product.id} className="bg-card border-border hover:border-accent/50 transition-colors duration-300 overflow-hidden group">
                 <div className="relative h-64 w-full">
-                  <Image src={product.imageUrl} alt={product.name} layout="fill" objectFit="cover" className="group-hover:scale-105 transition-transform duration-500" />
+                  <Image src={product.imageUrl} alt={product.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <CardHeader>
                   <CardTitle className="font-headline text-xl">{product.name}</CardTitle>

@@ -86,9 +86,8 @@ export function Header() {
                     src="https://images.unsplash.com/photo-1491497895121-1334fc14d8c9"
                     data-ai-hint="tea ceremony"
                     alt="A serene tea ceremony setting"
-                    layout="fill"
-                    objectFit="cover"
-                    className="object-center"
+                    fill
+                    className="object-cover object-center"
                   />
                 </div>
               </div>
