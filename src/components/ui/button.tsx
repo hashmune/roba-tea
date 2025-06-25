@@ -1,3 +1,4 @@
+
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
@@ -5,18 +6,14 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "group inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-l-full rounded-br-full rounded-tr-[4px] text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 relative overflow-hidden z-0 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_i]:pointer-events-none [&_i]:leading-none [&_i]:shrink-0",
+  "group inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 relative overflow-hidden z-0 [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_i]:pointer-events-none [&_i]:leading-none [&_i]:shrink-0",
   {
     variants: {
       variant: {
-        outline: "border border-foreground bg-transparent text-foreground hover:text-secondary-foreground hover:bg-secondary",
-        primary: "bg-primary text-primary-foreground hover:text-secondary-foreground hover:bg-secondary",
-        destructive:
-          "bg-destructive text-destructive-foreground hover:text-secondary-foreground hover:bg-secondary",
-        secondary:
-          "bg-secondary text-secondary-foreground hover:text-secondary-foreground",
+        filled: "bg-white text-black group-hover:text-secondary-foreground rounded-tl-[40px] rounded-tr-[6px] rounded-br-[20px] rounded-bl-[40px]",
+        'outline-light': "border-2 border-white bg-transparent text-white group-hover:text-black rounded-tl-[40px] rounded-tr-[6px] rounded-br-[20px] rounded-bl-[40px]",
+        'outline-dark': "border-2 border-black bg-transparent text-black group-hover:text-white rounded-tl-[40px] rounded-tr-[6px] rounded-br-[20px] rounded-bl-[40px]",
         ghost: "text-foreground bg-transparent hover:text-secondary-foreground hover:bg-secondary",
-        accent: "bg-accent text-accent-foreground hover:text-secondary-foreground hover:bg-secondary",
         link: "text-primary underline-offset-4 hover:underline !overflow-visible",
       },
       size: {
@@ -27,7 +24,7 @@ const buttonVariants = cva(
       },
     },
     defaultVariants: {
-      variant: "outline",
+      variant: "filled",
       size: "default",
     },
   }
@@ -41,32 +38,37 @@ export interface ButtonProps
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, children, ...props }, ref) => {
-    if (asChild) {
-      return (
-        <Slot
-          className={cn(buttonVariants({ variant, size, className }))}
-          ref={ref}
-          {...props}
-        >
-          {children}
-        </Slot>
-      )
-    }
+    const Comp = asChild ? Slot : "button"
 
-    if (variant === "link" || variant === "ghost") {
+    // Simple variants (link, ghost) and asChild usage have a simpler structure
+    if (asChild || variant === "link" || variant === "ghost") {
+      // For asChild, we must pass a single child to Slot, so we can't use the span animation.
+      // The hover:bg will be handled by a simple transition if we add it.
+      // For now, this fixes the crash. Text color will still change on hover.
+       const hoverBgClass = asChild ? (variant === "filled" ? "hover:bg-secondary" : variant === "outline-light" ? "hover:bg-white" : variant === "outline-dark" ? "hover:bg-black" : "") : ""
       return (
-        <button
-          className={cn(buttonVariants({ variant, size, className }))}
+        <Comp
+          className={cn(buttonVariants({ variant, size, className }), hoverBgClass)}
           ref={ref}
           {...props}
         >
           {children}
-        </button>
+        </Comp>
       )
     }
+    
+    // Default buttons with the slide animation
+    const hoverBgClass =
+      variant === "filled"
+        ? "bg-secondary"
+        : variant === "outline-light"
+        ? "bg-white"
+        : variant === "outline-dark"
+        ? "bg-black"
+        : "bg-secondary";
 
     return (
-      <button
+      <Comp
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         {...props}
@@ -74,11 +76,17 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         <span className="relative z-10 transition-colors duration-300 ease-in-out">
           {children}
         </span>
-        <span className="absolute inset-0 z-0 h-full w-full translate-x-full transform bg-secondary transition-transform duration-300 ease-in-out group-hover:translate-x-0"></span>
-      </button>
+        <span
+          className={cn(
+            "absolute inset-0 z-0 h-full w-full translate-x-full transform transition-transform duration-300 ease-in-out group-hover:translate-x-0",
+            hoverBgClass
+          )}
+        />
+      </Comp>
     )
   }
 )
 Button.displayName = "Button"
 
 export { Button, buttonVariants }
+

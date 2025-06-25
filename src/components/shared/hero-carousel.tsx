@@ -56,7 +56,7 @@ export function HeroCarousel() {
       <CarouselContent>
         {heroSlides.map((slide, index) => (
           <CarouselItem key={index}>
-            <div className="relative h-[75vh] max-h-[800px] w-full">
+            <div className="relative h-[75vh] max-h-[800px]">
               <Image
                 src={slide.imageUrl}
                 data-ai-hint={slide.dataAiHint}
@@ -68,13 +68,13 @@ export function HeroCarousel() {
               <div className="relative z-20 flex h-full items-end justify-center text-white md:justify-start">
                 <div className="container mx-auto px-4 text-center md:text-left">
                   <div className="max-w-2xl animate-in fade-in-0 slide-in-from-bottom-12 duration-1000 pb-16 md:pb-24">
-                    <p className="mb-4 text-sm font-bold uppercase tracking-widest text-accent">
+                    <p className="mb-4 text-sm font-bold uppercase tracking-widest text-white">
                       {slide.tag}
                     </p>
-                    <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-6xl">
+                    <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-4xl uppercase">
                       {slide.title}
                     </h1>
-                    <Button asChild size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">
+                    <Button asChild size="lg" variant="outline-light">
                         <Link href={slide.buttonLink}>{slide.buttonText}</Link>
                     </Button>
                   </div>

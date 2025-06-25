@@ -57,7 +57,7 @@ export default function Home() {
               <p className="text-lg mb-6 text-muted-foreground">
                 Our story is one of dedication to the art of tea making. From the careful selection of leaves to our ethical practices, we honor a tradition of excellence passed down through generations.
               </p>
-              <Button asChild size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">
+              <Button asChild size="lg" variant="outline-dark">
                 <Link href="/our-story">Our Story</Link>
               </Button>
             </div>
@@ -82,7 +82,7 @@ export default function Home() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-lg font-semibold text-accent">{product.price}</p>
-                  <Button asChild className="w-full mt-4" variant="primary">
+                  <Button asChild className="w-full mt-4" variant="filled">
                     <Link href="/store">View Product</Link>
                   </Button>
                 </CardContent>
