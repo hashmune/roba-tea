@@ -7,6 +7,7 @@ import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/s
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Logo } from "./logo";
+import { useEffect, useState } from "react";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -19,6 +20,11 @@ const navLinks = [
 
 export function Header() {
   const pathname = usePathname();
+  const [year, setYear] = useState<number>();
+
+  useEffect(() => {
+    setYear(new Date().getFullYear());
+  }, []);
 
   const NavLink = ({ href, label, className }: { href: string; label:string, className?: string }) => (
     <Link href={href} passHref>
@@ -36,7 +42,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-20 items-center justify-between">
+      <div className="container flex h-16 items-center justify-between">
         {/* Left Side: Menu */}
         <div className="flex items-center justify-start">
            <Sheet>
@@ -78,7 +84,7 @@ export function Header() {
                                 <i className="ri-linkedin-fill text-lg"></i>
                             </Link>
                         </div>
-                        <p>&copy; {new Date().getFullYear()} Roba Ceylon Tea</p>
+                        <p>&copy; {year} Roba Ceylon Tea</p>
                     </div>
                 </div>
                 <div className="relative hidden h-full bg-muted md:block">
