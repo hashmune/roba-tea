@@ -48,7 +48,7 @@ export function Header() {
             <SheetContent side="left" className="w-[300px] sm:w-[400px] bg-background">
               <div className="p-6">
                 <Link href="/" className="flex flex-col items-start mb-10" passHref>
-                    <Logo className="text-primary" />
+                    <Logo className="text-primary max-h-[54px]" />
                 </Link>
                 <nav className="flex flex-col space-y-6">
                   {navLinks.map((link) => (
@@ -65,7 +65,7 @@ export function Header() {
         {/* Center: Logo */}
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
             <Link href="/" className="flex flex-col items-center" passHref>
-                <Logo className="text-primary" />
+                <Logo className="text-primary max-h-[54px]" />
             </Link>
         </div>
         
