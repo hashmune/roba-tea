@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { products } from "@/lib/placeholder-data";
-import { ShoppingCart } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,7 +9,7 @@ export default function StorePage() {
     <div className="animate-in fade-in duration-500">
       <section className="bg-secondary py-12 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <ShoppingCart className="mx-auto h-12 w-12 text-accent mb-4"/>
+          <i className="ri-shopping-cart-line mx-auto text-5xl leading-none text-accent mb-4"></i>
           <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">Online Store</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Bring home the exquisite taste of Ceylon with our curated collection of teas and accessories.</p>
         </div>
@@ -36,7 +35,7 @@ export default function StorePage() {
               <CardContent>
                 <p className="text-xl font-semibold text-accent mb-4">{product.price}</p>
                 <Button className="w-full bg-primary hover:bg-primary/80">
-                  <ShoppingCart className="mr-2 h-4 w-4" /> Add to Cart
+                  <i className="ri-shopping-cart-line mr-2 text-base leading-none"></i> Add to Cart
                 </Button>
               </CardContent>
             </Card>

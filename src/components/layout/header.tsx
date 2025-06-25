@@ -3,7 +3,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
-import { Leaf, Menu } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 
@@ -37,7 +36,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center justify-between">
         <Link href="/" className="flex items-center gap-2" passHref>
-            <Leaf className="h-6 w-6 text-accent" />
+            <i className="ri-leaf-line text-2xl leading-none text-accent"></i>
             <span className="font-bold font-headline text-lg">Roba Ceylon Tea</span>
         </Link>
         <nav className="hidden md:flex items-center space-x-6">
@@ -49,7 +48,7 @@ export function Header() {
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
-                <Menu className="h-6 w-6" />
+                <i className="ri-menu-line text-2xl leading-none"></i>
                 <span className="sr-only">Toggle navigation menu</span>
               </Button>
             </SheetTrigger>

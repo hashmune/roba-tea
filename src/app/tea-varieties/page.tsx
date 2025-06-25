@@ -1,6 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { teaVarieties } from "@/lib/placeholder-data";
-import { ArrowRight, Leaf } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -15,7 +14,7 @@ export default function TeaVarietiesPage() {
     <div className="animate-in fade-in duration-500">
        <section className="bg-secondary py-12 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <Leaf className="mx-auto h-12 w-12 text-accent mb-4"/>
+          <i className="ri-leaf-line mx-auto text-5xl leading-none text-accent mb-4"></i>
           <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">Our Tea Varieties</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Explore our collection of authentic Ceylon teas, each with its own unique character and story.</p>
         </div>

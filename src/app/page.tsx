@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { teaVarieties, products } from "@/lib/placeholder-data";
-import { ArrowRight, Leaf } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -25,7 +24,7 @@ export default function Home() {
             Experience the unparalleled quality and rich heritage of Roba Ceylon Tea, cultivated in the pristine highlands of Sri Lanka.
           </p>
           <Button asChild size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">
-            <Link href="/store">Explore Our Teas <ArrowRight className="ml-2 h-5 w-5" /></Link>
+            <Link href="/store">Explore Our Teas <i className="ri-arrow-right-line ml-2 text-xl leading-none"></i></Link>
           </Button>
         </div>
       </section>
@@ -48,7 +47,7 @@ export default function Home() {
                 <CardContent>
                   <CardDescription>{tea.shortDescription}</CardDescription>
                   <Button asChild variant="link" className="p-0 mt-4 text-accent hover:text-accent/80">
-                    <Link href={`/tea-varieties/${tea.slug}`}>Learn More <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                    <Link href={`/tea-varieties/${tea.slug}`}>Learn More <i className="ri-arrow-right-line ml-2 text-base leading-none"></i></Link>
                   </Button>
                 </CardContent>
               </Card>

@@ -23,9 +23,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("dark", literata.variable)}>
-      <head />
-      <body className={cn("antialiased bg-background text-foreground min-h-screen flex flex-col")}>
+    <html lang="en" className={cn("dark")}>
+      <head>
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+      </head>
+      <body className={cn("antialiased bg-background text-foreground min-h-screen flex flex-col", literata.variable)}>
         <Header />
         <main className="flex-grow">{children}</main>
         <Footer />

@@ -1,4 +1,3 @@
-import { Leaf } from "lucide-react";
 import Image from "next/image";
 
 export default function OurStoryPage() {
@@ -49,7 +48,7 @@ export default function OurStoryPage() {
             We are stewards of the land and the community. Our estates follow sustainable farming practices that enrich the soil and protect biodiversity. We are also committed to the well-being of our workers, providing fair wages, healthcare, and education to their families. When you choose Roba Ceylon Tea, you are not just buying a premium product; you are supporting a community and a sustainable future.
           </p>
           <div className="flex justify-center my-8">
-            <Leaf className="w-12 h-12 text-accent" />
+            <i className="ri-leaf-line text-5xl leading-none text-accent"></i>
           </div>
           <p>
             We invite you to explore our collection and discover the authentic taste of Ceylon. Each cup tells a story of our heritage, our passion, and our unwavering commitment to bringing you the very best tea.

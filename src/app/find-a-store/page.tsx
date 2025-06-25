@@ -1,5 +1,4 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { MapPin, Phone, Clock } from "lucide-react";
 import Image from "next/image";
 
 const stores = [
@@ -28,7 +27,7 @@ export default function FindAStorePage() {
     <div className="animate-in fade-in duration-500">
       <section className="bg-secondary py-12 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <MapPin className="mx-auto h-12 w-12 text-accent mb-4"/>
+          <i className="ri-map-pin-line mx-auto text-5xl leading-none text-accent mb-4"></i>
           <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">Find Our Tea</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">Visit our stores and authorized retailers to experience Roba Ceylon Tea in person.</p>
         </div>
@@ -44,9 +43,9 @@ export default function FindAStorePage() {
                     <CardTitle className="text-xl font-headline">{store.name}</CardTitle>
                   </CardHeader>
                   <CardContent className="text-muted-foreground space-y-2 text-sm">
-                    <p className="flex items-start gap-2"><MapPin className="h-4 w-4 mt-1 text-accent flex-shrink-0"/> <span>{store.address}</span></p>
-                    <p className="flex items-center gap-2"><Phone className="h-4 w-4 text-accent"/> {store.phone}</p>
-                    <p className="flex items-center gap-2"><Clock className="h-4 w-4 text-accent"/> {store.hours}</p>
+                    <p className="flex items-start gap-2"><i className="ri-map-pin-line text-base leading-none mt-1 text-accent flex-shrink-0"></i> <span>{store.address}</span></p>
+                    <p className="flex items-center gap-2"><i className="ri-phone-line text-base leading-none text-accent"></i> {store.phone}</p>
+                    <p className="flex items-center gap-2"><i className="ri-time-line text-base leading-none text-accent"></i> {store.hours}</p>
                   </CardContent>
                 </Card>
               ))}

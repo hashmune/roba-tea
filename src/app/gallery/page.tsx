@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Camera } from "lucide-react";
 
 const galleryImages = [
   { src: 'https://placehold.co/800x600.png', alt: 'Lush tea fields in Sri Lanka', hint: 'tea plantation' },
@@ -18,7 +17,7 @@ export default function GalleryPage() {
     <div className="animate-in fade-in duration-500">
       <section className="bg-secondary py-12 md:py-20">
         <div className="container mx-auto px-4 text-center">
-          <Camera className="mx-auto h-12 w-12 text-accent mb-4"/>
+          <i className="ri-camera-line mx-auto text-5xl leading-none text-accent mb-4"></i>
           <h1 className="text-4xl md:text-5xl font-headline font-bold mb-4">Visual Storytelling</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">A glimpse into the journey of our tea, from the vibrant estates of Ceylon to your cup.</p>
         </div>
