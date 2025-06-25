@@ -20,7 +20,7 @@ const navLinks = [
 export function Header() {
   const pathname = usePathname();
 
-  const NavLink = ({ href, label, className }: { href: string; label: string, className?: string }) => (
+  const NavLink = ({ href, label, className }: { href: string; label:string, className?: string }) => (
     <Link href={href} passHref>
       <span
         className={cn(
@@ -48,20 +48,22 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="left" className="w-full max-w-none p-0 sm:max-w-none">
               <div className="grid h-full md:grid-cols-2">
-                <div className="col-span-2 flex flex-col bg-background p-8 sm:p-12 md:col-span-1">
-                    <SheetClose asChild>
-                        <Link href="/" passHref>
-                            <Logo className="text-primary max-h-[40px]" />
-                        </Link>
-                    </SheetClose>
-                    <nav className="flex mt-16 flex-grow flex-col space-y-8">
+                <div className="col-span-2 flex flex-col bg-background py-8 sm:py-12 md:col-span-1">
+                    <div className="px-8 sm:px-12">
+                      <SheetClose asChild>
+                          <Link href="/" passHref>
+                              <Logo className="text-primary max-h-[40px]" />
+                          </Link>
+                      </SheetClose>
+                    </div>
+                    <nav className="flex mt-16 flex-grow flex-col space-y-8 px-8 sm:px-12">
                     {navLinks.map((link) => (
                         <SheetClose asChild key={link.href}>
                             <NavLink {...link} className="text-4xl font-light tracking-wide"/>
                         </SheetClose>
                     ))}
                     </nav>
-                    <div className="mt-12 text-xs text-muted-foreground space-y-4">
+                    <div className="mt-12 text-xs text-muted-foreground space-y-4 px-8 sm:px-12">
                         <div className="flex items-center space-x-4">
                             <Link href="#" className="text-foreground hover:text-secondary">
                                 <i className="ri-facebook-fill text-lg"></i>
