@@ -5,14 +5,14 @@ import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import Autoplay from "embla-carousel-autoplay";
+import { cn } from "@/lib/utils";
 
 import { heroSlides } from "@/lib/placeholder-data";
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
+  type CarouselApi,
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 
@@ -21,8 +21,30 @@ export function HeroCarousel() {
     Autoplay({ delay: 8000, stopOnInteraction: true })
   );
 
+  const [api, setApi] = React.useState<CarouselApi>();
+  const [current, setCurrent] = React.useState(0);
+
+  React.useEffect(() => {
+    if (!api) {
+      return;
+    }
+
+    setCurrent(api.selectedScrollSnap());
+
+    const onSelect = () => {
+      setCurrent(api.selectedScrollSnap());
+    };
+
+    api.on("select", onSelect);
+
+    return () => {
+      api.off("select", onSelect);
+    };
+  }, [api]);
+
   return (
     <Carousel
+      setApi={setApi}
       plugins={[plugin.current]}
       className="w-full"
       onMouseEnter={plugin.current.stop}
@@ -62,11 +84,18 @@ export function HeroCarousel() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <div className="absolute bottom-8 left-1/2 z-20 -translate-x-1/2">
-        <div className="flex items-center gap-x-4">
-            <CarouselPrevious className="static -translate-y-0 text-white border-white hover:bg-white/20 hover:text-white" />
-            <CarouselNext className="static -translate-y-0 text-white border-white hover:bg-white/20 hover:text-white" />
-        </div>
+      <div className="absolute bottom-8 left-1/2 z-30 -translate-x-1/2 flex items-center gap-x-2">
+        {heroSlides.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => api?.scrollTo(index)}
+              className={cn(
+                "h-2 rounded-full transition-all duration-300",
+                current === index ? "w-6 bg-white" : "w-2 bg-white/50"
+              )}
+              aria-label={`Go to slide ${index + 1}`}
+            />
+        ))}
       </div>
     </Carousel>
   );
