@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import Image from "next/image";
 
@@ -54,7 +55,7 @@ export default function FindAStorePage() {
           <div className="lg:col-span-2">
             <div className="relative h-[400px] lg:h-full w-full rounded-lg overflow-hidden shadow-2xl">
               <Image 
-                src="https://images.unsplash.com/photo-1580287292203-c9185e478546?q=80&w=1200&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1491497895121-1334fc14d8c9"
                 data-ai-hint="world map"
                 alt="Map showing store locations"
                 layout="fill"
