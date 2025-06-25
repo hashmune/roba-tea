@@ -34,7 +34,7 @@ export function HeroCarousel() {
       <CarouselContent>
         {heroSlides.map((slide, index) => (
           <CarouselItem key={index}>
-            <div className="relative h-screen w-full">
+            <div className="relative h-[75vh] max-h-[800px] w-full">
               <Image
                 src={slide.imageUrl}
                 data-ai-hint={slide.dataAiHint}
@@ -43,9 +43,9 @@ export function HeroCarousel() {
                 className="object-cover z-0"
               />
               <div className="absolute inset-0 bg-black/40 z-10" />
-              <div className="relative z-20 flex h-full items-center justify-center text-white md:justify-start">
+              <div className="relative z-20 flex h-full items-end justify-center text-white md:justify-start">
                 <div className="container mx-auto px-4 text-center md:text-left">
-                  <div className="max-w-2xl animate-in fade-in-0 slide-in-from-bottom-12 duration-1000">
+                  <div className="max-w-2xl animate-in fade-in-0 slide-in-from-bottom-12 duration-1000 pb-16 md:pb-24">
                     <p className="mb-4 text-sm font-bold uppercase tracking-widest text-accent">
                       {slide.tag}
                     </p>
