@@ -42,6 +42,7 @@ export function Header() {
             <SheetTrigger asChild>
               <Button variant="ghost" className="hover:bg-transparent text-foreground hover:text-secondary">
                   <i className="ri-menu-4-line text-2xl leading-none"></i>
+                  <span>Menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="w-[300px] sm:w-[400px] bg-background">
