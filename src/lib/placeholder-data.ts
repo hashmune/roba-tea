@@ -28,7 +28,7 @@ export const teaVarieties: TeaVariety[] = [
     origin: 'Dimbula, Sri Lanka',
     flavorProfile: 'Bold, Robust, Citrus, Spice',
     brewingMethod: 'Steep 1 tsp of tea in 200ml of water at 95°C (203°F) for 3-5 minutes.',
-    imageUrl: 'https://placehold.co/800x600.png',
+    imageUrl: 'https://images.unsplash.com/photo-1576092762791-d07a271f3228?q=80&w=800&auto=format&fit=crop',
     dataAiHint: 'black tea'
   },
   {
@@ -39,7 +39,7 @@ export const teaVarieties: TeaVariety[] = [
     origin: 'Nuwara Eliya, Sri Lanka',
     flavorProfile: 'Fragrant, Citrus, Floral, Bergamot',
     brewingMethod: 'Steep 1 tsp of tea in 200ml of water at 90°C (194°F) for 3 minutes.',
-    imageUrl: 'https://placehold.co/800x600.png',
+    imageUrl: 'https://images.unsplash.com/photo-1608874937498-5086518719a6?q=80&w=800&auto=format&fit=crop',
     dataAiHint: 'earl grey'
   },
   {
@@ -50,7 +50,7 @@ export const teaVarieties: TeaVariety[] = [
     origin: 'Uva, Sri Lanka',
     flavorProfile: 'Delicate, Grassy, Sweet, Refreshing',
     brewingMethod: 'Steep 1 tsp of tea in 200ml of water at 80°C (176°F) for 2-3 minutes.',
-    imageUrl: 'https://placehold.co/800x600.png',
+    imageUrl: 'https://images.unsplash.com/photo-1557962491-11bbe4b4f65c?q=80&w=800&auto=format&fit=crop',
     dataAiHint: 'green tea'
   },
   {
@@ -61,7 +61,7 @@ export const teaVarieties: TeaVariety[] = [
     origin: 'Adam\'s Peak, Sri Lanka',
     flavorProfile: 'Subtle, Honey, Melon, Smooth',
     brewingMethod: 'Steep 2 tsp of tea in 200ml of water at 75°C (167°F) for 5-7 minutes.',
-    imageUrl: 'https://placehold.co/800x600.png',
+    imageUrl: 'https://images.unsplash.com/photo-1595891000281-a67f785c4179?q=80&w=800&auto=format&fit=crop',
     dataAiHint: 'white tea'
   }
 ];
@@ -72,7 +72,7 @@ export const products: Product[] = [
     name: 'Classic Ceylon Black Tin (100g)',
     price: '$15.00',
     description: 'A beautiful tin containing 100g of our finest loose-leaf Classic Ceylon Black tea.',
-    imageUrl: 'https://placehold.co/600x600.png',
+    imageUrl: 'https://images.unsplash.com/photo-1576092762791-d07a271f3228?q=80&w=600&auto=format&fit=crop',
     dataAiHint: 'tea tin'
   },
   {
@@ -80,7 +80,7 @@ export const products: Product[] = [
     name: 'Ceylon Earl Grey Sachets (20)',
     price: '$12.00',
     description: '20 convenient, biodegradable tea sachets of our aromatic Ceylon Earl Grey.',
-    imageUrl: 'https://placehold.co/600x600.png',
+    imageUrl: 'https://images.unsplash.com/photo-1563822552-3a7a925f56b3?q=80&w=600&auto=format&fit=crop',
     dataAiHint: 'tea box'
   },
   {
@@ -88,7 +88,7 @@ export const products: Product[] = [
     name: 'Highland Green Loose Leaf (80g)',
     price: '$18.00',
     description: '80g of premium loose-leaf Highland Green tea, perfect for a refreshing cup.',
-    imageUrl: 'https://placehold.co/600x600.png',
+    imageUrl: 'https://images.unsplash.com/photo-1622483737524-3f75a40b396f?q=80&w=600&auto=format&fit=crop',
     dataAiHint: 'tea pouch'
   },
   {
@@ -96,7 +96,7 @@ export const products: Product[] = [
     name: 'Silver Tips White Tea Caddy (50g)',
     price: '$45.00',
     description: 'An exclusive 50g caddy of our rare and exquisite Silver Tips White Tea.',
-    imageUrl: 'https://placehold.co/600x600.png',
+    imageUrl: 'https://images.unsplash.com/photo-1595891000281-a67f785c4179?q=80&w=600&auto=format&fit=crop',
     dataAiHint: 'luxury tea'
   },
   {
@@ -104,7 +104,7 @@ export const products: Product[] = [
     name: 'Roba Tea Discovery Kit',
     price: '$35.00',
     description: 'A selection of our four signature teas in sample sizes. The perfect gift for any tea lover.',
-    imageUrl: 'https://placehold.co/600x600.png',
+    imageUrl: 'https://images.unsplash.com/photo-1556745753-b2904692b3cd?q=80&w=600&auto=format&fit=crop',
     dataAiHint: 'tea gift'
   },
     {
@@ -112,7 +112,7 @@ export const products: Product[] = [
     name: 'Artisan Tea Pot',
     price: '$55.00',
     description: 'A beautifully crafted ceramic teapot, designed for the perfect brew.',
-    imageUrl: 'https://placehold.co/600x600.png',
+    imageUrl: 'https://images.unsplash.com/photo-1544983175-a835a639d3a7?q=80&w=600&auto=format&fit=crop',
     dataAiHint: 'teapot'
   }
 ];

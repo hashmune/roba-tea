@@ -54,16 +54,13 @@ export default function FindAStorePage() {
           <div className="lg:col-span-2">
             <div className="relative h-[400px] lg:h-full w-full rounded-lg overflow-hidden shadow-2xl">
               <Image 
-                src="https://placehold.co/1200x800.png"
+                src="https://images.unsplash.com/photo-1580287292203-c9185e478546?q=80&w=1200&auto=format&fit=crop"
                 data-ai-hint="world map"
                 alt="Map showing store locations"
                 layout="fill"
                 objectFit="cover"
-                className="brightness-75"
+                className="brightness-90"
               />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <p className="text-2xl font-bold text-white bg-black/50 p-4 rounded-md">Map Placeholder</p>
-              </div>
             </div>
           </div>
         </div>

@@ -48,8 +48,8 @@ export function Header() {
             </SheetTrigger>
             <SheetContent side="left" className="w-full max-w-none p-0 sm:max-w-none">
               <div className="grid h-full md:grid-cols-2">
-                <div className="col-span-2 flex flex-col bg-background py-8 sm:py-12 md:col-span-1">
-                    <div className="px-8 sm:px-12">
+                <div className="col-span-2 flex flex-col bg-background md:col-span-1">
+                    <div className="px-8 sm:px-12 py-8 sm:py-12">
                       <SheetClose asChild>
                           <Link href="/" passHref>
                               <Logo className="text-primary max-h-[40px]" />
@@ -83,7 +83,7 @@ export function Header() {
                 </div>
                 <div className="relative hidden h-full bg-muted md:block">
                   <Image
-                    src="https://placehold.co/800x1200.png"
+                    src="https://images.unsplash.com/photo-1544983175-a835a639d3a7?q=80&w=800&auto=format&fit=crop"
                     data-ai-hint="tea ceremony"
                     alt="A serene tea ceremony setting"
                     layout="fill"

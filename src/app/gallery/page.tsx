@@ -1,15 +1,15 @@
 import Image from "next/image";
 
 const galleryImages = [
-  { src: 'https://placehold.co/800x600.png', alt: 'Lush tea fields in Sri Lanka', hint: 'tea plantation' },
-  { src: 'https://placehold.co/600x800.png', alt: 'Close-up of freshly picked tea leaves', hint: 'tea leaves' },
-  { src: 'https://placehold.co/800x600.png', alt: 'Tea leaves being withered', hint: 'tea factory' },
-  { src: 'https://placehold.co/800x600.png', alt: 'Tea tasting session with various blends', hint: 'tea tasting' },
-  { src: 'https://placehold.co/600x800.png', alt: 'A perfectly brewed cup of Ceylon tea', hint: 'tea cup' },
-  { src: 'https://placehold.co/800x600.png', alt: 'Rolling hills of a tea estate at sunrise', hint: 'sri lanka' },
-  { src: 'https://placehold.co/800x600.png', alt: 'Workers processing tea in a factory', hint: 'worker' },
-  { src: 'https://placehold.co/600x800.png', alt: 'Beautifully packaged Roba Ceylon Tea tins', hint: 'tea packaging' },
-  { src: 'https://placehold.co/800x600.png', alt: 'A traditional Sri Lankan tea ceremony setup', hint: 'tea ceremony' },
+  { src: 'https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=800&auto=format&fit=crop', alt: 'Lush tea fields in Sri Lanka', hint: 'tea plantation' },
+  { src: 'https://images.unsplash.com/photo-1597318181409-cf7e2f18d27a?q=80&w=600&auto=format&fit=crop', alt: 'Close-up of freshly picked tea leaves', hint: 'tea leaves' },
+  { src: 'https://images.unsplash.com/photo-1522204523234-8729aa6e3d54?q=80&w=800&auto=format&fit=crop', alt: 'Tea leaves being withered', hint: 'tea factory' },
+  { src: 'https://images.unsplash.com/photo-1556745753-b2904692b3cd?q=80&w=800&auto=format&fit=crop', alt: 'Tea tasting session with various blends', hint: 'tea tasting' },
+  { src: 'https://images.unsplash.com/photo-1576092762791-d07a271f3228?q=80&w=600&auto=format&fit=crop', alt: 'A perfectly brewed cup of Ceylon tea', hint: 'tea cup' },
+  { src: 'https://images.unsplash.com/photo-1523485804343-5d58b8f2c328?q=80&w=800&auto=format&fit=crop', alt: 'Rolling hills of a tea estate at sunrise', hint: 'sri lanka' },
+  { src: 'https://images.unsplash.com/photo-1528239074395-c9a721d0115b?q=80&w=800&auto=format&fit=crop', alt: 'Workers processing tea in a factory', hint: 'worker' },
+  { src: 'https://images.unsplash.com/photo-1594212699903-861dc5891364?q=80&w=600&auto=format&fit=crop', alt: 'Beautifully packaged Roba Ceylon Tea tins', hint: 'tea packaging' },
+  { src: 'https://images.unsplash.com/photo-1621282643881-88481498b671?q=80&w=800&auto=format&fit=crop', alt: 'A traditional Sri Lankan tea ceremony setup', hint: 'tea ceremony' },
 ];
 
 export default function GalleryPage() {

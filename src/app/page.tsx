@@ -9,7 +9,7 @@ export default function Home() {
     <div className="flex flex-col animate-in fade-in duration-500">
       <section className="relative h-screen w-full flex items-center justify-center text-center text-white">
         <Image
-          src="https://placehold.co/1800x1200.png"
+          src="https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=1800&auto=format&fit=crop"
           data-ai-hint="tea plantation"
           alt="Lush tea plantation in Ceylon"
           layout="fill"
@@ -61,7 +61,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative w-full h-96 rounded-lg overflow-hidden">
                 <Image
-                src="https://placehold.co/800x600.png"
+                src="https://images.unsplash.com/photo-1604213410329-32b07d611b84?q=80&w=800&auto=format&fit=crop"
                 data-ai-hint="ceylon history"
                 alt="Vintage map of Ceylon"
                 layout="fill"

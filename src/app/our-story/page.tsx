@@ -5,7 +5,7 @@ export default function OurStoryPage() {
     <div className="animate-in fade-in duration-500">
       <section className="relative h-[40vh] md:h-[50vh] w-full flex items-center justify-center text-center text-white">
         <Image
-          src="https://placehold.co/1600x900.png"
+          src="https://images.unsplash.com/photo-1528239074395-c9a721d0115b?q=80&w=1600&auto=format&fit=crop"
           data-ai-hint="tea pickers"
           alt="Tea pickers working on a plantation"
           layout="fill"
@@ -30,7 +30,7 @@ export default function OurStoryPage() {
           
           <div className="relative w-full h-96 my-12 rounded-lg overflow-hidden shadow-2xl">
             <Image
-              src="https://placehold.co/1200x800.png"
+              src="https://images.unsplash.com/photo-1523485804343-5d58b8f2c328?q=80&w=1200&auto=format&fit=crop"
               data-ai-hint="sri lanka landscape"
               alt="Lush green landscape of Sri Lanka's tea country"
               layout="fill"
