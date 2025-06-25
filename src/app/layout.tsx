@@ -27,10 +27,12 @@ export default function RootLayout({
       <head>
         <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
       </head>
-      <body className={cn("antialiased bg-background text-foreground min-h-screen flex flex-col")}>
-        <Header />
-        <main className="flex-grow">{children}</main>
-        <Footer />
+      <body className={cn("antialiased bg-muted text-foreground")}>
+        <div className="mx-auto flex min-h-screen max-w-[1800px] flex-col bg-background shadow-lg">
+          <Header />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+        </div>
         <Toaster />
       </body>
     </html>
