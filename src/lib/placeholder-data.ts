@@ -20,6 +20,43 @@ export type Product = {
   dataAiHint: string;
 };
 
+export type HeroSlide = {
+  tag: string;
+  title: string;
+  buttonText: string;
+  buttonLink: string;
+  imageUrl: string;
+  dataAiHint: string;
+};
+
+export const heroSlides: HeroSlide[] = [
+  {
+    tag: 'Discover',
+    title: 'The Soul of Ceylon, in a Cup',
+    buttonText: 'Explore Our Teas',
+    buttonLink: '/store',
+    imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
+    dataAiHint: 'tea plantation'
+  },
+  {
+    tag: 'Timeless',
+    title: 'A Legacy of Unmatched Quality',
+    buttonText: 'Read Our Story',
+    buttonLink: '/our-story',
+    imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
+    dataAiHint: 'tea ceremony'
+  },
+  {
+    tag: 'Exquisite',
+    title: 'Handpicked for Pure Perfection',
+    buttonText: 'View Tea Varieties',
+    buttonLink: '/tea-varieties',
+    imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
+    dataAiHint: 'tea leaves'
+  }
+];
+
+
 export const teaVarieties: TeaVariety[] = [
   {
     slug: 'ceylon-black',

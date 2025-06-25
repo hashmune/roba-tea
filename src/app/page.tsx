@@ -4,31 +4,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { teaVarieties, products } from "@/lib/placeholder-data";
 import Image from "next/image";
 import Link from "next/link";
+import { HeroCarousel } from "@/components/shared/hero-carousel";
 
 export default function Home() {
   return (
     <div className="flex flex-col animate-in fade-in duration-500">
-      <section className="relative h-screen w-full flex items-center justify-center text-center text-white">
-        <Image
-          src="https://images.unsplash.com/photo-1491497895121-1334fc14d8c9"
-          data-ai-hint="tea plantation"
-          alt="Lush tea plantation in Ceylon"
-          layout="fill"
-          objectFit="cover"
-          className="z-0 brightness-50"
-        />
-        <div className="relative z-10 p-4 animate-in fade-in-0 slide-in-from-bottom-12 duration-1000">
-          <h1 className="text-5xl md:text-7xl font-headline font-bold mb-4 tracking-tight">
-            The Soul of Ceylon, in a Cup
-          </h1>
-          <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-foreground/80">
-            Experience the unparalleled quality and rich heritage of Roba Ceylon Tea, cultivated in the pristine highlands of Sri Lanka.
-          </p>
-          <Button asChild size="lg" variant="outline" className="border-accent text-accent hover:bg-accent hover:text-accent-foreground">
-            <Link href="/store">Explore Our Teas <i className="ri-arrow-right-line ml-2 text-xl leading-none"></i></Link>
-          </Button>
-        </div>
-      </section>
+      <HeroCarousel />
 
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
