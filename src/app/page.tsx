@@ -9,7 +9,9 @@ import { HeroCarousel } from "@/components/shared/hero-carousel";
 export default function Home() {
   return (
     <div className="flex flex-col animate-in fade-in duration-500">
-      <HeroCarousel />
+      <div className="w-full max-w-[1800px] mx-auto">
+        <HeroCarousel />
+      </div>
 
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
