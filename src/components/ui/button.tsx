@@ -53,7 +53,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       )
     }
 
-    if (variant === "link") {
+    if (variant === "link" || variant === "ghost") {
       return (
         <button
           className={cn(buttonVariants({ variant, size, className }))}
