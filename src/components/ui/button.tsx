@@ -40,10 +40,10 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, children, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
 
-    const isAnimated = variant !== 'ghost' && variant !== 'link';
+    const isAnimated = variant === 'filled' || variant === 'outline-light' || variant === 'outline-dark';
     
     const animationClasses = isAnimated 
-      ? "isolate after:content-[''] after:absolute after:inset-0 after:z-[-1] after:h-full after:w-full after:translate-x-full after:transform after:transition-transform after:duration-300 after:ease-in-out group-hover:after:translate-x-0" 
+      ? "isolate after:content-[''] after:absolute after:inset-0 after:h-full after:w-full after:translate-x-full after:transform after:transition-transform after:duration-300 after:ease-in-out group-hover:after:translate-x-0" 
       : "";
 
     return (
