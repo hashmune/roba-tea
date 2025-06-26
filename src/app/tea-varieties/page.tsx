@@ -101,7 +101,8 @@ export default function TeaVarietiesPage() {
                     <div
                       className={cn(
                         "relative w-full overflow-hidden",
-                        index === 4 ? "aspect-video" : "aspect-[3/4]"
+                        // The banner (index 4) has a different aspect ratio to align its height with the card next to it.
+                        index === 4 ? "aspect-[3/2]" : "aspect-[3/4]"
                       )}
                     >
                       <Image
@@ -112,26 +113,29 @@ export default function TeaVarietiesPage() {
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                     </div>
-                    <div className="pt-4">
-                      <div className="flex justify-between items-baseline gap-4">
-                        <h3 className="font-sans text-sm text-foreground uppercase">
-                          {product.name}
-                        </h3>
-                        {product.status && (
-                          <Badge
-                            variant="outline"
-                            className={cn(
-                              "whitespace-nowrap",
-                              product.status === "Available"
-                                ? "border-accent text-accent"
-                                : "text-muted-foreground"
-                            )}
-                          >
-                            {product.status.toUpperCase()}
-                          </Badge>
-                        )}
+                    {/* The banner image (index 4) does not have a title or badge */}
+                    {index !== 4 && (
+                      <div className="pt-4">
+                        <div className="flex justify-between items-baseline gap-4">
+                          <h3 className="font-sans text-sm text-foreground uppercase">
+                            {product.name}
+                          </h3>
+                          {product.status && (
+                            <Badge
+                              variant="outline"
+                              className={cn(
+                                "whitespace-nowrap",
+                                product.status === "Available"
+                                  ? "border-accent text-accent"
+                                  : "text-muted-foreground"
+                              )}
+                            >
+                              {product.status.toUpperCase()}
+                            </Badge>
+                          )}
+                        </div>
                       </div>
-                    </div>
+                    )}
                   </div>
                 ))}
               </div>
