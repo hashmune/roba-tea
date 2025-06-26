@@ -72,7 +72,7 @@ export function Header() {
                                 <i className="ri-instagram-line text-lg"></i>
                             </Link>
                             <Link href="#" className="text-foreground hover:text-secondary">
-                                <i className="ri-youtube-fill text-lg"></i>
+                                <i className="ri-youtube-line text-lg"></i>
                             </Link>
                             <Link href="#" className="text-foreground hover:text-secondary">
                                 <i className="ri-linkedin-fill text-lg"></i>
