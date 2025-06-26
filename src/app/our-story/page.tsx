@@ -238,22 +238,22 @@ export default function OurStoryPage() {
       {/* Our Signature Teas section */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground">Our Signature Teas</h2>
-            <p className="text-lg text-muted-foreground mt-2">Explore the teas that define our legacy. Each one is a testament to our Six Pillars and the unique character of our estate.</p>
-            <div className="mt-8">
-              <Button asChild variant="outline-dark" size="lg">
-                <Link href="/tea-varieties">Explore All Teas</Link>
-              </Button>
-            </div>
-          </div>
            <Carousel
             opts={{
               align: "start",
-              loop: true,
+              loop: false,
             }}
             className="w-full"
           >
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground">Our Signature Teas</h2>
+              <p className="text-lg text-muted-foreground mt-2">Explore the teas that define our legacy. Each one is a testament to our Six Pillars and the unique character of our estate.</p>
+              <div className="mt-8">
+                <Button asChild variant="outline-dark" size="lg">
+                  <Link href="/tea-varieties">Explore All Teas</Link>
+                </Button>
+              </div>
+            </div>
             <CarouselContent>
               {teaVarieties.map((tea) => (
                 <CarouselItem key={tea.slug} className="md:basis-1/2 lg:basis-1/3">
