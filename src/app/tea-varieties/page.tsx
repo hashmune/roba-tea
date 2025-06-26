@@ -37,8 +37,8 @@ export default function TeaVarietiesPage() {
                         onClick={() => handleScrollTo(collection.id)}
                         className="group flex-shrink-0"
                     >
-                        <div className="w-40 space-y-2">
-                            <div className="relative aspect-[4/3] w-full overflow-hidden border-2 border-transparent group-hover:border-primary transition-colors duration-300">
+                        <div className="w-48 space-y-2">
+                            <div className="relative aspect-[271/199] w-full overflow-hidden border-2 border-transparent group-hover:border-primary transition-colors duration-300">
                                 <Image
                                     src={collection.navImage}
                                     alt={collection.title}
