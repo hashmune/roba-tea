@@ -107,8 +107,15 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground tracking-wider">EXPERIENCE THE ROBA TEA</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
-            {experiences.map((experience) => (
-              <Link href={experience.link} key={experience.title} className="group block">
+            {experiences.map((experience, index) => (
+              <Link 
+                href={experience.link} 
+                key={experience.title} 
+                className={cn(
+                  "group block",
+                  index % 2 !== 0 && "md:mt-16"
+                )}
+              >
                 <div className="relative aspect-square w-full overflow-hidden">
                   <Image 
                     src={experience.imageUrl} 
