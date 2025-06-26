@@ -28,8 +28,8 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {teaVarieties.slice(0, 3).map((tea) => (
-              <Card key={tea.slug} className="border-0 shadow-none bg-transparent group overflow-hidden rounded-lg">
-                <div className="relative h-80 w-full overflow-hidden">
+              <div key={tea.slug} className="group">
+                <div className="relative h-[750px] w-full overflow-hidden rounded-lg">
                   <Image 
                     src={tea.imageUrl} 
                     alt={tea.name} 
@@ -37,14 +37,10 @@ export default function Home() {
                     className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
-                <CardContent className="p-6 text-center">
-                  <CardTitle className="font-headline text-2xl text-foreground">{tea.name}</CardTitle>
-                  <CardDescription className="mt-2">{tea.shortDescription}</CardDescription>
-                  <Button asChild variant="link" className="p-0 mt-4 text-accent hover:text-accent/80">
-                    <Link href={`/tea-varieties/${tea.slug}`}>Learn More <i className="ri-arrow-right-line ml-2 text-base leading-none"></i></Link>
-                  </Button>
-                </CardContent>
-              </Card>
+                <div className="pt-4 text-center">
+                  <h3 className="font-headline text-xl text-foreground">{tea.name}</h3>
+                </div>
+              </div>
             ))}
           </div>
         </div>
