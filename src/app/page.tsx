@@ -14,6 +14,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
+import { VideoPlayer } from "@/components/shared/video-player";
 
 export default function Home() {
   return (
@@ -83,28 +84,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 md:py-24 bg-secondary">
+      <section className="py-16 md:py-24 bg-secondary/10">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div className="relative w-full h-96 rounded-lg overflow-hidden">
-                <Image
-                src="https://images.unsplash.com/photo-1491497895121-1334fc14d8c9"
-                data-ai-hint="ceylon history"
-                alt="Vintage map of Ceylon"
-                fill
-                className="object-cover"
-                />
-            </div>
-            <div>
-              <h2 className="text-3xl md:text-4xl font-headline font-bold mb-4 text-accent">A Legacy of Quality</h2>
-              <p className="text-lg mb-6 text-muted-foreground">
-                Our story is one of dedication to the art of tea making. From the careful selection of leaves to our ethical practices, we honor a tradition of excellence passed down through generations.
-              </p>
-              <Button asChild size="lg" variant="outline-dark">
-                <Link href="/our-story">Our Story</Link>
-              </Button>
-            </div>
-          </div>
+          <VideoPlayer 
+             src="https://videos.pexels.com/video-files/3209828/3209828-hd_1920_1080_25fps.mp4"
+             poster="https://placehold.co/1920x1080.png"
+          />
         </div>
       </section>
 
