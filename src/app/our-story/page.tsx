@@ -33,13 +33,17 @@ export default function OurStoryPage() {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-black/40" />
-        <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white">
-          <p className="mb-2 text-sm font-bold uppercase tracking-widest">
-            ROBA CEYLON TEA ESTATE
-          </p>
-          <h1 className="text-4xl font-bold uppercase tracking-tight md:text-5xl">
-            A Legacy of Perfection
-          </h1>
+        <div className="relative z-10 flex h-full items-end justify-start text-left text-white">
+          <div className="container mx-auto px-4 pb-16 md:pb-24">
+            <div className="max-w-2xl">
+              <p className="mb-2 text-sm font-bold uppercase tracking-widest">
+                ROBA CEYLON TEA ESTATE
+              </p>
+              <h1 className="text-4xl font-bold uppercase tracking-tight md:text-5xl">
+                A Legacy of Perfection
+              </h1>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -169,7 +173,7 @@ export default function OurStoryPage() {
           >
             <CarouselContent>
               <CarouselItem className="md:basis-1/2 lg:basis-1/3">
-                <div className="flex h-full flex-col justify-center p-4">
+                <div className="flex h-full flex-col justify-start p-4">
                   <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground">
                     Our Signature Teas
                   </h2>
