@@ -80,7 +80,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {products.slice(0, 3).map((product) => (
               <div key={product.id} className="group">
-                <div className="relative h-[750px] w-full overflow-hidden rounded-lg">
+                <div className="relative aspect-video w-full overflow-hidden rounded-lg">
                   <Image 
                     src={product.imageUrl} 
                     alt={product.name} 
@@ -89,10 +89,10 @@ export default function Home() {
                   />
                 </div>
                 <div className="pt-4">
-                  <div className="flex justify-between items-center gap-4">
-                    <h3 className="font-headline text-xl text-foreground">{product.name}</h3>
+                  <div className="flex justify-between items-baseline gap-4">
+                    <h3 className="font-headline text-sm text-foreground uppercase">{product.name}</h3>
                     <Badge variant="outline" className={cn('whitespace-nowrap', product.status === 'Available' ? 'text-accent border-accent' : 'text-muted-foreground')}>
-                      {product.status}
+                      {product.status.toUpperCase()}
                     </Badge>
                   </div>
                 </div>
