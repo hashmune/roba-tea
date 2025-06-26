@@ -18,7 +18,7 @@ function ProductCard({ product }: { product: typeof products[0] }) {
     <div className="group text-left">
       <div className="relative mb-1">
         <Link href={`/store/${product.slug}`}>
-            <div className="relative aspect-square w-full overflow-hidden">
+            <div className="relative aspect-[5/4] w-full overflow-hidden">
                 <Image
                     src={product.imageUrl}
                     alt={product.name}
