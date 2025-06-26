@@ -78,7 +78,7 @@ export default function StorePage() {
         </div>
       </section>
 
-      <section id="teas" className="py-16 md:py-24 bg-secondary/5">
+      <section id="teas" className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="mb-12 text-center">
             <h2 className="font-headline text-3xl font-bold text-foreground">
@@ -93,7 +93,7 @@ export default function StorePage() {
         </div>
       </section>
       
-      <section className="py-16 md:py-24 bg-background">
+      <section className="py-16 md:py-24 bg-secondary/5">
         <div className="container mx-auto px-4">
           <div className="mb-12 text-center">
             <h2 className="font-headline text-3xl font-bold text-foreground">
