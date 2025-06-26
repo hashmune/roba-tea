@@ -5,6 +5,8 @@ import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from "@/components/ui/toaster"
 import { cn } from '@/lib/utils';
+import { ShoppingBagProvider } from '@/hooks/use-shopping-bag';
+import { ShoppingBag } from '@/components/shared/shopping-bag';
 
 const nunitoSans = Nunito_Sans({
   subsets: ['latin'],
@@ -28,12 +30,15 @@ export default function RootLayout({
         <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
       </head>
       <body className={cn("antialiased bg-muted text-foreground")}>
-        <div className="mx-auto flex min-h-screen max-w-[1800px] flex-col bg-background shadow-lg">
-          <Header />
-          <main className="flex-grow">{children}</main>
-          <Footer />
-        </div>
-        <Toaster />
+        <ShoppingBagProvider>
+            <div className="mx-auto flex min-h-screen max-w-[1800px] flex-col bg-background shadow-lg">
+              <Header />
+              <main className="flex-grow">{children}</main>
+              <Footer />
+            </div>
+            <ShoppingBag />
+            <Toaster />
+        </ShoppingBagProvider>
       </body>
     </html>
   );

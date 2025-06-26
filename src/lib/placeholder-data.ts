@@ -14,12 +14,14 @@ export type TeaVariety = {
 
 export type Product = {
   id: string;
+  slug: string;
   name:string;
-  price: string;
+  price: number;
   description: string;
   imageUrl: string;
   dataAiHint: string;
   status: 'Available' | 'Coming Soon';
+  category: 'Tea' | 'Accessories';
 };
 
 export type HeroSlide = {
@@ -288,56 +290,90 @@ export const teaVarieties: TeaVariety[] = [
 export const products: Product[] = [
   {
     id: 'prod_001',
+    slug: 'classic-ceylon-black-tin',
     name: 'Classic Ceylon Black Tin (100g)',
-    price: '$15.00',
-    description: 'A beautiful tin containing 100g of our finest loose-leaf Classic Ceylon Black tea.',
+    price: 15.00,
+    description: 'A beautiful tin containing 100g of our finest loose-leaf Classic Ceylon Black tea. A bold and robust classic, with notes of citrus and spice.',
     imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
     dataAiHint: 'tea tin',
     status: 'Available',
+    category: 'Tea',
   },
   {
     id: 'prod_002',
+    slug: 'ceylon-earl-grey-sachets',
     name: 'Ceylon Earl Grey Sachets (20)',
-    price: '$12.00',
-    description: '20 convenient, biodegradable tea sachets of our aromatic Ceylon Earl Grey.',
+    price: 12.00,
+    description: '20 convenient, biodegradable tea sachets of our aromatic Ceylon Earl Grey. A bright and fragrant blend with a distinctive bergamot aroma.',
     imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
     dataAiHint: 'tea box',
     status: 'Available',
+    category: 'Tea',
   },
   {
     id: 'prod_003',
+    slug: 'highland-green-loose-leaf',
     name: 'Highland Green Loose Leaf (80g)',
-    price: '$18.00',
-    description: '80g of premium loose-leaf Highland Green tea, perfect for a refreshing cup.',
+    price: 18.00,
+    description: '80g of premium loose-leaf Highland Green tea, perfect for a refreshing cup. A delicate and refreshing green tea with a light, grassy flavor.',
     imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
     dataAiHint: 'tea pouch',
     status: 'Coming Soon',
+    category: 'Tea',
   },
   {
     id: 'prod_004',
+    slug: 'silver-tips-white-tea-caddy',
     name: 'Silver Tips White Tea Caddy (50g)',
-    price: '$45.00',
-    description: 'An exclusive 50g caddy of our rare and exquisite Silver Tips White Tea.',
+    price: 45.00,
+    description: 'An exclusive 50g caddy of our rare and exquisite Silver Tips White Tea. An exquisite and rare tea with subtle notes of honey and melon.',
     imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
     dataAiHint: 'luxury tea',
     status: 'Available',
+    category: 'Tea',
   },
   {
     id: 'prod_005',
+    slug: 'roba-tea-discovery-kit',
     name: 'Roba Tea Discovery Kit',
-    price: '$35.00',
+    price: 35.00,
     description: 'A selection of our four signature teas in sample sizes. The perfect gift for any tea lover.',
     imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
     dataAiHint: 'tea gift',
     status: 'Available',
+    category: 'Tea',
   },
     {
     id: 'prod_006',
+    slug: 'artisan-tea-pot',
     name: 'Artisan Tea Pot',
-    price: '$55.00',
+    price: 55.00,
     description: 'A beautifully crafted ceramic teapot, designed for the perfect brew.',
     imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
     dataAiHint: 'teapot',
     status: 'Coming Soon',
+    category: 'Accessories',
+  },
+  {
+    id: 'prod_007',
+    slug: 'steep-and-sip-mug',
+    name: 'Steep & Sip Mug',
+    price: 25.00,
+    description: 'An elegant glass mug designed for a complete tea-tasting experience.',
+    imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
+    dataAiHint: 'glass mug',
+    status: 'Available',
+    category: 'Accessories'
+  },
+  {
+    id: 'prod_008',
+    slug: 'matcha-whisk-set',
+    name: 'Matcha Whisk Set',
+    price: 38.00,
+    description: 'A complete set for preparing the perfect bowl of matcha, including a bamboo whisk and scoop.',
+    imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
+    dataAiHint: 'matcha set',
+    status: 'Available',
+    category: 'Accessories'
   }
 ];
