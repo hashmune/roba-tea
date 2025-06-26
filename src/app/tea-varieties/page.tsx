@@ -12,8 +12,8 @@ export default function TeaVarietiesPage() {
   const handleScrollTo = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      // The offset is to account for the sticky header and nav stripe height
-      const yOffset = -200; 
+      // The offset is to account for the sticky header (88px) and nav stripe height
+      const yOffset = -270; 
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({top: y, behavior: 'smooth'});
     }
@@ -25,7 +25,7 @@ export default function TeaVarietiesPage() {
     const onScroll = () => {
       const scrollPosition = window.pageYOffset;
       // Offset to trigger active state when section is near the top of the viewport
-      const offset = 220; 
+      const offset = 280; 
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i];
@@ -53,22 +53,11 @@ export default function TeaVarietiesPage() {
   return (
     <div className="animate-in fade-in duration-500">
       <div className="container mx-auto px-4">
-        {/* Breadcrumbs */}
         <Breadcrumb items={breadcrumbItems} />
-
-        {/* Page Title & Introduction */}
-        <div className="text-center max-w-3xl mx-auto py-12 md:py-16">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline uppercase tracking-wider text-foreground">
-            Premium Collections
-          </h1>
-          <p className="mt-4 text-lg text-muted-foreground">
-            At Roba Tea, we offer handpicked selections from our lush plantations, each crafted with legacy, precision, and nature’s finest offerings. From timeless classics to rare releases, our premium collections reflect our deep-rooted passion for tea.
-          </p>
-        </div>
       </div>
 
       {/* Category Navigation Strip */}
-      <div className="sticky top-[88px] z-40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 py-4 border-b">
+      <div className="sticky top-[88px] z-40 bg-secondary/10 py-4 border-b">
         <div className="container mx-auto px-4">
             <div className="flex items-start justify-start md:justify-center gap-x-8 overflow-x-auto">
                 {teaCollections.map((collection) => (
@@ -95,6 +84,18 @@ export default function TeaVarietiesPage() {
                     </button>
                 ))}
             </div>
+        </div>
+      </div>
+
+      <div className="container mx-auto px-4">
+        {/* Page Title & Introduction */}
+        <div className="text-center max-w-3xl mx-auto pt-12 md:pt-16">
+          <h1 className="text-4xl md:text-5xl font-bold font-headline uppercase tracking-wider text-foreground">
+            Premium Collections
+          </h1>
+          <p className="mt-4 text-lg text-muted-foreground">
+            At Roba Tea, we offer handpicked selections from our lush plantations, each crafted with legacy, precision, and nature’s finest offerings. From timeless classics to rare releases, our premium collections reflect our deep-rooted passion for tea.
+          </p>
         </div>
       </div>
 
