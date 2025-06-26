@@ -1,4 +1,6 @@
 
+'use client';
+
 import { Breadcrumb } from '@/components/shared/breadcrumb';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -163,7 +165,7 @@ export default function OurStoryPage() {
           <Carousel
             opts={{
               align: "start",
-              loop: true,
+              loop: false,
             }}
             className="w-full"
           >
