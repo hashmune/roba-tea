@@ -75,7 +75,7 @@ export function Header() {
                                 <i className="ri-youtube-line text-lg"></i>
                             </Link>
                             <Link href="#" className="text-foreground hover:text-secondary">
-                                <i className="ri-linkedin-fill text-lg"></i>
+                                <i className="ri-linkedin-box-line text-lg"></i>
                             </Link>
                         </div>
                         <p>&copy; {year} Roba Ceylon Tea</p>

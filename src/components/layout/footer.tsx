@@ -71,7 +71,7 @@ export function Footer() {
                   <i className="ri-youtube-line text-xl"></i>
                 </Link>
                 <Link href="#" className="text-muted-foreground hover:text-primary">
-                  <i className="ri-linkedin-fill text-xl"></i>
+                  <i className="ri-linkedin-box-line text-xl"></i>
                 </Link>
               </div>
           </div>
