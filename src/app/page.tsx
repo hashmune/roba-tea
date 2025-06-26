@@ -44,7 +44,7 @@ export default function Home() {
               {teaVarieties.map((tea) => (
                 <CarouselItem key={tea.slug} className="md:basis-1/2 lg:basis-1/3">
                   <div className="group p-4">
-                    <div className="relative aspect-[9/16] w-full overflow-hidden rounded-lg">
+                    <div className="relative aspect-[3/4] w-full overflow-hidden rounded-lg">
                       <Image 
                         src={tea.imageUrl} 
                         alt={tea.name} 
@@ -65,8 +65,8 @@ export default function Home() {
               ))}
             </CarouselContent>
              <div className="flex justify-end gap-2 mt-4">
-              <CarouselPrevious className="static translate-x-0 translate-y-0" />
-              <CarouselNext className="static translate-x-0 translate-y-0" />
+              <CarouselPrevious variant="outline-dark" className="static translate-x-0 translate-y-0" />
+              <CarouselNext variant="outline-dark" className="static translate-x-0 translate-y-0" />
             </div>
           </Carousel>
         </div>
