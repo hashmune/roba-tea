@@ -56,6 +56,45 @@ export type TeaCollection = {
   dataAiHintNav: string;
 };
 
+export type SixPillar = {
+  title: string;
+  imageUrl: string;
+  dataAiHint: string;
+}
+
+export const sixPillars: SixPillar[] = [
+  {
+    title: 'The Estate',
+    imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
+    dataAiHint: 'tea estate house',
+  },
+  {
+    title: 'Artisanal Craft',
+    imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
+    dataAiHint: 'tea processing',
+  },
+  {
+    title: 'Exceptional Quality',
+    imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
+    dataAiHint: 'tea tasting',
+  },
+  {
+    title: 'Sustainability',
+    imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
+    dataAiHint: 'nature conservation',
+  },
+  {
+    title: 'Community',
+    imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
+    dataAiHint: 'community workers',
+  },
+  {
+    title: 'The Perfect Cup',
+    imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
+    dataAiHint: 'cup of tea',
+  },
+];
+
 export const teaCollections: TeaCollection[] = [
   {
     id: 'timeless-collections',
