@@ -26,7 +26,7 @@ export function VideoPlayer({
 
   return (
     <div 
-      className="relative aspect-video w-full max-w-5xl mx-auto rounded-sm overflow-hidden group"
+      className="relative aspect-video w-full max-w-5xl mx-auto overflow-hidden group"
     >
       <video
         ref={videoRef}

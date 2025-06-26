@@ -68,7 +68,7 @@ export default function Home() {
               {teaVarieties.map((tea) => (
                 <CarouselItem key={tea.slug} className="md:basis-1/2 lg:basis-1/3">
                   <div className="group p-4">
-                    <div className="relative aspect-[3/4] w-full overflow-hidden rounded-lg">
+                    <div className="relative aspect-[3/4] w-full overflow-hidden">
                       <Image 
                         src={tea.imageUrl} 
                         alt={tea.name} 
