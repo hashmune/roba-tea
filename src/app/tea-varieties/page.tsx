@@ -59,11 +59,11 @@ export default function TeaVarietiesPage() {
 
       <div className="container mx-auto px-4">
         {/* Page Title & Introduction */}
-        <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center max-w-6xl mx-auto pt-12 md:pt-16">
-          <h1 className="text-4xl md:text-5xl font-bold font-headline uppercase tracking-wider text-foreground">
+        <div className="grid md:grid-cols-3 gap-8 md:gap-16 items-start max-w-6xl pt-12 md:pt-16">
+          <h1 className="md:col-span-1 text-4xl md:text-5xl font-bold font-headline uppercase tracking-wider text-foreground">
             Premium Collections
           </h1>
-          <p className="text-lg text-muted-foreground">
+          <p className="md:col-span-2 text-lg text-muted-foreground">
             At Roba Tea, we offer handpicked selections from our lush plantations, each crafted with legacy, precision, and nature’s finest offerings. From timeless classics to rare releases, our premium collections reflect our deep-rooted passion for tea.
           </p>
         </div>
