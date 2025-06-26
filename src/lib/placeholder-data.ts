@@ -43,28 +43,28 @@ export const experiences: ExperienceCard[] = [
   {
     category: 'Enjoy',
     title: 'Serves',
-    imageUrl: 'https://images.unsplash.com/photo-1556742053-9971a1c4b3de',
+    imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
     dataAiHint: 'tea serving',
     link: '/store'
   },
   {
     category: 'Inside',
     title: 'The Roba Tea Society',
-    imageUrl: 'https://images.unsplash.com/photo-1512568400610-62da2848a609',
+    imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
     dataAiHint: 'tea community people',
     link: '/our-story'
   },
   {
     category: 'Book',
     title: 'Estate Experiences',
-    imageUrl: 'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d',
+    imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
     dataAiHint: 'tea estate landscape',
     link: '/our-story'
   },
   {
     category: 'Discover',
     title: 'Our Six Pillars',
-    imageUrl: 'https://images.unsplash.com/photo-1544776193-53d9ff38d3ca',
+    imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
     dataAiHint: 'tea making process',
     link: '/our-story'
   }
