@@ -18,6 +18,11 @@ export default function Home() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground">Our signature varieties</h2>
             <p className="text-lg text-muted-foreground mt-2">From our Timeless Collections enjoyed around the world to our rare, limited-edition teas—each blend tells a unique story. Every cup of our single-origin or artisan tea reflects our unwavering dedication to the craft of leaf and flavor mastery, honed since 1824.</p>
+            <div className="mt-8">
+              <Button asChild variant="outline-dark" size="lg">
+                <Link href="/tea-varieties">Explore signature varieties</Link>
+              </Button>
+            </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {teaVarieties.slice(0, 3).map((tea) => (
