@@ -29,7 +29,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {teaVarieties.slice(0, 3).map((tea) => (
               <div key={tea.slug} className="group">
-                <div className="relative h-[750px] w-full overflow-hidden rounded-lg">
+                <div className="relative aspect-[9/16] w-full overflow-hidden rounded-lg">
                   <Image 
                     src={tea.imageUrl} 
                     alt={tea.name} 
