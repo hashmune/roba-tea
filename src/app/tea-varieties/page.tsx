@@ -4,11 +4,8 @@
 import { teaCollections } from '@/lib/placeholder-data';
 import Image from 'next/image';
 import { Breadcrumb } from '@/components/shared/breadcrumb';
-import { useEffect, useState } from 'react';
 
 export default function TeaVarietiesPage() {
-  const [activeSection, setActiveSection] = useState<string>(teaCollections[0]?.id || '');
-
   const handleScrollTo = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -18,32 +15,6 @@ export default function TeaVarietiesPage() {
       window.scrollTo({top: y, behavior: 'smooth'});
     }
   };
-
-  useEffect(() => {
-    const sections = teaCollections.map(collection => document.getElementById(collection.id));
-    
-    const onScroll = () => {
-      const scrollPosition = window.pageYOffset;
-      // Offset to trigger active state when section is near the top of the viewport
-      const offset = 120;
-
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const section = sections[i];
-        if (section && section.offsetTop - offset <= scrollPosition) {
-            if (activeSection !== section.id) {
-                setActiveSection(section.id);
-            }
-            break;
-        }
-      }
-    };
-    
-    window.addEventListener('scroll', onScroll, { passive: true });
-    onScroll(); // Initial check
-
-    return () => window.removeEventListener('scroll', onScroll);
-  }, [activeSection]);
-
 
   const breadcrumbItems = [
     { label: 'Home', href: '/' },
@@ -57,7 +28,7 @@ export default function TeaVarietiesPage() {
       </div>
 
       {/* Category Navigation Strip */}
-      <div className="bg-secondary/10 py-4 border-b">
+      <div className="bg-secondary/10 py-4 border-y">
         <div className="container mx-auto px-4">
             <div className="flex items-start justify-start md:justify-center gap-x-8 overflow-x-auto">
                 {teaCollections.map((collection) => (
@@ -65,10 +36,9 @@ export default function TeaVarietiesPage() {
                         key={collection.id}
                         onClick={() => handleScrollTo(collection.id)}
                         className="group flex-shrink-0"
-                        data-active={activeSection === collection.id}
                     >
                         <div className="w-40 space-y-2">
-                            <div className="relative aspect-[4/3] w-full overflow-hidden border-2 border-transparent group-data-[active=true]:border-primary transition-colors duration-300">
+                            <div className="relative aspect-[4/3] w-full overflow-hidden border-2 border-transparent group-hover:border-primary transition-colors duration-300">
                                 <Image
                                     src={collection.navImage}
                                     alt={collection.title}
@@ -77,7 +47,7 @@ export default function TeaVarietiesPage() {
                                     className="object-cover transition-transform duration-300 group-hover:scale-110"
                                 />
                             </div>
-                            <p className="text-center text-xs font-semibold uppercase tracking-wider text-muted-foreground transition-colors duration-300 group-data-[active=true]:text-primary">
+                            <p className="text-center text-xs font-semibold uppercase tracking-wider text-muted-foreground transition-colors duration-300 group-hover:text-primary">
                                 {collection.title}
                             </p>
                         </div>
