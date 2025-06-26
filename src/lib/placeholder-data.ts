@@ -1,4 +1,5 @@
 
+
 export type TeaVariety = {
   slug: string;
   name: string;
@@ -38,6 +39,63 @@ export type ExperienceCard = {
   dataAiHint: string;
   link: string;
 };
+
+export type TeaCollectionProduct = {
+  name: string;
+  imageUrl: string;
+  dataAiHint: string;
+};
+
+export type TeaCollection = {
+  id: string;
+  title: string;
+  description: string;
+  products: TeaCollectionProduct[];
+};
+
+export const teaCollections: TeaCollection[] = [
+  {
+    id: 'classic-range',
+    title: 'Classic Range',
+    description: 'Our signature blends, time-tested and adored.',
+    products: [
+      { name: 'Roba OP Grade', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves' },
+      { name: 'Roba BOP1 Estate Reserve', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves' },
+      { name: 'Roba Flowery Pekoe', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves' },
+    ],
+  },
+  {
+    id: 'limited-releases',
+    title: 'Limited Releases',
+    description: 'Rare selections harvested in micro-lots.',
+    products: [
+      { name: 'Roba Silver Tips (Moonlight Harvest)', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves' },
+      { name: 'Highland Gold OP Select', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves' },
+      { name: 'Roba Twilight BOP Reserve', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves' },
+    ],
+  },
+  {
+    id: 'travel-exclusive',
+    title: 'Travel Exclusive',
+    description: 'Curated packs for discerning global travellers.',
+    products: [
+      { name: 'Roba Voyager’s Pick', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves' },
+      { name: 'Sunrise Trails OP Select', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves' },
+      { name: 'Dusk Valley Highland Reserve', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves' },
+    ],
+  },
+  {
+    id: 'gifts-accessories',
+    title: 'Gift & Accessories',
+    description: 'Gifting-worthy blends and steeping essentials.',
+    products: [
+      { name: 'Roba Collectors Gift Set', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea gift set' },
+      { name: 'Steep & Sip Mug', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea mug' },
+      { name: 'Signature Roba Tray', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea tray' },
+    ],
+  },
+];
+
 
 export const experiences: ExperienceCard[] = [
   {
