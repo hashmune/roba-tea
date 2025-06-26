@@ -15,7 +15,7 @@ export type TeaVariety = {
 
 export type Product = {
   id: string;
-  name: string;
+  name:string;
   price: string;
   description: string;
   imageUrl: string;
@@ -44,6 +44,7 @@ export type TeaCollectionProduct = {
   name: string;
   imageUrl: string;
   dataAiHint: string;
+  status: 'Available' | 'Coming Soon' | 'Unavailable';
 };
 
 export type TeaCollection = {
@@ -63,9 +64,11 @@ export const teaCollections: TeaCollection[] = [
     navImage: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
     dataAiHintNav: 'classic tea',
     products: [
-      { name: 'Heritage Black', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'black tea' },
-      { name: 'Golden Pekoe', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves' },
-      { name: 'Ancient Green', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'green tea' },
+      { name: 'Heritage Black', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'black tea', status: 'Available' },
+      { name: 'Golden Pekoe', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves', status: 'Available' },
+      { name: 'Ancient Green', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'green tea', status: 'Coming Soon' },
+      { name: 'White Orchid', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'white tea', status: 'Unavailable' },
+      { name: 'Spiced Chai', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'chai tea', status: 'Available' },
     ],
   },
   {
@@ -75,9 +78,11 @@ export const teaCollections: TeaCollection[] = [
     navImage: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
     dataAiHintNav: 'tea plantation',
     products: [
-      { name: 'Roba OP Grade', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves' },
-      { name: 'Roba BOP1 Estate Reserve', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves' },
-      { name: 'Roba Flowery Pekoe', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves' },
+      { name: 'Roba OP Grade', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves', status: 'Available' },
+      { name: 'Roba BOP1 Estate Reserve', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves', status: 'Available' },
+      { name: 'Roba Flowery Pekoe', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves', status: 'Coming Soon' },
+      { name: 'Silver Kandy', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'silver tea', status: 'Unavailable' },
+      { name: 'Uva Highlands BOP', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'black tea leaves', status: 'Available' },
     ],
   },
   {
@@ -87,9 +92,11 @@ export const teaCollections: TeaCollection[] = [
     navImage: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
     dataAiHintNav: 'rare tea',
     products: [
-      { name: 'Roba Silver Tips (Moonlight Harvest)', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves' },
-      { name: 'Highland Gold OP Select', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves' },
-      { name: 'Roba Twilight BOP Reserve', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves' },
+      { name: 'Roba Silver Tips (Moonlight Harvest)', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves', status: 'Available' },
+      { name: 'Highland Gold OP Select', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves', status: 'Available' },
+      { name: 'Roba Twilight BOP Reserve', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves', status: 'Coming Soon' },
+      { name: 'First Flush Darjeeling', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'darjeeling tea', status: 'Unavailable' },
+      { name: 'Golden Monkey Paw', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'golden tea', status: 'Available' },
     ],
   },
   {
@@ -99,9 +106,11 @@ export const teaCollections: TeaCollection[] = [
     navImage: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
     dataAiHintNav: 'tea travel',
     products: [
-      { name: 'Roba Voyager’s Pick', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves' },
-      { name: 'Sunrise Trails OP Select', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves' },
-      { name: 'Dusk Valley Highland Reserve', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves' },
+      { name: 'Roba Voyager’s Pick', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves', status: 'Available' },
+      { name: 'Sunrise Trails OP Select', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves', status: 'Available' },
+      { name: 'Dusk Valley Highland Reserve', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves', status: 'Coming Soon' },
+      { name: 'Jetsetter\'s Green', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'green tea pack', status: 'Unavailable' },
+      { name: 'Metropolis Black', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'black tea box', status: 'Available' },
     ],
   },
   {
@@ -111,9 +120,11 @@ export const teaCollections: TeaCollection[] = [
     navImage: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
     dataAiHintNav: 'tea gift',
     products: [
-      { name: 'Roba Collectors Gift Set', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea gift set' },
-      { name: 'Steep & Sip Mug', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea mug' },
-      { name: 'Signature Roba Tray', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea tray' },
+      { name: 'Roba Collectors Gift Set', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea gift set', status: 'Available' },
+      { name: 'Steep & Sip Mug', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea mug', status: 'Available' },
+      { name: 'Signature Roba Tray', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea tray', status: 'Coming Soon' },
+      { name: 'Tea Infuser Ball', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea infuser', status: 'Unavailable' },
+      { name: 'Matcha Whisk Set', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'matcha set', status: 'Available' },
     ],
   },
 ];

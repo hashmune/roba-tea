@@ -6,6 +6,8 @@ import Image from 'next/image';
 import { Breadcrumb } from '@/components/shared/breadcrumb';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { cn } from '@/lib/utils';
+import { Badge } from '@/components/ui/badge';
 
 export default function TeaVarietiesPage() {
   const handleScrollTo = (id: string) => {
@@ -87,10 +89,21 @@ export default function TeaVarietiesPage() {
                 </div>
               </div>
 
-              <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
-                {collection.products.map((product) => (
-                  <div key={product.name} className="group">
-                    <div className="relative aspect-[3/4] w-full overflow-hidden">
+              <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                {collection.products.slice(0, 5).map((product, index) => (
+                  <div
+                    key={product.name}
+                    className={cn(
+                      "group",
+                      index === 4 && "md:col-span-2"
+                    )}
+                  >
+                    <div
+                      className={cn(
+                        "relative w-full overflow-hidden",
+                        index === 4 ? "aspect-video" : "aspect-[3/4]"
+                      )}
+                    >
                       <Image
                         src={product.imageUrl}
                         alt={product.name}
@@ -100,7 +113,24 @@ export default function TeaVarietiesPage() {
                       />
                     </div>
                     <div className="pt-4">
-                      <h3 className="font-sans text-sm text-foreground uppercase">{product.name}</h3>
+                      <div className="flex justify-between items-baseline gap-4">
+                        <h3 className="font-sans text-sm text-foreground uppercase">
+                          {product.name}
+                        </h3>
+                        {product.status && (
+                          <Badge
+                            variant="outline"
+                            className={cn(
+                              "whitespace-nowrap",
+                              product.status === "Available"
+                                ? "border-accent text-accent"
+                                : "text-muted-foreground"
+                            )}
+                          >
+                            {product.status.toUpperCase()}
+                          </Badge>
+                        )}
+                      </div>
                     </div>
                   </div>
                 ))}
