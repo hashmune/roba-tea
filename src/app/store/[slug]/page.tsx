@@ -37,7 +37,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
       </div>
 
       <div className="container mx-auto grid grid-cols-1 items-start gap-12 py-8 md:grid-cols-2 md:py-12">
-        <div className="relative aspect-[3/4] w-full">
+        <div className="relative aspect-square w-full">
           <Image
             src={product.imageUrl}
             alt={product.name}

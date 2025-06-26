@@ -16,9 +16,9 @@ function ProductCard({ product }: { product: typeof products[0] }) {
 
   return (
     <div className="group text-left">
-      <div className="relative mb-4">
+      <div className="relative mb-1">
         <Link href={`/store/${product.slug}`}>
-            <div className="relative aspect-[3/4] w-full overflow-hidden">
+            <div className="relative aspect-square w-full overflow-hidden">
                 <Image
                     src={product.imageUrl}
                     alt={product.name}
@@ -111,7 +111,7 @@ export default function StorePage() {
 
       <section id="teas" className="py-16 md:py-24">
         <div className="container mx-auto">
-          <div className="mb-12 text-center">
+          <div className="mb-3 text-center">
             <h2 className="font-headline text-3xl font-bold text-foreground">
               Tea Varieties
             </h2>
@@ -126,7 +126,7 @@ export default function StorePage() {
       
       <section id="accessories" className="py-16 md:py-24">
         <div className="container mx-auto">
-          <div className="mb-12 text-center">
+          <div className="mb-3 text-center">
             <h2 className="font-headline text-3xl font-bold text-foreground">
               Lifestyle & Accessories
             </h2>
