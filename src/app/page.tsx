@@ -16,11 +16,11 @@ import {
 } from "@/components/ui/carousel"
 import { VideoPlayer } from "@/components/shared/video-player";
 
-const ExperienceDisplayItem = ({ experience }: { experience: ExperienceCard }) => (
+const ExperienceDisplayItem = ({ experience, className }: { experience: ExperienceCard, className?: string }) => (
   <Link 
     href={experience.link} 
     key={experience.title} 
-    className="group block"
+    className={cn("group block", className)}
   >
     <div className="relative aspect-square w-full overflow-hidden">
       <Image 
@@ -111,7 +111,7 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center">
           <p className="text-sm font-bold uppercase text-muted-foreground mb-4">HEART AND HOME</p>
           <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground mb-4">Welcome to The Roba Estate</h2>
-          <div className="mb-4">
+          <div className="mb-5">
             <Button asChild variant="outline-dark" size="lg">
               <Link href="/our-story">Discover estate</Link>
             </Button>
