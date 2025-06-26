@@ -20,16 +20,16 @@ export function Breadcrumb({ items, className }: BreadcrumbProps) {
       <ol className="flex items-center space-x-2">
         {items.map((item, index) => (
           <li key={index} className="flex items-center space-x-2">
-            {index > 0 && <span className="text-muted-foreground">/</span>}
+            {index > 0 && <span className="text-foreground">&gt;</span>}
             {item.href ? (
               <Link
                 href={item.href}
-                className="text-muted-foreground hover:text-primary transition-colors"
+                className="font-bold text-foreground transition-colors hover:text-primary"
               >
                 {item.label}
               </Link>
             ) : (
-              <span className="text-foreground font-medium">{item.label}</span>
+              <span className="text-muted-foreground">{item.label}</span>
             )}
           </li>
         ))}
