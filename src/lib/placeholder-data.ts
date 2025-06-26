@@ -18,6 +18,7 @@ export type Product = {
   description: string;
   imageUrl: string;
   dataAiHint: string;
+  status: 'Available' | 'Coming Soon';
 };
 
 export type HeroSlide = {
@@ -111,7 +112,8 @@ export const products: Product[] = [
     price: '$15.00',
     description: 'A beautiful tin containing 100g of our finest loose-leaf Classic Ceylon Black tea.',
     imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
-    dataAiHint: 'tea tin'
+    dataAiHint: 'tea tin',
+    status: 'Available',
   },
   {
     id: 'prod_002',
@@ -119,7 +121,8 @@ export const products: Product[] = [
     price: '$12.00',
     description: '20 convenient, biodegradable tea sachets of our aromatic Ceylon Earl Grey.',
     imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
-    dataAiHint: 'tea box'
+    dataAiHint: 'tea box',
+    status: 'Available',
   },
   {
     id: 'prod_003',
@@ -127,7 +130,8 @@ export const products: Product[] = [
     price: '$18.00',
     description: '80g of premium loose-leaf Highland Green tea, perfect for a refreshing cup.',
     imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
-    dataAiHint: 'tea pouch'
+    dataAiHint: 'tea pouch',
+    status: 'Coming Soon',
   },
   {
     id: 'prod_004',
@@ -135,7 +139,8 @@ export const products: Product[] = [
     price: '$45.00',
     description: 'An exclusive 50g caddy of our rare and exquisite Silver Tips White Tea.',
     imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
-    dataAiHint: 'luxury tea'
+    dataAiHint: 'luxury tea',
+    status: 'Available',
   },
   {
     id: 'prod_005',
@@ -143,7 +148,8 @@ export const products: Product[] = [
     price: '$35.00',
     description: 'A selection of our four signature teas in sample sizes. The perfect gift for any tea lover.',
     imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
-    dataAiHint: 'tea gift'
+    dataAiHint: 'tea gift',
+    status: 'Available',
   },
     {
     id: 'prod_006',
@@ -151,6 +157,7 @@ export const products: Product[] = [
     price: '$55.00',
     description: 'A beautifully crafted ceramic teapot, designed for the perfect brew.',
     imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
-    dataAiHint: 'teapot'
+    dataAiHint: 'teapot',
+    status: 'Coming Soon',
   }
 ];

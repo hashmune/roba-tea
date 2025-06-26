@@ -5,6 +5,8 @@ import { teaVarieties, products } from "@/lib/placeholder-data";
 import Image from "next/image";
 import Link from "next/link";
 import { HeroCarousel } from "@/components/shared/hero-carousel";
+import { Badge } from "@/components/ui/badge";
+import { cn } from "@/lib/utils";
 
 export default function Home() {
   return (
@@ -26,7 +28,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {teaVarieties.slice(0, 3).map((tea) => (
-              <Card key={tea.slug} className="border-0 shadow-none bg-card group overflow-hidden rounded-lg transition-shadow duration-300 hover:shadow-xl">
+              <Card key={tea.slug} className="border-0 shadow-none bg-transparent group overflow-hidden rounded-lg">
                 <div className="relative h-80 w-full overflow-hidden">
                   <Image 
                     src={tea.imageUrl} 
@@ -81,8 +83,8 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {products.slice(0, 3).map((product) => (
-              <Card key={product.id} className="border-0 shadow-none bg-card group overflow-hidden rounded-lg transition-shadow duration-300 hover:shadow-xl">
-                <div className="relative h-96 w-full overflow-hidden">
+              <div key={product.id} className="group">
+                <div className="relative h-[750px] w-full overflow-hidden rounded-lg">
                   <Image 
                     src={product.imageUrl} 
                     alt={product.name} 
@@ -90,14 +92,15 @@ export default function Home() {
                     className="object-cover transition-transform duration-500 group-hover:scale-110" 
                   />
                 </div>
-                <CardContent className="p-6 text-center">
-                  <CardTitle className="font-headline text-xl text-foreground">{product.name}</CardTitle>
-                  <p className="text-lg font-semibold text-muted-foreground mt-2">{product.price}</p>
-                  <Button asChild className="w-full mt-4" variant="outline-dark">
-                    <Link href="/store">View Product</Link>
-                  </Button>
-                </CardContent>
-              </Card>
+                <div className="pt-4">
+                  <div className="flex justify-between items-center gap-4">
+                    <h3 className="font-headline text-xl text-foreground">{product.name}</h3>
+                    <Badge variant="outline" className={cn('whitespace-nowrap', product.status === 'Available' ? 'text-accent border-accent' : 'text-muted-foreground')}>
+                      {product.status}
+                    </Badge>
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         </div>
