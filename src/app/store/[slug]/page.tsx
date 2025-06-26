@@ -1,4 +1,3 @@
-
 'use client';
 
 import { notFound, useRouter } from 'next/navigation';
@@ -30,7 +29,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
     <div className="animate-in fade-in duration-500">
       <div className="container mx-auto flex items-center justify-between px-4">
         <Breadcrumb items={breadcrumbItems} />
-        <Button variant="ghost" onClick={() => router.back()}>
+        <Button variant="outline-dark" onClick={() => router.back()}>
           <i className="ri-arrow-left-line mr-2" />
           Back
         </Button>
