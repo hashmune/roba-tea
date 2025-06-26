@@ -1,8 +1,8 @@
 
 'use client';
 
-import { createContext, useContext, useState, useMemo } from 'react';
-import type { Product } from '@/lib/placeholder-data';
+import React, { createContext, useContext, useState, useMemo } from 'react';
+import { Product } from '@/lib/placeholder-data';
 import { useToast } from './use-toast';
 
 export type CartItem = {
@@ -69,9 +69,10 @@ export function ShoppingBagProvider({ children }: { children: React.ReactNode })
       return items.reduce((total, item) => total + item.product.price * item.quantity, 0);
   }, [items]);
 
-  return (
-    <ShoppingBagContext.Provider
-      value={{
+  return React.createElement(
+    ShoppingBagContext.Provider,
+    {
+      value: {
         items,
         isBagOpen,
         setBagOpen,
@@ -80,10 +81,9 @@ export function ShoppingBagProvider({ children }: { children: React.ReactNode })
         updateQuantity,
         totalItems,
         subtotal
-      }}
-    >
-      {children}
-    </ShoppingBagContext.Provider>
+      }
+    },
+    children
   );
 }
 
