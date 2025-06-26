@@ -46,14 +46,14 @@ export function VideoPlayer({
           <Button
             variant="filled"
             size="icon"
-            className="h-24 w-24 rounded-full"
+            className="h-[52px] w-[52px] rounded-full"
             onClick={(e) => {
               e.stopPropagation();
               togglePlay();
             }}
             aria-label="Play video"
           >
-            <i className="ri-play-line text-6xl"></i>
+            <i className="ri-play-line text-3xl"></i>
           </Button>
         </div>
       )}
