@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 import { teaVarieties, products } from "@/lib/placeholder-data";
 import Image from "next/image";
 import Link from "next/link";
@@ -26,15 +26,18 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {teaVarieties.slice(0, 3).map((tea) => (
-              <Card key={tea.slug} className="bg-card border-border hover:border-accent/50 transition-colors duration-300 overflow-hidden group">
-                <CardHeader>
-                  <div className="relative h-48 w-full mb-4">
-                    <Image src={tea.imageUrl} alt={tea.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500"/>
-                  </div>
-                  <CardTitle className="font-headline text-2xl text-primary-foreground">{tea.name}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription>{tea.shortDescription}</CardDescription>
+              <Card key={tea.slug} className="border-0 shadow-none bg-card group overflow-hidden rounded-lg transition-shadow duration-300 hover:shadow-xl">
+                <div className="relative h-80 w-full overflow-hidden">
+                  <Image 
+                    src={tea.imageUrl} 
+                    alt={tea.name} 
+                    fill 
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  />
+                </div>
+                <CardContent className="p-6 text-center">
+                  <CardTitle className="font-headline text-2xl text-foreground">{tea.name}</CardTitle>
+                  <CardDescription className="mt-2">{tea.shortDescription}</CardDescription>
                   <Button asChild variant="link" className="p-0 mt-4 text-accent hover:text-accent/80">
                     <Link href={`/tea-varieties/${tea.slug}`}>Learn More <i className="ri-arrow-right-line ml-2 text-base leading-none"></i></Link>
                   </Button>
@@ -78,16 +81,19 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {products.slice(0, 3).map((product) => (
-              <Card key={product.id} className="bg-card border-border hover:border-accent/50 transition-colors duration-300 overflow-hidden group">
-                <div className="relative h-64 w-full">
-                  <Image src={product.imageUrl} alt={product.name} fill className="object-cover group-hover:scale-105 transition-transform duration-500" />
+              <Card key={product.id} className="border-0 shadow-none bg-card group overflow-hidden rounded-lg transition-shadow duration-300 hover:shadow-xl">
+                <div className="relative h-96 w-full overflow-hidden">
+                  <Image 
+                    src={product.imageUrl} 
+                    alt={product.name} 
+                    fill 
+                    className="object-cover transition-transform duration-500 group-hover:scale-110" 
+                  />
                 </div>
-                <CardHeader>
-                  <CardTitle className="font-headline text-xl">{product.name}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-lg font-semibold text-accent">{product.price}</p>
-                  <Button asChild className="w-full mt-4" variant="filled">
+                <CardContent className="p-6 text-center">
+                  <CardTitle className="font-headline text-xl text-foreground">{product.name}</CardTitle>
+                  <p className="text-lg font-semibold text-muted-foreground mt-2">{product.price}</p>
+                  <Button asChild className="w-full mt-4" variant="outline-dark">
                     <Link href="/store">View Product</Link>
                   </Button>
                 </CardContent>
