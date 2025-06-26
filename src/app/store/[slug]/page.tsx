@@ -1,3 +1,4 @@
+
 'use client';
 
 import { notFound, useRouter } from 'next/navigation';
@@ -27,7 +28,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
 
   return (
     <div className="animate-in fade-in duration-500">
-      <div className="container mx-auto flex items-center justify-between px-4">
+      <div className="container mx-auto flex items-center justify-between">
         <Breadcrumb items={breadcrumbItems} />
         <Button variant="outline-dark" onClick={() => router.back()}>
           <i className="ri-arrow-left-line mr-2" />
@@ -35,7 +36,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
         </Button>
       </div>
 
-      <div className="container mx-auto grid grid-cols-1 items-start gap-12 px-4 py-8 md:grid-cols-2 md:py-12">
+      <div className="container mx-auto grid grid-cols-1 items-start gap-12 py-8 md:grid-cols-2 md:py-12">
         <div className="relative aspect-[3/4] w-full">
           <Image
             src={product.imageUrl}

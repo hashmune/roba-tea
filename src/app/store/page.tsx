@@ -47,7 +47,7 @@ export default function StorePage() {
 
   return (
     <div className="animate-in fade-in duration-500">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto">
         <Breadcrumb items={breadcrumbItems} />
       </div>
 
@@ -62,7 +62,7 @@ export default function StorePage() {
             {storeHeroSlides.map((slide) => (
               <CarouselItem key={slide.title}>
                 <div className="container mx-auto">
-                  <div className="grid grid-cols-1 items-center gap-12 px-4 py-12 md:grid-cols-5 md:py-16">
+                  <div className="grid grid-cols-1 items-center gap-12 py-12 md:grid-cols-5 md:py-16">
                     <div className="text-left md:col-span-2">
                       <p className="mb-2 font-bold uppercase tracking-widest text-muted-foreground">
                         {slide.tag}
@@ -91,7 +91,7 @@ export default function StorePage() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          <div className="container mx-auto flex justify-end px-4 pb-8">
+          <div className="container mx-auto flex justify-end pb-8">
             <div className={cn(
                 buttonVariants({ variant: 'outline-dark', size: 'lg' }),
                 "w-auto p-0 hover:bg-transparent hover:text-inherit"
@@ -110,7 +110,7 @@ export default function StorePage() {
       </section>
 
       <section id="teas" className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="mb-12 text-center">
             <h2 className="font-headline text-3xl font-bold text-foreground">
               Tea Varieties
@@ -125,7 +125,7 @@ export default function StorePage() {
       </section>
       
       <section id="accessories" className="py-16 md:py-24">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto">
           <div className="mb-12 text-center">
             <h2 className="font-headline text-3xl font-bold text-foreground">
               Lifestyle & Accessories
@@ -140,7 +140,7 @@ export default function StorePage() {
       </section>
       
         <section className="py-16">
-            <div className="container mx-auto px-4 max-w-3xl">
+            <div className="container mx-auto max-w-3xl">
                 <Alert>
                     <i className="ri-shopping-bag-line h-4 w-4" />
                     <AlertTitle>In-Store Pickup Only</AlertTitle>
