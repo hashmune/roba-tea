@@ -1,7 +1,7 @@
-
 'use client';
 
 import { useState, useRef } from 'react';
+import { Button } from '@/components/ui/button';
 
 export function VideoPlayer({
     src,
@@ -42,18 +42,20 @@ export function VideoPlayer({
       />
       
       {!isPlaying && (
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            togglePlay();
-          }}
-          aria-label="Play video"
-          className="absolute inset-0 w-full h-full flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors"
-        >
-          <div className="h-24 w-24 rounded-full bg-white text-black flex items-center justify-center hover:bg-white/90 transition-colors">
-            <i className="ri-play-fill text-6xl ml-2"></i>
-          </div>
-        </button>
+        <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors">
+          <Button
+            variant="filled"
+            size="icon"
+            className="h-24 w-24 rounded-full"
+            onClick={(e) => {
+              e.stopPropagation();
+              togglePlay();
+            }}
+            aria-label="Play video"
+          >
+            <i className="ri-play-line text-6xl"></i>
+          </Button>
+        </div>
       )}
     </div>
   );
