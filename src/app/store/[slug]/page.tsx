@@ -56,7 +56,7 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
           
           <div className="mt-8">
             <Button
-              variant="filled"
+              variant="outline-dark"
               size="lg"
               onClick={() => addToBag(product)}
               className="w-full md:w-auto"
