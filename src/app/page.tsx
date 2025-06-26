@@ -105,11 +105,6 @@ export default function Home() {
           <div className="text-center mb-12">
             <p className="text-sm font-bold uppercase text-muted-foreground mb-4">FROM OUR STORE</p>
             <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground tracking-wider">EXPERIENCE THE ROBA TEA</h2>
-            <div className="flex justify-center items-center space-x-1 mt-4">
-              <svg className="w-2.5 h-2.5 text-accent" fill="currentColor" viewBox="0 0 8 8"><path d="M4 0l4 4-4 4-4-4L4 0z"/></svg>
-              <svg className="w-2.5 h-2.5 text-accent" fill="currentColor" viewBox="0 0 8 8"><path d="M4 0l4 4-4 4-4-4L4 0z"/></svg>
-              <svg className="w-2.5 h-2.5 text-accent" fill="currentColor" viewBox="0 0 8 8"><path d="M4 0l4 4-4 4-4-4L4 0z"/></svg>
-            </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
             {experiences.map((experience) => (
