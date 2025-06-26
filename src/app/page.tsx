@@ -7,6 +7,13 @@ import Link from "next/link";
 import { HeroCarousel } from "@/components/shared/hero-carousel";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
 
 export default function Home() {
   return (
@@ -26,23 +33,42 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {teaVarieties.slice(0, 3).map((tea) => (
-              <div key={tea.slug} className="group">
-                <div className="relative aspect-[9/16] w-full overflow-hidden rounded-lg">
-                  <Image 
-                    src={tea.imageUrl} 
-                    alt={tea.name} 
-                    fill 
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                </div>
-                <div className="pt-4 text-center">
-                  <h3 className="font-headline text-xl text-foreground">{tea.name}</h3>
-                </div>
-              </div>
-            ))}
-          </div>
+           <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full"
+          >
+            <CarouselContent>
+              {teaVarieties.map((tea) => (
+                <CarouselItem key={tea.slug} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="group p-4">
+                    <div className="relative aspect-[9/16] w-full overflow-hidden rounded-lg">
+                      <Image 
+                        src={tea.imageUrl} 
+                        alt={tea.name} 
+                        fill 
+                        className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                    </div>
+                    <div className="pt-4">
+                       <div className="flex justify-between items-baseline gap-4">
+                        <h3 className="font-sans text-sm text-foreground uppercase">{tea.name}</h3>
+                        <Badge variant="outline" className={cn('whitespace-nowrap', tea.status === 'Available' ? 'text-accent border-accent' : 'text-muted-foreground')}>
+                          {tea.status.toUpperCase()}
+                        </Badge>
+                      </div>
+                    </div>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+             <div className="flex justify-end gap-2 mt-4">
+              <CarouselPrevious className="static translate-x-0 translate-y-0" />
+              <CarouselNext className="static translate-x-0 translate-y-0" />
+            </div>
+          </Carousel>
         </div>
       </section>
 

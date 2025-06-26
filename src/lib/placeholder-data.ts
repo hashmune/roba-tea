@@ -9,6 +9,7 @@ export type TeaVariety = {
   brewingMethod: string;
   imageUrl: string;
   dataAiHint: string;
+  status: 'Available' | 'Coming Soon';
 };
 
 export type Product = {
@@ -68,7 +69,8 @@ export const teaVarieties: TeaVariety[] = [
     flavorProfile: 'Bold, Robust, Citrus, Spice',
     brewingMethod: 'Steep 1 tsp of tea in 200ml of water at 95°C (203°F) for 3-5 minutes.',
     imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
-    dataAiHint: 'black tea'
+    dataAiHint: 'black tea',
+    status: 'Available',
   },
   {
     slug: 'earl-grey',
@@ -79,7 +81,8 @@ export const teaVarieties: TeaVariety[] = [
     flavorProfile: 'Fragrant, Citrus, Floral, Bergamot',
     brewingMethod: 'Steep 1 tsp of tea in 200ml of water at 90°C (194°F) for 3 minutes.',
     imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
-    dataAiHint: 'earl grey'
+    dataAiHint: 'earl grey',
+    status: 'Coming Soon',
   },
   {
     slug: 'green-tea',
@@ -90,7 +93,8 @@ export const teaVarieties: TeaVariety[] = [
     flavorProfile: 'Delicate, Grassy, Sweet, Refreshing',
     brewingMethod: 'Steep 1 tsp of tea in 200ml of water at 80°C (176°F) for 2-3 minutes.',
     imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
-    dataAiHint: 'green tea'
+    dataAiHint: 'green tea',
+    status: 'Coming Soon',
   },
   {
     slug: 'white-tea',
@@ -101,7 +105,8 @@ export const teaVarieties: TeaVariety[] = [
     flavorProfile: 'Subtle, Honey, Melon, Smooth',
     brewingMethod: 'Steep 2 tsp of tea in 200ml of water at 75°C (167°F) for 5-7 minutes.',
     imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
-    dataAiHint: 'white tea'
+    dataAiHint: 'white tea',
+    status: 'Coming Soon',
   }
 ];
 
