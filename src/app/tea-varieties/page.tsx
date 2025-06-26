@@ -12,8 +12,8 @@ export default function TeaVarietiesPage() {
   const handleScrollTo = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      // The offset is to account for the sticky header (88px) and nav stripe height
-      const yOffset = -270; 
+      // Offset for the sticky header (88px) + 24px gap
+      const yOffset = -112; 
       const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
       window.scrollTo({top: y, behavior: 'smooth'});
     }
@@ -25,7 +25,7 @@ export default function TeaVarietiesPage() {
     const onScroll = () => {
       const scrollPosition = window.pageYOffset;
       // Offset to trigger active state when section is near the top of the viewport
-      const offset = 280; 
+      const offset = 120;
 
       for (let i = sections.length - 1; i >= 0; i--) {
         const section = sections[i];
@@ -57,7 +57,7 @@ export default function TeaVarietiesPage() {
       </div>
 
       {/* Category Navigation Strip */}
-      <div className="sticky top-[88px] z-40 bg-secondary/10 py-4 border-b">
+      <div className="bg-secondary/10 py-4 border-b">
         <div className="container mx-auto px-4">
             <div className="flex items-start justify-start md:justify-center gap-x-8 overflow-x-auto">
                 {teaCollections.map((collection) => (
@@ -104,7 +104,7 @@ export default function TeaVarietiesPage() {
       <div className="container mx-auto px-4 py-16">
         <div className="space-y-24">
           {teaCollections.map((collection) => (
-            <section key={collection.id} id={collection.id} className="scroll-mt-48">
+            <section key={collection.id} id={collection.id} className="scroll-mt-28">
               <div className="max-w-3xl">
                 <h2 className="text-3xl font-bold font-headline text-foreground">{collection.title}</h2>
                 <p className="mt-2 text-muted-foreground">{collection.description}</p>
