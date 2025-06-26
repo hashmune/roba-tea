@@ -4,6 +4,8 @@
 import { teaCollections } from '@/lib/placeholder-data';
 import Image from 'next/image';
 import { Breadcrumb } from '@/components/shared/breadcrumb';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 export default function TeaVarietiesPage() {
   const handleScrollTo = (id: string) => {
@@ -59,7 +61,7 @@ export default function TeaVarietiesPage() {
 
       <div className="container mx-auto px-4">
         {/* Page Title & Introduction */}
-        <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-start max-w-6xl pt-12 md:pt-16">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-start max-w-6xl mx-auto pt-12 md:pt-16">
           <h1 className="text-4xl md:text-5xl font-bold font-headline uppercase tracking-wider text-foreground">
             TEA VARIETIES
           </h1>
@@ -78,6 +80,11 @@ export default function TeaVarietiesPage() {
               <div className="max-w-3xl">
                 <h2 className="text-3xl font-bold font-headline text-foreground">{collection.title}</h2>
                 <p className="mt-2 text-muted-foreground">{collection.description}</p>
+                <div className="mt-6">
+                  <Button asChild variant="outline-dark" size="lg">
+                    <Link href="/store">Explore More</Link>
+                  </Button>
+                </div>
               </div>
 
               <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
