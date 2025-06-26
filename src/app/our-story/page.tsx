@@ -149,11 +149,11 @@ export default function OurStoryPage() {
               )}>
                   <CarouselPrevious 
                       variant="ghost" 
-                      className="static w-auto h-full px-4 rounded-none translate-x-0 translate-y-0 hover:bg-transparent hover:text-inherit disabled:opacity-75"
+                      className="static w-auto h-full px-4 rounded-none translate-x-0 translate-y-0 hover:bg-transparent hover:text-inherit"
                   />
                   <CarouselNext 
                       variant="ghost" 
-                      className="static w-auto h-full px-4 rounded-none translate-x-0 translate-y-0 hover:bg-transparent hover:text-inherit disabled:opacity-75"
+                      className="static w-auto h-full px-4 rounded-none translate-x-0 translate-y-0 hover:bg-transparent hover:text-inherit"
                   />
               </div>
             </div>
@@ -220,11 +220,11 @@ export default function OurStoryPage() {
                 )}>
                     <CarouselPrevious 
                         variant="ghost" 
-                        className="static w-auto h-full px-4 rounded-none translate-x-0 translate-y-0 hover:bg-transparent hover:text-inherit disabled:opacity-75"
+                        className="static w-auto h-full px-4 rounded-none translate-x-0 translate-y-0 hover:bg-transparent hover:text-inherit"
                     />
                     <CarouselNext 
                         variant="ghost" 
-                        className="static w-auto h-full px-4 rounded-none translate-x-0 translate-y-0 hover:bg-transparent hover:text-inherit disabled:opacity-75"
+                        className="static w-auto h-full px-4 rounded-none translate-x-0 translate-y-0 hover:bg-transparent hover:text-inherit"
                     />
                 </div>
             </div>
