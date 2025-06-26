@@ -1,5 +1,5 @@
 
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 import { teaVarieties, products } from "@/lib/placeholder-data";
 import Image from "next/image";
@@ -64,9 +64,20 @@ export default function Home() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-             <div className="flex justify-end gap-2 mt-4">
-              <CarouselPrevious variant="outline-dark" className="static translate-x-0 translate-y-0" />
-              <CarouselNext variant="outline-dark" className="static translate-x-0 translate-y-0" />
+             <div className="flex justify-end mt-4">
+                <div className={cn(
+                    buttonVariants({ variant: 'outline-dark', size: 'lg' }),
+                    "w-auto p-0 hover:bg-transparent hover:text-inherit"
+                )}>
+                    <CarouselPrevious 
+                        variant="ghost" 
+                        className="static w-auto h-full px-4 rounded-none translate-x-0 translate-y-0 hover:bg-transparent hover:text-inherit disabled:opacity-75"
+                    />
+                    <CarouselNext 
+                        variant="ghost" 
+                        className="static w-auto h-full px-4 rounded-none translate-x-0 translate-y-0 hover:bg-transparent hover:text-inherit disabled:opacity-75"
+                    />
+                </div>
             </div>
           </Carousel>
         </div>
