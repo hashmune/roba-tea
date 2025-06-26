@@ -26,7 +26,7 @@ export function VideoPlayer({
 
   return (
     <div 
-      className="relative aspect-video w-full max-w-5xl mx-auto rounded-lg overflow-hidden shadow-2xl group"
+      className="relative aspect-video w-full max-w-5xl mx-auto rounded-lg overflow-hidden group"
     >
       <video
         ref={videoRef}
@@ -50,7 +50,7 @@ export function VideoPlayer({
           aria-label="Play video"
           className="absolute inset-0 w-full h-full flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors"
         >
-          <div className="h-24 w-24 rounded-full bg-white/30 backdrop-blur-sm border-2 border-white text-white flex items-center justify-center hover:bg-white/50 transition-colors">
+          <div className="h-24 w-24 rounded-full bg-white text-black flex items-center justify-center hover:bg-white/90 transition-colors">
             <i className="ri-play-fill text-6xl ml-2"></i>
           </div>
         </button>

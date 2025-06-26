@@ -85,11 +85,18 @@ export default function Home() {
       </section>
 
       <section className="py-16 md:py-24 bg-secondary/10">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 text-center">
+          <p className="text-sm font-bold uppercase tracking-widest text-accent mb-4">HEART AND HOME</p>
+          <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground mb-8">Welcome to The Roba Estate</h2>
           <VideoPlayer 
              src="https://videos.pexels.com/video-files/3209828/3209828-hd_1920_1080_25fps.mp4"
              poster="https://placehold.co/1920x1080.png"
           />
+          <div className="mt-8">
+            <Button asChild variant="outline-dark" size="lg">
+              <Link href="/our-story">Discover estate</Link>
+            </Button>
+          </div>
         </div>
       </section>
 
