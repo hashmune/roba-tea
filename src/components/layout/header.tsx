@@ -66,7 +66,7 @@ export function Header() {
                     <div className="mt-12 text-xs text-muted-foreground space-y-4 px-8 sm:px-12">
                         <div className="flex items-center space-x-4">
                             <Link href="#" className="text-foreground hover:text-secondary">
-                                <i className="ri-facebook-fill text-lg"></i>
+                                <i className="ri-facebook-box-line text-lg"></i>
                             </Link>
                             <Link href="#" className="text-foreground hover:text-secondary">
                                 <i className="ri-instagram-line text-lg"></i>

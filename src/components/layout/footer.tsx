@@ -62,7 +62,7 @@ export function Footer() {
             </Link>
             <div className="flex items-center space-x-4">
                 <Link href="#" className="text-muted-foreground hover:text-primary">
-                  <i className="ri-facebook-fill text-xl"></i>
+                  <i className="ri-facebook-box-line text-xl"></i>
                 </Link>
                 <Link href="#" className="text-muted-foreground hover:text-primary">
                   <i className="ri-instagram-line text-xl"></i>
