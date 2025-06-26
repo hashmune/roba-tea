@@ -11,58 +11,6 @@ import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 
 
-// A helper component for the alternating sections
-const ContentImageSection = ({
-  imageSrc,
-  imageHint,
-  imageAlt,
-  title,
-  subtitle,
-  description,
-  imagePosition = 'left',
-}: {
-  imageSrc: string;
-  imageHint: string;
-  imageAlt: string;
-  title: string;
-  subtitle: string;
-  description: string;
-  imagePosition?: 'left' | 'right';
-}) => {
-  const imageDiv = (
-    <div
-      className={cn(
-        "relative h-[40vh] md:h-auto",
-        imagePosition === 'right' && 'md:order-last'
-      )}
-    >
-      <Image
-        src={imageSrc}
-        data-ai-hint={imageHint}
-        alt={imageAlt}
-        fill
-        className="object-cover"
-      />
-    </div>
-  );
-
-  const textDiv = (
-    <div className="flex flex-col justify-center p-8 md:p-16">
-      <p className="mb-2 text-sm font-bold uppercase tracking-widest text-muted-foreground">{subtitle}</p>
-      <h3 className="mb-4 text-3xl font-bold font-headline text-foreground">{title}</h3>
-      <p className="text-muted-foreground">{description}</p>
-    </div>
-  );
-
-  return (
-    <section className="grid grid-cols-1 bg-secondary/5 md:grid-cols-2">
-      {imageDiv}
-      {textDiv}
-    </section>
-  );
-};
-
-
 export default function OurStoryPage() {
   const breadcrumbItems = [
     { label: 'Home', href: '/' },
@@ -172,7 +120,7 @@ export default function OurStoryPage() {
             <CarouselContent>
               {sixPillars.map((pillar) => (
                 <CarouselItem key={pillar.title} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="group p-4">
+                  <div className="group p-4 h-full">
                     <div className="relative aspect-[4/5] w-full overflow-hidden">
                       <Image 
                         src={pillar.imageUrl} 
@@ -182,8 +130,9 @@ export default function OurStoryPage() {
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                     </div>
-                    <div className="pt-4 text-center">
+                    <div className="pt-4 text-left">
                       <h3 className="font-headline text-lg font-bold text-foreground uppercase tracking-wider">{pillar.title}</h3>
+                      <p className="text-muted-foreground mt-2 text-sm">{pillar.description}</p>
                     </div>
                   </div>
                 </CarouselItem>
@@ -208,35 +157,6 @@ export default function OurStoryPage() {
         </div>
       </section>
 
-      {/* Alternating Content Sections */}
-      <ContentImageSection
-        imageSrc="https://images.unsplash.com/photo-1491497895121-1334fc14d8c9"
-        imageHint="tea estate"
-        imageAlt="The Roba Tea Estate house"
-        subtitle="PILLAR 1"
-        title="THE ESTATE"
-        description="Our estate is the heart of our operations, a place of extraordinary natural beauty and biodiversity. The unique microclimate and rich soil provide the perfect conditions for growing tea of the highest quality."
-        imagePosition="left"
-      />
-      <ContentImageSection
-        imageSrc="https://images.unsplash.com/photo-1491497895121-1334fc14d8c9"
-        imageHint="tea leaves processing"
-        imageAlt="Artisanal tea leaf processing"
-        subtitle="PILLAR 2"
-        title="ARTISANAL CRAFT"
-        description="We honor time-tested traditions of tea craftsmanship. Our leaves are meticulously hand-plucked and processed by skilled artisans who have perfected their craft over generations, ensuring every batch meets our exacting standards."
-        imagePosition="right"
-      />
-      <ContentImageSection
-        imageSrc="https://images.unsplash.com/photo-1491497895121-1334fc14d8c9"
-        imageHint="sustainable farming"
-        imageAlt="Lush, sustainable tea fields"
-        subtitle="PILLAR 3"
-        title="SUSTAINABILITY"
-        description="We are committed to sustainable practices that protect our environment and support our local community. From water conservation to organic farming, we strive to be responsible stewards of the land."
-        imagePosition="left"
-      />
-      
       {/* Our Signature Teas section */}
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">

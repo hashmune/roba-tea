@@ -1,5 +1,4 @@
 
-
 export type TeaVariety = {
   slug: string;
   name: string;
@@ -58,6 +57,7 @@ export type TeaCollection = {
 
 export type SixPillar = {
   title: string;
+  description: string;
   imageUrl: string;
   dataAiHint: string;
 }
@@ -65,31 +65,37 @@ export type SixPillar = {
 export const sixPillars: SixPillar[] = [
   {
     title: 'The Estate',
+    description: "Our estate is the heart of our operations, a place of extraordinary natural beauty and biodiversity. The unique microclimate and rich soil provide the perfect conditions for growing tea of the highest quality.",
     imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
     dataAiHint: 'tea estate house',
   },
   {
     title: 'Artisanal Craft',
+    description: "We honor time-tested traditions of tea craftsmanship. Our leaves are meticulously hand-plucked and processed by skilled artisans who have perfected their craft over generations.",
     imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
     dataAiHint: 'tea processing',
   },
   {
     title: 'Exceptional Quality',
+    description: 'From leaf to cup, our commitment to quality is unwavering. We meticulously grade and taste each batch to ensure a consistently exceptional experience.',
     imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
     dataAiHint: 'tea tasting',
   },
   {
     title: 'Sustainability',
+    description: "We are committed to sustainable practices that protect our environment. From water conservation to organic farming, we strive to be responsible stewards of the land.",
     imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
     dataAiHint: 'nature conservation',
   },
   {
     title: 'Community',
+    description: "We believe in nurturing the community that nurtures our tea. We are dedicated to fair labor practices and investing in the well-being of our estate families.",
     imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
     dataAiHint: 'community workers',
   },
   {
     title: 'The Perfect Cup',
+    description: "Our ultimate goal is to deliver the perfect cup of tea. We provide guidance on brewing to help you unlock the full flavor and aroma of our exceptional leaves.",
     imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
     dataAiHint: 'cup of tea',
   },
