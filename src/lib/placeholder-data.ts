@@ -377,3 +377,43 @@ export const products: Product[] = [
     category: 'Accessories'
   }
 ];
+
+export type StoreHeroSlide = {
+  tag: string;
+  title: string;
+  description: string;
+  buttonText: string;
+  buttonLink: string;
+  imageUrl: string;
+  dataAiHint: string;
+};
+
+export const storeHeroSlides: StoreHeroSlide[] = [
+  {
+    tag: 'THE ROBA COLLECTION',
+    title: 'A Journey in Every Sip',
+    description: 'Explore our curated selection of premium Ceylon teas and handcrafted accessories. Each product is a testament to our dedication to quality, tradition, and the fine art of tea.',
+    buttonText: 'Shop Teas',
+    buttonLink: '#teas',
+    imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
+    dataAiHint: 'luxury tea bottle'
+  },
+  {
+    tag: 'LIFESTYLE & ACCESSORIES',
+    title: 'Enhance Your Ritual',
+    description: 'Discover our handcrafted accessories, designed to elevate your tea experience from brewing to serving.',
+    buttonText: 'Shop Accessories',
+    buttonLink: '#accessories',
+    imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
+    dataAiHint: 'teapot teacup'
+  },
+  {
+    tag: 'THE PERFECT GIFT',
+    title: 'Share the Experience',
+    description: 'Find the perfect gift for any tea lover with our curated discovery kits and elegant gift sets.',
+    buttonText: 'Explore Gifts',
+    buttonLink: '/store',
+    imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
+    dataAiHint: 'tea gift set'
+  }
+];

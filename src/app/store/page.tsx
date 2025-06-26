@@ -3,12 +3,13 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { products } from '@/lib/placeholder-data';
+import { products, storeHeroSlides } from '@/lib/placeholder-data';
 import { Breadcrumb } from '@/components/shared/breadcrumb';
-import { Button } from '@/components/ui/button';
+import { Button, buttonVariants } from '@/components/ui/button';
 import { useShoppingBag } from '@/hooks/use-shopping-bag';
-import { formatCurrency } from '@/lib/utils';
+import { formatCurrency, cn } from '@/lib/utils';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 function ProductCard({ product }: { product: typeof products[0] }) {
   const { addToBag } = useShoppingBag();
@@ -50,32 +51,60 @@ export default function StorePage() {
         <Breadcrumb items={breadcrumbItems} />
       </div>
 
-      <section className="container mx-auto grid grid-cols-1 items-center gap-8 px-4 py-12 md:grid-cols-2 md:py-16">
-        <div className="text-left">
-          <p className="mb-2 font-bold uppercase tracking-widest text-muted-foreground">
-            THE ROBA COLLECTION
-          </p>
-          <h1 className="mb-4 font-headline text-4xl font-bold uppercase text-foreground md:text-5xl">
-            A Journey in Every Sip
-          </h1>
-          <p className="mb-6 max-w-lg text-muted-foreground">
-            Explore our curated selection of premium Ceylon teas and handcrafted
-            accessories. Each product is a testament to our dedication to
-            quality, tradition, and the fine art of tea.
-          </p>
-          <Button variant="outline-dark" size="lg" asChild>
-            <Link href="#teas">Shop Now</Link>
-          </Button>
-        </div>
-        <div className="relative aspect-[4/3] w-full">
-          <Image
-            src="https://images.unsplash.com/photo-1491497895121-1334fc14d8c9"
-            alt="A featured tea product"
-            data-ai-hint="luxury tea bottle"
-            fill
-            className="object-cover"
-          />
-        </div>
+      <section>
+        <Carousel
+          opts={{
+            loop: false,
+          }}
+          className="w-full"
+        >
+          <CarouselContent>
+            {storeHeroSlides.map((slide) => (
+              <CarouselItem key={slide.title}>
+                <div className="container mx-auto grid grid-cols-1 items-center gap-8 px-4 py-12 md:grid-cols-2 md:py-16">
+                  <div className="text-left">
+                    <p className="mb-2 font-bold uppercase tracking-widest text-muted-foreground">
+                      {slide.tag}
+                    </p>
+                    <h1 className="mb-4 font-headline text-4xl font-bold uppercase text-foreground md:text-5xl">
+                      {slide.title}
+                    </h1>
+                    <p className="mb-6 max-w-lg text-muted-foreground">
+                      {slide.description}
+                    </p>
+                    <Button variant="outline-dark" size="lg" asChild>
+                      <Link href={slide.buttonLink}>{slide.buttonText}</Link>
+                    </Button>
+                  </div>
+                  <div className="relative aspect-[4/3] w-full">
+                    <Image
+                      src={slide.imageUrl}
+                      alt={slide.title}
+                      data-ai-hint={slide.dataAiHint}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <div className="container mx-auto flex justify-start px-4 pb-8 -mt-8">
+            <div className={cn(
+                buttonVariants({ variant: 'outline-dark', size: 'lg' }),
+                "w-auto p-0 hover:bg-transparent hover:text-inherit"
+            )}>
+              <CarouselPrevious 
+                variant="ghost" 
+                className="static w-auto h-full px-4 rounded-none translate-x-0 translate-y-0 hover:bg-transparent hover:text-inherit"
+              />
+              <CarouselNext 
+                variant="ghost" 
+                className="static w-auto h-full px-4 rounded-none translate-x-0 translate-y-0 hover:bg-transparent hover:text-inherit"
+              />
+            </div>
+          </div>
+        </Carousel>
       </section>
 
       <section id="teas" className="py-16 md:py-24">
@@ -93,7 +122,7 @@ export default function StorePage() {
         </div>
       </section>
       
-      <section className="py-16 md:py-24">
+      <section id="accessories" className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="mb-12 text-center">
             <h2 className="font-headline text-3xl font-bold text-foreground">
