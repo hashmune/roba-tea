@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -35,7 +34,7 @@ export function Header() {
             <SheetTrigger asChild>
               <Button variant="ghost" className="flex items-center gap-2 pl-0 hover:bg-transparent text-foreground hover:text-secondary">
                   <i className="ri-menu-4-line text-2xl leading-none"></i>
-                  <span>Menu</span>
+                  <span className="hidden md:inline">Menu</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="w-full max-w-none p-0 sm:max-w-none">
