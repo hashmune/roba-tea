@@ -1,7 +1,7 @@
 
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
-import { teaVarieties, products, experiences } from "@/lib/placeholder-data";
+import { teaVarieties, products, experiences, type ExperienceCard } from "@/lib/placeholder-data";
 import Image from "next/image";
 import Link from "next/link";
 import { HeroCarousel } from "@/components/shared/hero-carousel";
@@ -15,6 +15,29 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 import { VideoPlayer } from "@/components/shared/video-player";
+
+const ExperienceDisplayItem = ({ experience }: { experience: ExperienceCard }) => (
+  <Link 
+    href={experience.link} 
+    key={experience.title} 
+    className="group block"
+  >
+    <div className="relative aspect-square w-full overflow-hidden">
+      <Image 
+        src={experience.imageUrl} 
+        alt={experience.title} 
+        data-ai-hint={experience.dataAiHint}
+        fill 
+        className="object-cover transition-transform duration-500 group-hover:scale-110" 
+      />
+    </div>
+    <div className="pt-4">
+      <p className="text-xs font-light text-muted-foreground uppercase tracking-widest">{experience.category}</p>
+      <h3 className="font-headline text-lg font-bold text-foreground uppercase tracking-wider">{experience.title}</h3>
+    </div>
+  </Link>
+);
+
 
 export default function Home() {
   return (
@@ -106,31 +129,21 @@ export default function Home() {
             <p className="text-sm font-bold uppercase text-muted-foreground mb-4">FROM OUR STORE</p>
             <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground tracking-wider">EXPERIENCE THE ROBA TEA</h2>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
-            {experiences.map((experience, index) => (
-              <Link 
-                href={experience.link} 
-                key={experience.title} 
-                className={cn(
-                  "group block",
-                  index % 2 !== 0 && "md:mt-16"
-                )}
-              >
-                <div className="relative aspect-square w-full overflow-hidden">
-                  <Image 
-                    src={experience.imageUrl} 
-                    alt={experience.title} 
-                    data-ai-hint={experience.dataAiHint}
-                    fill 
-                    className="object-cover transition-transform duration-500 group-hover:scale-110" 
-                  />
-                </div>
-                <div className="pt-4">
-                  <p className="text-xs font-light text-muted-foreground uppercase tracking-widest">{experience.category}</p>
-                  <h3 className="font-headline text-lg font-bold text-foreground uppercase tracking-wider">{experience.title}</h3>
-                </div>
-              </Link>
-            ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8">
+            <div className="flex flex-col gap-y-12">
+              {experiences
+                .filter((_, index) => index % 2 === 0)
+                .map((experience) => (
+                  <ExperienceDisplayItem experience={experience} key={experience.title} />
+                ))}
+            </div>
+            <div className="flex flex-col gap-y-12 md:mt-16">
+               {experiences
+                .filter((_, index) => index % 2 !== 0)
+                .map((experience) => (
+                  <ExperienceDisplayItem experience={experience} key={experience.title} />
+                ))}
+            </div>
           </div>
         </div>
       </section>
