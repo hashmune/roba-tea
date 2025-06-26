@@ -34,7 +34,7 @@ export default function TeaVarietiesPage() {
       {/* Category Navigation Strip */}
       <div className="bg-secondary/10 py-4 border-y">
         <div className="container mx-auto px-4">
-            <div className="flex items-start justify-start md:justify-center gap-x-8 overflow-x-auto">
+            <div className="flex items-start justify-center gap-x-8 overflow-x-auto">
                 {teaCollections.map((collection) => (
                     <button
                         key={collection.id}
@@ -100,9 +100,7 @@ export default function TeaVarietiesPage() {
                   >
                     <div
                       className={cn(
-                        "relative w-full overflow-hidden",
-                        // The banner (index 4) has a different aspect ratio to align its height with the card next to it.
-                        index === 4 ? "aspect-[3/2]" : "aspect-[3/4]"
+                        "relative w-full overflow-hidden h-[50vh]"
                       )}
                     >
                       <Image
