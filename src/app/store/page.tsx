@@ -9,7 +9,6 @@ import { Button } from '@/components/ui/button';
 import { useShoppingBag } from '@/hooks/use-shopping-bag';
 import { formatCurrency } from '@/lib/utils';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
-import { ShoppingBagIcon } from 'lucide-react';
 
 function ProductCard({ product }: { product: typeof products[0] }) {
   const { addToBag } = useShoppingBag();
@@ -112,7 +111,7 @@ export default function StorePage() {
         <section className="py-16">
             <div className="container mx-auto px-4 max-w-3xl">
                 <Alert>
-                    <ShoppingBagIcon className="h-4 w-4" />
+                    <i className="ri-shopping-bag-line h-4 w-4" />
                     <AlertTitle>In-Store Pickup Only</AlertTitle>
                     <AlertDescription>
                         Please note that all online orders are for pickup at our estate store. Your order will be ready for collection approximately 15 minutes after payment is confirmed.
