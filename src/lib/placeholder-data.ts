@@ -57,6 +57,18 @@ export type TeaCollection = {
 
 export const teaCollections: TeaCollection[] = [
   {
+    id: 'timeless-collections',
+    title: 'Timeless Collections',
+    description: 'An exquisite selection of our most cherished and enduring teas, celebrated for their consistent quality and classic character.',
+    navImage: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
+    dataAiHintNav: 'classic tea',
+    products: [
+      { name: 'Heritage Black', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'black tea' },
+      { name: 'Golden Pekoe', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'tea leaves' },
+      { name: 'Ancient Green', imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9', dataAiHint: 'green tea' },
+    ],
+  },
+  {
     id: 'classic-range',
     title: 'Classic Range',
     description: 'Our signature blends, time-tested and adored.',
