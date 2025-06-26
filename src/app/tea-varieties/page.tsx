@@ -3,29 +3,31 @@
 
 import { teaCollections } from '@/lib/placeholder-data';
 import Image from 'next/image';
-import Link from 'next/link';
 import { Button } from '@/components/ui/button';
+import { Breadcrumb } from '@/components/shared/breadcrumb';
 
 export default function TeaVarietiesPage() {
   
   const handleScroll = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // The offset is to account for the sticky header height
+      const yOffset = -120; 
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({top: y, behavior: 'smooth'});
     }
   };
+
+  const breadcrumbItems = [
+    { label: 'Home', href: '/' },
+    { label: 'Tea Varieties' },
+  ];
 
   return (
     <div className="animate-in fade-in duration-500">
       <div className="container mx-auto px-4">
         {/* Breadcrumbs */}
-        <nav className="py-8 text-sm">
-          <Link href="/" className="text-muted-foreground hover:text-primary">
-            Home
-          </Link>
-          <span className="mx-2 text-muted-foreground">/</span>
-          <span className="text-foreground">Tea Varieties</span>
-        </nav>
+        <Breadcrumb items={breadcrumbItems} />
 
         {/* Page Title & Introduction */}
         <div className="text-center max-w-3xl mx-auto py-12 md:py-16">
