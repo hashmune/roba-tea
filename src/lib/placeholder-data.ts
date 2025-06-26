@@ -390,30 +390,21 @@ export type StoreHeroSlide = {
 
 export const storeHeroSlides: StoreHeroSlide[] = [
   {
-    tag: 'THE ROBA COLLECTION',
-    title: 'A Journey in Every Sip',
-    description: 'Explore our curated selection of premium Ceylon teas and handcrafted accessories. Each product is a testament to our dedication to quality, tradition, and the fine art of tea.',
-    buttonText: 'Shop Teas',
-    buttonLink: '#teas',
+    tag: 'FEATURED TEA',
+    title: 'Silver Tips White Tea Caddy (50g)',
+    description: 'An exclusive 50g caddy of our rare and exquisite Silver Tips White Tea. An exquisite and rare tea with subtle notes of honey and melon.',
+    buttonText: 'Discover Product',
+    buttonLink: '/store/silver-tips-white-tea-caddy',
     imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
-    dataAiHint: 'luxury tea bottle'
+    dataAiHint: 'luxury tea'
   },
   {
-    tag: 'LIFESTYLE & ACCESSORIES',
-    title: 'Enhance Your Ritual',
-    description: 'Discover our handcrafted accessories, designed to elevate your tea experience from brewing to serving.',
-    buttonText: 'Shop Accessories',
-    buttonLink: '#accessories',
+    tag: 'FEATURED ACCESSORY',
+    title: 'Artisan Tea Pot',
+    description: 'A beautifully crafted ceramic teapot, designed for the perfect brew.',
+    buttonText: 'Discover Product',
+    buttonLink: '/store/artisan-tea-pot',
     imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
-    dataAiHint: 'teapot teacup'
-  },
-  {
-    tag: 'THE PERFECT GIFT',
-    title: 'Share the Experience',
-    description: 'Find the perfect gift for any tea lover with our curated discovery kits and elegant gift sets.',
-    buttonText: 'Explore Gifts',
-    buttonLink: '/store',
-    imageUrl: 'https://images.unsplash.com/photo-1491497895121-1334fc14d8c9',
-    dataAiHint: 'tea gift set'
+    dataAiHint: 'teapot'
   }
 ];

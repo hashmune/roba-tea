@@ -61,35 +61,37 @@ export default function StorePage() {
           <CarouselContent>
             {storeHeroSlides.map((slide) => (
               <CarouselItem key={slide.title}>
-                <div className="container mx-auto grid grid-cols-1 items-center gap-8 px-4 py-12 md:grid-cols-2 md:py-16">
-                  <div className="text-left">
-                    <p className="mb-2 font-bold uppercase tracking-widest text-muted-foreground">
-                      {slide.tag}
-                    </p>
-                    <h1 className="mb-4 font-headline text-4xl font-bold uppercase text-foreground md:text-5xl">
-                      {slide.title}
-                    </h1>
-                    <p className="mb-6 max-w-lg text-muted-foreground">
-                      {slide.description}
-                    </p>
-                    <Button variant="outline-dark" size="lg" asChild>
-                      <Link href={slide.buttonLink}>{slide.buttonText}</Link>
-                    </Button>
-                  </div>
-                  <div className="relative aspect-[4/3] w-full">
-                    <Image
-                      src={slide.imageUrl}
-                      alt={slide.title}
-                      data-ai-hint={slide.dataAiHint}
-                      fill
-                      className="object-cover"
-                    />
+                <div className="container mx-auto">
+                  <div className="grid grid-cols-1 items-center gap-12 px-4 py-12 md:grid-cols-5 md:py-16">
+                    <div className="text-left md:col-span-2">
+                      <p className="mb-2 font-bold uppercase tracking-widest text-muted-foreground">
+                        {slide.tag}
+                      </p>
+                      <h1 className="mb-4 font-headline text-4xl font-bold uppercase text-foreground md:text-5xl">
+                        {slide.title}
+                      </h1>
+                      <p className="mb-6 max-w-lg text-muted-foreground">
+                        {slide.description}
+                      </p>
+                      <Button variant="outline-dark" size="lg" asChild>
+                        <Link href={slide.buttonLink}>{slide.buttonText}</Link>
+                      </Button>
+                    </div>
+                    <div className="relative aspect-[4/3] w-full md:col-span-3">
+                      <Image
+                        src={slide.imageUrl}
+                        alt={slide.title}
+                        data-ai-hint={slide.dataAiHint}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
                   </div>
                 </div>
               </CarouselItem>
             ))}
           </CarouselContent>
-          <div className="container mx-auto flex justify-start px-4 pb-8 -mt-8">
+          <div className="container mx-auto flex justify-end px-4 pb-8">
             <div className={cn(
                 buttonVariants({ variant: 'outline-dark', size: 'lg' }),
                 "w-auto p-0 hover:bg-transparent hover:text-inherit"
