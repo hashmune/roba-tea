@@ -14,7 +14,7 @@ function ProductCard({ product }: { product: typeof products[0] }) {
   const { addToBag } = useShoppingBag();
 
   return (
-    <div className="group text-center">
+    <div className="group text-left">
       <div className="relative mb-4">
         <Link href={`/store/${product.slug}`}>
             <div className="relative aspect-[3/4] w-full overflow-hidden">
@@ -85,7 +85,7 @@ export default function StorePage() {
               Tea Varieties
             </h2>
           </div>
-          <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
             {teas.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
@@ -93,14 +93,14 @@ export default function StorePage() {
         </div>
       </section>
       
-      <section className="py-16 md:py-24 bg-secondary/5">
+      <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="mb-12 text-center">
             <h2 className="font-headline text-3xl font-bold text-foreground">
               Lifestyle & Accessories
             </h2>
           </div>
-          <div className="grid grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
             {accessories.map((product) => (
               <ProductCard key={product.id} product={product} />
             ))}
