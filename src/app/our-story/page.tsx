@@ -243,13 +243,17 @@ export default function OurStoryPage() {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-black/40" />
-        <div className="relative z-10 flex h-full flex-col items-center justify-center text-center text-white">
-          <h2 className="mb-6 text-3xl font-bold uppercase tracking-tight md:text-4xl">
-            Book An Estate Experience
-          </h2>
-          <Button asChild size="lg" variant="outline-light">
-            <Link href="/find-a-store">Explore</Link>
-          </Button>
+        <div className="relative z-10 flex h-full items-end justify-start text-left text-white">
+          <div className="container mx-auto px-4 pb-16 md:pb-24">
+            <div className="max-w-2xl">
+              <h2 className="mb-6 text-3xl font-bold uppercase tracking-tight md:text-4xl">
+                Book An Estate Experience
+              </h2>
+              <Button asChild size="lg" variant="outline-light">
+                <Link href="/find-a-store">Explore</Link>
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
