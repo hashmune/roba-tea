@@ -26,7 +26,7 @@ export function VideoPlayer({
 
   return (
     <div 
-      className="relative aspect-video w-full max-w-5xl mx-auto rounded-lg overflow-hidden group"
+      className="relative aspect-video w-full max-w-5xl mx-auto rounded-sm overflow-hidden group"
     >
       <video
         ref={videoRef}
@@ -46,14 +46,14 @@ export function VideoPlayer({
           <Button
             variant="filled"
             size="icon"
-            className="h-[52px] w-[52px] rounded-full"
+            className="h-[44px] w-[44px] rounded-tl-[40px] rounded-tr-[12px] rounded-br-[40px] rounded-bl-[40px]"
             onClick={(e) => {
               e.stopPropagation();
               togglePlay();
             }}
             aria-label="Play video"
           >
-            <i className="ri-play-line text-3xl"></i>
+            <i className="ri-play-line text-2xl"></i>
           </Button>
         </div>
       )}

@@ -10,9 +10,9 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        filled: "bg-white text-black hover:bg-secondary hover:text-white rounded-tl-[40px] rounded-tr-[6px] rounded-br-[20px] rounded-bl-[40px]",
-        'outline-light': "border-2 border-white bg-transparent text-white hover:bg-white hover:text-black rounded-tl-[40px] rounded-tr-[6px] rounded-br-[20px] rounded-bl-[40px]",
-        'outline-dark': "border-2 border-black bg-transparent text-black hover:bg-black hover:text-white rounded-tl-[40px] rounded-tr-[6px] rounded-br-[20px] rounded-bl-[40px]",
+        filled: "bg-white text-black hover:bg-secondary hover:text-white rounded-tl-[40px] rounded-tr-[12px] rounded-br-[40px] rounded-bl-[40px]",
+        'outline-light': "border-2 border-white bg-transparent text-white hover:bg-white hover:text-black rounded-tl-[40px] rounded-tr-[12px] rounded-br-[40px] rounded-bl-[40px]",
+        'outline-dark': "border-2 border-black bg-transparent text-black hover:bg-black hover:text-white rounded-tl-[40px] rounded-tr-[12px] rounded-br-[40px] rounded-bl-[40px]",
         ghost: "text-foreground bg-transparent hover:text-secondary-foreground hover:bg-secondary",
         link: "text-primary underline-offset-4 hover:underline",
       },

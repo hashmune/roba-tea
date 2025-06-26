@@ -31,6 +31,45 @@ export type HeroSlide = {
   dataAiHint: string;
 };
 
+export type ExperienceCard = {
+  category: string;
+  title: string;
+  imageUrl: string;
+  dataAiHint: string;
+  link: string;
+};
+
+export const experiences: ExperienceCard[] = [
+  {
+    category: 'Enjoy',
+    title: 'Serves',
+    imageUrl: 'https://images.unsplash.com/photo-1556742053-9971a1c4b3de',
+    dataAiHint: 'tea serving',
+    link: '/store'
+  },
+  {
+    category: 'Inside',
+    title: 'The Roba Tea Society',
+    imageUrl: 'https://images.unsplash.com/photo-1512568400610-62da2848a609',
+    dataAiHint: 'tea community people',
+    link: '/our-story'
+  },
+  {
+    category: 'Book',
+    title: 'Estate Experiences',
+    imageUrl: 'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d',
+    dataAiHint: 'tea estate landscape',
+    link: '/our-story'
+  },
+  {
+    category: 'Discover',
+    title: 'Our Six Pillars',
+    imageUrl: 'https://images.unsplash.com/photo-1544776193-53d9ff38d3ca',
+    dataAiHint: 'tea making process',
+    link: '/our-story'
+  }
+];
+
 export const heroSlides: HeroSlide[] = [
   {
     tag: 'Discover',

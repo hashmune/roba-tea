@@ -1,7 +1,7 @@
 
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
-import { teaVarieties, products } from "@/lib/placeholder-data";
+import { teaVarieties, products, experiences } from "@/lib/placeholder-data";
 import Image from "next/image";
 import Link from "next/link";
 import { HeroCarousel } from "@/components/shared/hero-carousel";
@@ -86,46 +86,48 @@ export default function Home() {
 
       <section className="py-16 md:py-24 bg-secondary/10">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-sm font-bold uppercase tracking-widest text-accent mb-4">HEART AND HOME</p>
-          <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground mb-8">Welcome to The Roba Estate</h2>
-          <VideoPlayer 
-             src="https://videos.pexels.com/video-files/3209828/3209828-hd_1920_1080_25fps.mp4"
-             poster="https://placehold.co/1920x1080.png"
-          />
-          <div className="mt-8">
+          <p className="text-sm font-bold uppercase text-muted-foreground mb-4">HEART AND HOME</p>
+          <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground mb-4">Welcome to The Roba Estate</h2>
+          <div className="mb-4">
             <Button asChild variant="outline-dark" size="lg">
               <Link href="/our-story">Discover estate</Link>
             </Button>
           </div>
+          <VideoPlayer 
+             src="https://videos.pexels.com/video-files/3568312/3568312-hd_1280_720_24fps.mp4"
+             poster="https://images.unsplash.com/photo-1491497895121-1334fc14d8c9"
+          />
         </div>
       </section>
 
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-accent">From Our Store</h2>
-            <p className="text-lg text-muted-foreground mt-2">Bring home the taste of Ceylon.</p>
+            <p className="text-sm font-bold uppercase text-muted-foreground mb-4">FROM OUR STORE</p>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground tracking-wider">EXPERIENCE THE ROBA TEA</h2>
+            <div className="flex justify-center items-center space-x-1 mt-4">
+              <svg className="w-2.5 h-2.5 text-accent" fill="currentColor" viewBox="0 0 8 8"><path d="M4 0l4 4-4 4-4-4L4 0z"/></svg>
+              <svg className="w-2.5 h-2.5 text-accent" fill="currentColor" viewBox="0 0 8 8"><path d="M4 0l4 4-4 4-4-4L4 0z"/></svg>
+              <svg className="w-2.5 h-2.5 text-accent" fill="currentColor" viewBox="0 0 8 8"><path d="M4 0l4 4-4 4-4-4L4 0z"/></svg>
+            </div>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {products.slice(0, 3).map((product) => (
-              <div key={product.id} className="group">
-                <div className="relative aspect-video w-full overflow-hidden rounded-lg">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
+            {experiences.map((experience) => (
+              <Link href={experience.link} key={experience.title} className="group block">
+                <div className="relative aspect-square w-full overflow-hidden">
                   <Image 
-                    src={product.imageUrl} 
-                    alt={product.name} 
+                    src={experience.imageUrl} 
+                    alt={experience.title} 
+                    data-ai-hint={experience.dataAiHint}
                     fill 
                     className="object-cover transition-transform duration-500 group-hover:scale-110" 
                   />
                 </div>
                 <div className="pt-4">
-                  <div className="flex justify-between items-baseline gap-4">
-                    <h3 className="font-headline text-sm text-foreground uppercase">{product.name}</h3>
-                    <Badge variant="outline" className={cn('whitespace-nowrap', product.status === 'Available' ? 'text-accent border-accent' : 'text-muted-foreground')}>
-                      {product.status.toUpperCase()}
-                    </Badge>
-                  </div>
+                  <p className="text-xs font-light text-muted-foreground uppercase tracking-widest">{experience.category}</p>
+                  <h3 className="font-headline text-lg font-bold text-foreground uppercase tracking-wider">{experience.title}</h3>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
