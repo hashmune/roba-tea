@@ -10,9 +10,9 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        filled: "bg-white text-black hover:bg-secondary hover:text-white rounded-tl-[40px] rounded-tr-[12px] rounded-br-[40px] rounded-bl-[40px]",
-        'outline-light': "border-2 border-white bg-transparent text-white hover:bg-white hover:text-black rounded-tl-[40px] rounded-tr-[12px] rounded-br-[40px] rounded-bl-[40px]",
-        'outline-dark': "border-2 border-black bg-transparent text-black hover:bg-black hover:text-white rounded-tl-[40px] rounded-tr-[12px] rounded-br-[40px] rounded-bl-[40px]",
+        filled: "bg-primary text-primary-foreground hover:bg-primary/90",
+        'outline-light': "border-2 border-white bg-transparent text-white hover:bg-white hover:text-black",
+        'outline-dark': "border border-foreground bg-transparent text-foreground hover:bg-foreground hover:text-background",
         ghost: "text-foreground bg-transparent hover:text-secondary-foreground hover:bg-secondary",
         link: "text-primary underline-offset-4 hover:underline",
       },
@@ -20,7 +20,7 @@ const buttonVariants = cva(
         default: "h-10 px-4 py-2",
         sm: "h-9 px-3",
         lg: "h-11 px-8",
-        icon: "h-10 w-10 rounded-full",
+        icon: "h-10 w-10",
       },
     },
     defaultVariants: {
@@ -40,9 +40,19 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({ className, variant, size, asChild = false, children, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
 
+    const baseStyles = buttonVariants({ variant, size });
+
+    // Special rounded styles for specific variants.
+    const roundedStyles = (variant === 'filled' || variant === 'outline-light' || variant === 'outline-dark') && !className?.includes('rounded')
+      ? "rounded-tl-[40px] rounded-tr-[12px] rounded-br-[40px] rounded-bl-[40px]"
+      : "";
+
+    // Specific styles for icon size to ensure it's a circle.
+    const iconStyles = size === 'icon' ? "rounded-full" : "";
+
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size, className }))}
+        className={cn(baseStyles, roundedStyles, iconStyles, className)}
         ref={ref}
         {...props}
       >

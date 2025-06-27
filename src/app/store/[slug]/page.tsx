@@ -5,10 +5,11 @@ import { notFound, useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { products } from '@/lib/placeholder-data';
 import { Breadcrumb } from '@/components/shared/breadcrumb';
-import { Button } from '@/components/ui/button';
-import { formatCurrency } from '@/lib/utils';
+import { Button, buttonVariants } from '@/components/ui/button';
+import { formatCurrency, cn } from '@/lib/utils';
 import { useShoppingBag } from '@/hooks/use-shopping-bag';
 import { Separator } from '@/components/ui/separator';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 export default function ProductDetailPage({ params }: { params: { slug: string } }) {
   const { slug } = params;
@@ -37,14 +38,28 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
       </div>
 
       <div className="container mx-auto grid grid-cols-1 items-start gap-12 py-8 md:grid-cols-2 md:py-12">
-        <div className="relative aspect-[5/4] w-full">
-          <Image
-            src={product.imageUrl}
-            alt={product.name}
-            data-ai-hint={product.dataAiHint}
-            fill
-            className="object-contain"
-          />
+        <div className="relative aspect-[5/4] w-full group">
+           <Carousel className="w-full h-full">
+            <CarouselContent>
+              {product.imageUrls.map((url, index) => (
+                <CarouselItem key={index} className="relative h-full">
+                  <Image
+                    src={url}
+                    alt={`${product.name} image ${index + 1}`}
+                    data-ai-hint={product.dataAiHint}
+                    fill
+                    className="object-contain"
+                  />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            {product.imageUrls.length > 1 && (
+                <div className="absolute bottom-4 right-4 z-10 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+                    <CarouselPrevious variant="outline-dark" className="static translate-y-0 w-10 h-10 rounded-full" />
+                    <CarouselNext variant="outline-dark" className="static translate-y-0 w-10 h-10 rounded-full" />
+                </div>
+            )}
+          </Carousel>
         </div>
 
         <div className="sticky top-28">

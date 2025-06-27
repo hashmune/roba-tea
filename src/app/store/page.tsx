@@ -20,7 +20,7 @@ function ProductCard({ product }: { product: typeof products[0] }) {
         <Link href={`/store/${product.slug}`}>
             <div className="relative aspect-[5/4] w-full overflow-hidden">
                 <Image
-                    src={product.imageUrl}
+                    src={product.imageUrls[0]}
                     alt={product.name}
                     data-ai-hint={product.dataAiHint}
                     fill

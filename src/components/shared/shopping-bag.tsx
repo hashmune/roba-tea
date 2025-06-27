@@ -63,7 +63,7 @@ export function ShoppingBag() {
                     <div key={item.product.id} className="flex items-start gap-4">
                       <div className="relative h-24 w-24 flex-shrink-0 overflow-hidden rounded-md border">
                         <Image
-                          src={item.product.imageUrl}
+                          src={item.product.imageUrls[0]}
                           alt={item.product.name}
                           data-ai-hint={item.product.dataAiHint}
                           fill
