@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -82,8 +83,8 @@ export function Header() {
                 </div>
                 <div className="relative hidden h-full bg-muted md:block">
                   <Image
-                    src="https://images.unsplash.com/photo-1491497895121-1334fc14d8c9"
-                    data-ai-hint="tea ceremony"
+                    src="https://images.unsplash.com/photo-1522747776116-64ee03be1dad"
+                    data-ai-hint="tea leaves"
                     alt="A serene tea ceremony setting"
                     fill
                     className="object-cover object-center"

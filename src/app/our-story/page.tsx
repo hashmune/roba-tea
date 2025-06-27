@@ -26,8 +26,8 @@ export default function OurStoryPage() {
       {/* Hero Section */}
       <section className="relative h-[60vh] w-full">
         <Image
-          src="https://images.unsplash.com/photo-1491497895121-1334fc14d8c9"
-          data-ai-hint="tea estate landscape"
+          src="https://images.unsplash.com/photo-1522747776116-64ee03be1dad"
+          data-ai-hint="tea leaves"
           alt="Lush tea estate in the highlands"
           fill
           className="object-cover"
@@ -79,8 +79,8 @@ export default function OurStoryPage() {
           <div className="grid grid-cols-2 gap-4">
             <div className="relative aspect-[3/4]">
               <Image
-                src="https://images.unsplash.com/photo-1491497895121-1334fc14d8c9"
-                data-ai-hint="vintage tea factory"
+                src="https://images.unsplash.com/photo-1522747776116-64ee03be1dad"
+                data-ai-hint="tea leaves"
                 alt="Vintage photo of the original tea factory"
                 fill
                 className="object-cover grayscale"
@@ -88,8 +88,8 @@ export default function OurStoryPage() {
             </div>
             <div className="relative mt-12 aspect-[3/4]">
               <Image
-                src="https://images.unsplash.com/photo-1491497895121-1334fc14d8c9"
-                data-ai-hint="vintage tea workers"
+                src="https://images.unsplash.com/photo-1522747776116-64ee03be1dad"
+                data-ai-hint="tea leaves"
                 alt="Vintage photo of tea workers on the estate"
                 fill
                 className="object-cover grayscale"
@@ -194,7 +194,7 @@ export default function OurStoryPage() {
                   <div className="group p-4">
                     <div className="relative aspect-[3/4] w-full overflow-hidden">
                       <Image 
-                        src={tea.imageUrl} 
+                        src={tea.imageUrls[0]} 
                         alt={tea.name} 
                         data-ai-hint={tea.dataAiHint}
                         fill 
@@ -236,8 +236,8 @@ export default function OurStoryPage() {
       {/* Final CTA */}
       <section className="relative h-[50vh] w-full bg-secondary/20">
          <Image
-          src="https://images.unsplash.com/photo-1491497895121-1334fc14d8c9"
-          data-ai-hint="tea plantation aerial"
+          src="https://images.unsplash.com/photo-1522747776116-64ee03be1dad"
+          data-ai-hint="tea leaves"
           alt="Aerial view of the lush tea estate"
           fill
           className="object-cover"

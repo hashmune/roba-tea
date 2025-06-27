@@ -70,8 +70,9 @@ export default function Home() {
                   <div className="group p-4">
                     <div className="relative aspect-[3/4] w-full overflow-hidden">
                       <Image 
-                        src={tea.imageUrl} 
-                        alt={tea.name} 
+                        src={tea.imageUrls[0]} 
+                        alt={tea.name}
+                        data-ai-hint={tea.dataAiHint}
                         fill 
                         className="object-cover transition-transform duration-500 group-hover:scale-110"
                       />
@@ -118,7 +119,7 @@ export default function Home() {
           </div>
           <VideoPlayer 
              src="https://videos.pexels.com/video-files/3568312/3568312-hd_1280_720_24fps.mp4"
-             poster="https://images.unsplash.com/photo-1491497895121-1334fc14d8c9"
+             poster="https://images.unsplash.com/photo-1522747776116-64ee03be1dad"
           />
         </div>
       </section>
