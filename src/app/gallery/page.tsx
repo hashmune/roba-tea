@@ -1,4 +1,3 @@
-
 'use client';
 
 import { useState, useMemo } from 'react';
@@ -7,7 +6,7 @@ import { Breadcrumb } from '@/components/shared/breadcrumb';
 import { Button } from '@/components/ui/button';
 import { galleryAlbums, galleryCategories } from '@/lib/roba-website-data';
 import { cn } from '@/lib/utils';
-import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 type GalleryAlbum = (typeof galleryAlbums)[0];
@@ -118,29 +117,32 @@ export default function GalleryPage() {
 
       <Dialog open={!!selectedAlbum} onOpenChange={(isOpen) => !isOpen && setSelectedAlbum(null)}>
         <DialogContent className="h-[90vh] max-w-[90vw] p-4 bg-background/80 backdrop-blur-lg border-0">
-          {selectedAlbum && (
-             <Carousel className="h-full w-full">
-              <CarouselContent className="h-full">
-                {selectedAlbum.images.map((image, index) => (
-                  <CarouselItem key={index} className="relative h-full">
-                    <Image
-                      src={image.url}
-                      alt={`${selectedAlbum.title} - Image ${index + 1}`}
-                      data-ai-hint={image.dataAiHint}
-                      fill
-                      className="object-contain"
-                    />
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              <div className="absolute bottom-4 right-4 z-10">
-                <div className="inline-flex items-center justify-center rounded-tl-[40px] rounded-tr-[12px] rounded-br-[40px] rounded-bl-[40px] border border-muted-foreground bg-background/80 backdrop-blur-sm p-1">
-                  <CarouselPrevious variant="ghost" size="icon" className="static translate-y-0 h-8 w-8 border-none text-foreground/70 disabled:text-foreground/30 hover:text-foreground hover:bg-transparent" />
-                  <CarouselNext variant="ghost" size="icon" className="static translate-y-0 h-8 w-8 border-none text-foreground/70 disabled:text-foreground/30 hover:text-foreground hover:bg-transparent" />
+          <>
+            <DialogTitle className="sr-only">{selectedAlbum?.title}</DialogTitle>
+            {selectedAlbum && (
+              <Carousel className="h-full w-full">
+                <CarouselContent className="h-full">
+                  {selectedAlbum.images.map((image, index) => (
+                    <CarouselItem key={index} className="relative h-full">
+                      <Image
+                        src={image.url}
+                        alt={`${selectedAlbum.title} - Image ${index + 1}`}
+                        data-ai-hint={image.dataAiHint}
+                        fill
+                        className="object-contain"
+                      />
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <div className="absolute bottom-4 right-4 z-10">
+                  <div className="inline-flex items-center justify-center rounded-tl-[40px] rounded-tr-[12px] rounded-br-[40px] rounded-bl-[40px] border border-muted-foreground bg-background/80 backdrop-blur-sm p-1">
+                    <CarouselPrevious variant="ghost" size="icon" className="static translate-y-0 h-8 w-8 border-none text-foreground/70 disabled:text-foreground/30 hover:text-foreground hover:bg-transparent" />
+                    <CarouselNext variant="ghost" size="icon" className="static translate-y-0 h-8 w-8 border-none text-foreground/70 disabled:text-foreground/30 hover:text-foreground hover:bg-transparent" />
+                  </div>
                 </div>
-              </div>
-            </Carousel>
-          )}
+              </Carousel>
+            )}
+          </>
         </DialogContent>
       </Dialog>
     </div>

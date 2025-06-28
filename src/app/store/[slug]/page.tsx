@@ -10,9 +10,10 @@ import { formatCurrency, cn } from '@/lib/utils';
 import { useShoppingBag } from '@/hooks/use-shopping-bag';
 import { Separator } from '@/components/ui/separator';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { use } from 'react';
 
-export default function ProductDetailPage({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+export default function ProductDetailPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = use(params);
   const router = useRouter();
   const product = products.find((p) => p.slug === slug);
   const { addToBag } = useShoppingBag();
