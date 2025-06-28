@@ -33,16 +33,16 @@ export function BackToTopButton() {
 
   return (
     <Button
-      variant="filled"
+      variant="outline-dark"
       size="icon"
       onClick={scrollToTop}
       className={cn(
-        'fixed bottom-6 left-6 z-50 h-14 w-14 shadow-lg transition-opacity duration-300',
+        'fixed bottom-6 left-6 z-50 shadow-lg transition-opacity duration-300',
         isVisible ? 'opacity-100' : 'opacity-0 pointer-events-none'
       )}
       aria-label="Go to top"
     >
-      <i className="ri-arrow-up-line text-2xl"></i>
+      <i className="ri-arrow-up-long-line text-xl"></i>
     </Button>
   );
 }
