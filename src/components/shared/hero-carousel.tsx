@@ -68,7 +68,7 @@ export function HeroCarousel() {
                 <div className="w-full h-full flex items-end justify-center">
                   <div className="w-full max-w-[1400px] mx-auto">
                     <div className="container mx-auto text-center md:text-left">
-                      <div className="max-w-2xl animate-in fade-in-0 slide-in-from-bottom-12 duration-1000 pb-16 md:pb-24 md:pl-24">
+                      <div className="max-w-2xl animate-in fade-in-0 slide-in-from-bottom-12 duration-1000 pb-16 md:pb-24 md:pl-4">
                         <p className="mb-4 text-sm font-bold uppercase tracking-widest text-white">
                           {slide.tag}
                         </p>
