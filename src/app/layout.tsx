@@ -32,7 +32,7 @@ export default function RootLayout({
       </head>
       <body className={cn("antialiased bg-background text-foreground")}>
         <ShoppingBagProvider>
-            <div className="mx-auto flex min-h-screen max-w-[1800px] flex-col bg-background">
+            <div className="mx-auto flex min-h-screen max-w-[1400px] flex-col bg-background">
               <Header />
               <main className="flex-grow">{children}</main>
               <Footer />

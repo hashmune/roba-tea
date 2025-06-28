@@ -1,4 +1,3 @@
-
 "use client";
 
 import * as React from "react";
@@ -66,17 +65,21 @@ export function HeroCarousel() {
               />
               <div className="absolute inset-0 bg-black/40 z-10" />
               <div className="relative z-20 flex h-full items-end justify-center text-white md:justify-start">
-                <div className="container mx-auto px-4 text-center md:text-left">
-                  <div className="max-w-2xl animate-in fade-in-0 slide-in-from-bottom-12 duration-1000 pb-16 md:pb-24">
-                    <p className="mb-4 text-sm font-bold uppercase tracking-widest text-white">
-                      {slide.tag}
-                    </p>
-                    <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-4xl uppercase">
-                      {slide.title}
-                    </h1>
-                    <Button asChild size="lg" variant="outline-light">
-                        <Link href={slide.buttonLink}>{slide.buttonText}</Link>
-                    </Button>
+                <div className="w-full h-full flex items-end justify-center">
+                  <div className="w-full max-w-[1400px] mx-auto">
+                    <div className="container mx-auto text-center md:text-left">
+                      <div className="max-w-2xl animate-in fade-in-0 slide-in-from-bottom-12 duration-1000 pb-16 md:pb-24 md:pl-24">
+                        <p className="mb-4 text-sm font-bold uppercase tracking-widest text-white">
+                          {slide.tag}
+                        </p>
+                        <h1 className="mb-6 text-4xl font-bold tracking-tight md:text-4xl uppercase">
+                          {slide.title}
+                        </h1>
+                        <Button asChild size="lg" variant="outline-light">
+                            <Link href={slide.buttonLink}>{slide.buttonText}</Link>
+                        </Button>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
