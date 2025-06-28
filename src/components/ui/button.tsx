@@ -6,15 +6,15 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-semibold uppercase ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 [&>svg]:pointer-events-none [&>svg]:shrink-0 [&>i]:pointer-events-none [&>i]:leading-none [&>i]:shrink-0",
+  "relative overflow-hidden inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-semibold uppercase ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 before:content-[''] before:absolute before:z-[-1] before:left-1/2 before:top-1/2 before:h-0 before:w-0 before:-translate-x-1/2 before:-translate-y-1/2 before:rounded-full before:transition-all before:duration-300 before:ease-out hover:before:h-56 hover:before:w-56 [&>svg]:pointer-events-none [&>svg]:shrink-0 [&>i]:pointer-events-none [&>i]:leading-none [&>i]:shrink-0",
   {
     variants: {
       variant: {
-        filled: "bg-primary text-primary-foreground hover:bg-primary/90",
-        'outline-light': "border-2 border-white bg-transparent text-white hover:bg-white hover:text-black",
-        'outline-dark': "border border-foreground bg-transparent text-foreground hover:bg-foreground hover:text-background",
-        ghost: "text-foreground bg-transparent hover:text-secondary-foreground hover:bg-secondary",
-        link: "text-primary underline-offset-4 hover:underline",
+        filled: "bg-primary text-primary-foreground before:bg-primary/90",
+        'outline-light': "border-2 border-white bg-transparent text-white before:bg-white hover:text-black",
+        'outline-dark': "border border-foreground bg-transparent text-foreground before:bg-foreground hover:text-background",
+        ghost: "text-foreground bg-transparent hover:text-secondary-foreground before:bg-secondary",
+        link: "text-primary underline-offset-4 hover:underline before:hidden",
       },
       size: {
         default: "h-10 px-4 py-2",
