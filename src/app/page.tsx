@@ -1,4 +1,3 @@
-
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
 import { teaVarieties, products, experiences, type ExperienceCard } from "@/lib/roba-website-data";
@@ -42,7 +41,7 @@ const ExperienceDisplayItem = ({ experience, className }: { experience: Experien
 export default function Home() {
   return (
     <div className="flex flex-col animate-in fade-in duration-500">
-      <div className="w-full max-w-[1800px] mx-auto">
+      <div className="w-full max-w-[1400px] mx-auto">
         <HeroCarousel />
       </div>
 

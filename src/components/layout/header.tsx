@@ -33,9 +33,11 @@ export function Header() {
         <div className="flex items-center justify-start">
            <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" className="flex items-center gap-2 pl-0 hover:bg-transparent text-foreground hover:text-secondary">
-                  <i className="ri-menu-4-line text-2xl leading-none"></i>
-                  <span className="hidden md:inline">Menu</span>
+              <Button variant="ghost" className="hover:text-secondary">
+                  <div className="flex gap-2 items-center">
+                    <i className="ri-menu-4-line text-2xl"></i>
+                    <span className="hidden md:inline">Menu</span>
+                  </div>
               </Button>
             </SheetTrigger>
             <SheetContent side="left" className="w-full max-w-none p-0 sm:max-w-none border-0">
