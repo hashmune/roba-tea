@@ -59,7 +59,7 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      <section className="border-y bg-background/95 py-4 backdrop-blur">
+      <section className="py-4">
         <div className="container mx-auto flex flex-wrap items-center justify-center gap-2 px-4">
           {galleryCategories.map((category) => (
             <Button
@@ -135,8 +135,8 @@ export default function GalleryPage() {
               </CarouselContent>
               <div className="absolute bottom-4 right-4 z-10">
                 <div className="inline-flex items-center justify-center rounded-tl-[40px] rounded-tr-[12px] rounded-br-[40px] rounded-bl-[40px] border border-border bg-background/80 backdrop-blur-sm p-1">
-                  <CarouselPrevious variant="ghost" size="icon" className="static translate-y-0 h-8 w-8 border-none text-foreground/70 disabled:text-foreground/30 hover:text-foreground" />
-                  <CarouselNext variant="ghost" size="icon" className="static translate-y-0 h-8 w-8 border-none text-foreground/70 disabled:text-foreground/30 hover:text-foreground" />
+                  <CarouselPrevious variant="ghost" size="icon" className="static translate-y-0 h-8 w-8 border-none text-foreground/70 disabled:text-foreground/30 hover:text-foreground hover:bg-transparent" />
+                  <CarouselNext variant="ghost" size="icon" className="static translate-y-0 h-8 w-8 border-none text-foreground/70 disabled:text-foreground/30 hover:text-foreground hover:bg-transparent" />
                 </div>
               </div>
             </Carousel>
