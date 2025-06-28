@@ -7,6 +7,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { cn } from '@/lib/utils';
 import { ShoppingBagProvider } from '@/hooks/use-shopping-bag';
 import { ShoppingBag } from '@/components/shared/shopping-bag';
+import { BackToTopButton } from '@/components/shared/back-to-top';
 
 const nunitoSans = Nunito_Sans({
   subsets: ['latin'],
@@ -37,6 +38,7 @@ export default function RootLayout({
               <Footer />
             </div>
             <ShoppingBag />
+            <BackToTopButton />
             <Toaster />
         </ShoppingBagProvider>
       </body>
