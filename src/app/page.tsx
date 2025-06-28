@@ -89,9 +89,9 @@ export default function Home() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-             <div className="flex justify-end mt-4 gap-2">
-                <CarouselPrevious variant="outline-dark" size="icon" className="static translate-y-0" />
-                <CarouselNext variant="outline-dark" size="icon" className="static translate-y-0" />
+            <div className="flex justify-end mt-4 gap-2">
+              <CarouselPrevious variant="outline-dark" size="icon" className="static translate-y-0" />
+              <CarouselNext variant="outline-dark" size="icon" className="static translate-y-0" />
             </div>
           </Carousel>
         </div>
