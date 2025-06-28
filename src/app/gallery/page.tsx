@@ -131,8 +131,8 @@ export default function GalleryPage() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 text-white bg-black/20 hover:bg-black/40 border-0" />
-              <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 text-white bg-black/20 hover:bg-black/40 border-0" />
+              <CarouselPrevious variant="outline-dark" className="left-4" />
+              <CarouselNext variant="outline-dark" className="right-4" />
             </Carousel>
           )}
         </DialogContent>

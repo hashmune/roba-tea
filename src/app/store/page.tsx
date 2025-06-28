@@ -92,18 +92,9 @@ export default function StorePage() {
             ))}
           </CarouselContent>
           <div className="container mx-auto flex justify-end pb-8">
-            <div className={cn(
-                buttonVariants({ variant: 'outline-dark', size: 'lg' }),
-                "w-auto p-0 hover:bg-transparent hover:text-inherit"
-            )}>
-              <CarouselPrevious 
-                variant="ghost" 
-                className="static w-auto h-full px-4 rounded-none translate-x-0 translate-y-0 hover:bg-transparent hover:text-inherit"
-              />
-              <CarouselNext 
-                variant="ghost" 
-                className="static w-auto h-full px-4 rounded-none translate-x-0 translate-y-0 hover:bg-transparent hover:text-inherit"
-              />
+            <div className="flex justify-end mt-4 gap-2">
+              <CarouselPrevious variant="outline-dark" className="static translate-y-0" />
+              <CarouselNext variant="outline-dark" className="static translate-y-0" />
             </div>
           </div>
         </Carousel>
