@@ -103,7 +103,9 @@ export function Header() {
         </div>
         
         {/* Right Side: Empty for balance */}
-        <div className="flex items-center justify-end"></div>
+        <div className="flex items-center justify-end w-[24px] md:w-[89px]">
+          <p className="invisible">balance</p>
+        </div>
       </div>
     </header>
   );
