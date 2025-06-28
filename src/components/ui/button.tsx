@@ -43,7 +43,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const baseStyles = buttonVariants({ variant, size });
 
     // Special rounded styles for specific variants.
-    const roundedStyles = (variant === 'filled' || variant === 'outline-light' || variant === 'outline-dark') && !className?.includes('rounded')
+    const roundedStyles = size !== 'icon' && (variant === 'filled' || variant === 'outline-light' || variant === 'outline-dark') && !className?.includes('rounded')
       ? "rounded-tl-[40px] rounded-tr-[12px] rounded-br-[40px] rounded-bl-[40px]"
       : "";
 

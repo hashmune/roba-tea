@@ -55,8 +55,8 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
             </CarouselContent>
             {product.imageUrls.length > 1 && (
                 <div className="absolute bottom-4 right-4 z-10 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <CarouselPrevious variant="outline-dark" className="static translate-y-0 w-10 h-10 rounded-full" />
-                    <CarouselNext variant="outline-dark" className="static translate-y-0 w-10 h-10 rounded-full" />
+                    <CarouselPrevious variant="outline-dark" size="icon" className="static translate-y-0" />
+                    <CarouselNext variant="outline-dark" size="icon" className="static translate-y-0" />
                 </div>
             )}
           </Carousel>
