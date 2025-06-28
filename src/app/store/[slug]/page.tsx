@@ -3,7 +3,7 @@
 
 import { notFound, useRouter } from 'next/navigation';
 import Image from 'next/image';
-import { products } from '@/lib/placeholder-data';
+import { products } from '@/lib/roba-website-data';
 import { Breadcrumb } from '@/components/shared/breadcrumb';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { formatCurrency, cn } from '@/lib/utils';

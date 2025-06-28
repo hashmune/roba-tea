@@ -2,7 +2,7 @@
 'use client';
 
 import React, { createContext, useContext, useState, useMemo } from 'react';
-import { Product } from '@/lib/placeholder-data';
+import { Product } from '@/lib/roba-website-data';
 import { useToast } from './use-toast';
 
 export type CartItem = {

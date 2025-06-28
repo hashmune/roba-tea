@@ -5,7 +5,7 @@ import { useState, useMemo } from 'react';
 import Image from 'next/image';
 import { Breadcrumb } from '@/components/shared/breadcrumb';
 import { Button } from '@/components/ui/button';
-import { galleryAlbums, galleryCategories } from '@/lib/placeholder-data';
+import { galleryAlbums, galleryCategories } from '@/lib/roba-website-data';
 import { cn } from '@/lib/utils';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';

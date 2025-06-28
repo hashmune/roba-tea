@@ -3,7 +3,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { products, storeHeroSlides } from '@/lib/placeholder-data';
+import { products, storeHeroSlides } from '@/lib/roba-website-data';
 import { Breadcrumb } from '@/components/shared/breadcrumb';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { useShoppingBag } from '@/hooks/use-shopping-bag';

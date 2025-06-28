@@ -327,7 +327,7 @@ export const heroSlides: HeroSlide[] = [
     title: 'The Soul of Ceylon, in a Cup',
     buttonText: 'Explore Our Teas',
     buttonLink: '/store',
-    imageUrl: '/images/hero-1.jpg',
+    imageUrl: '/images/carousel-1.jpg',
     dataAiHint: 'tea plantation'
   },
   {
@@ -335,7 +335,7 @@ export const heroSlides: HeroSlide[] = [
     title: 'A Legacy of Unmatched Quality',
     buttonText: 'Read Our Story',
     buttonLink: '/our-story',
-    imageUrl: '/images/hero-2.jpg',
+    imageUrl: '/images/carousel-2.jpg',
     dataAiHint: 'tea ceremony'
   },
   {
@@ -343,7 +343,7 @@ export const heroSlides: HeroSlide[] = [
     title: 'Handpicked for Pure Perfection',
     buttonText: 'View Tea Varieties',
     buttonLink: '/tea-varieties',
-    imageUrl: '/images/hero-3.jpg',
+    imageUrl: '/images/carousel-3.jpg',
     dataAiHint: 'tea leaves closeup'
   }
 ];

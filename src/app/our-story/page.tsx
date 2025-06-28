@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button, buttonVariants } from '@/components/ui/button';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import { sixPillars, teaVarieties } from '@/lib/placeholder-data';
+import { sixPillars, teaVarieties } from '@/lib/roba-website-data';
 import { cn } from '@/lib/utils';
 import { Badge } from '@/components/ui/badge';
 

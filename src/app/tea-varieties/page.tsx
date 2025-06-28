@@ -1,7 +1,7 @@
 
 'use client';
 
-import { teaCollections } from '@/lib/placeholder-data';
+import { teaCollections } from '@/lib/roba-website-data';
 import Image from 'next/image';
 import { Breadcrumb } from '@/components/shared/breadcrumb';
 import { Button } from '@/components/ui/button';

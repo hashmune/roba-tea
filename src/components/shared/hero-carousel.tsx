@@ -7,7 +7,7 @@ import Link from "next/link";
 import Autoplay from "embla-carousel-autoplay";
 import { cn } from "@/lib/utils";
 
-import { heroSlides } from "@/lib/placeholder-data";
+import { heroSlides } from "@/lib/roba-website-data";
 import {
   Carousel,
   CarouselContent,

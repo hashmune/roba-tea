@@ -1,7 +1,7 @@
 
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardTitle } from "@/components/ui/card";
-import { teaVarieties, products, experiences, type ExperienceCard } from "@/lib/placeholder-data";
+import { teaVarieties, products, experiences, type ExperienceCard } from "@/lib/roba-website-data";
 import Image from "next/image";
 import Link from "next/link";
 import { HeroCarousel } from "@/components/shared/hero-carousel";

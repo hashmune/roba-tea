@@ -4,7 +4,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle } from "@/components/ui/sheet";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { Logo } from "./logo";
@@ -38,9 +38,10 @@ export function Header() {
                   <span className="hidden md:inline">Menu</span>
               </Button>
             </SheetTrigger>
-            <SheetContent side="left" className="w-full max-w-none p-0 sm:max-w-none">
+            <SheetContent side="left" className="w-full max-w-none p-0 sm:max-w-none border-0">
+              <SheetTitle className="sr-only">Navigation menu</SheetTitle>
               <div className="grid h-full md:grid-cols-2">
-                <div className="col-span-2 flex flex-col bg-background md:col-span-1">
+                <div className="col-span-2 flex flex-col bg-background md:col-span-1 mb-2">
                     <div className="px-8 sm:px-12 py-8 sm:py-12">
                       <SheetClose asChild>
                           <Link href="/" passHref>
@@ -63,7 +64,7 @@ export function Header() {
                         </SheetClose>
                     ))}
                     </nav>
-                    <div className="mt-12 text-xs text-muted-foreground space-y-4 px-8 sm:px-12">
+                    <div className="mt-12 text-xs text-muted-foreground px-8 sm:px-12">
                         <div className="flex items-center space-x-4">
                             <Link href="#" className="text-foreground hover:text-secondary">
                                 <i className="ri-facebook-box-line text-lg"></i>
@@ -78,7 +79,7 @@ export function Header() {
                                 <i className="ri-linkedin-box-line text-lg"></i>
                             </Link>
                         </div>
-                        <p>&copy; {year} Roba Ceylon Tea</p>
+                        <p className="mt-2">&copy; {year} Roba Ceylon Tea</p>
                     </div>
                 </div>
                 <div className="relative hidden h-full bg-muted md:block">
