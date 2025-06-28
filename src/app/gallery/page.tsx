@@ -39,8 +39,10 @@ export default function GalleryPage() {
 
   return (
     <div className="animate-in fade-in duration-500">
+      <div className="container mx-auto px-4">
+        <Breadcrumb items={breadcrumbItems} />
+      </div>
       <section className="container mx-auto px-4 py-12 text-center">
-        <Breadcrumb items={breadcrumbItems} className="justify-center" />
         <p className="font-bold uppercase tracking-widest text-muted-foreground">
           Explore
         </p>
@@ -57,7 +59,7 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      <section className="sticky top-[87px] z-40 border-y bg-background/95 py-4 backdrop-blur">
+      <section className="border-y bg-background/95 py-4 backdrop-blur">
         <div className="container mx-auto flex flex-wrap items-center justify-center gap-2 px-4">
           {galleryCategories.map((category) => (
             <Button
@@ -131,8 +133,12 @@ export default function GalleryPage() {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious variant="outline-dark" className="left-4" />
-              <CarouselNext variant="outline-dark" className="right-4" />
+              <div className="absolute bottom-4 right-4 z-10">
+                <div className="inline-flex items-center justify-center rounded-full border border-border bg-background/80 backdrop-blur-sm p-1">
+                  <CarouselPrevious variant="ghost" size="icon" className="static translate-y-0 h-8 w-8 border-none" />
+                  <CarouselNext variant="ghost" size="icon" className="static translate-y-0 h-8 w-8 border-none" />
+                </div>
+              </div>
             </Carousel>
           )}
         </DialogContent>

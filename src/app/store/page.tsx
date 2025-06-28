@@ -92,9 +92,11 @@ export default function StorePage() {
             ))}
           </CarouselContent>
           <div className="container mx-auto flex justify-end pb-8">
-            <div className="flex justify-end mt-4 gap-2">
-              <CarouselPrevious variant="outline-dark" size="icon" className="static translate-y-0" />
-              <CarouselNext variant="outline-dark" size="icon" className="static translate-y-0" />
+            <div className="flex justify-end mt-4">
+              <div className="inline-flex items-center justify-center rounded-full border border-border bg-background p-1">
+                <CarouselPrevious variant="ghost" size="icon" className="static translate-y-0 border-none h-8 w-8" />
+                <CarouselNext variant="ghost" size="icon" className="static translate-y-0 border-none h-8 w-8" />
+              </div>
             </div>
           </div>
         </Carousel>
