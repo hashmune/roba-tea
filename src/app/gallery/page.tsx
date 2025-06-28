@@ -134,7 +134,7 @@ export default function GalleryPage() {
                 ))}
               </CarouselContent>
               <div className="absolute bottom-4 right-4 z-10">
-                <div className="inline-flex items-center justify-center rounded-tl-[40px] rounded-tr-[12px] rounded-br-[40px] rounded-bl-[40px] border border-border bg-background/80 backdrop-blur-sm p-1">
+                <div className="inline-flex items-center justify-center rounded-tl-[40px] rounded-tr-[12px] rounded-br-[40px] rounded-bl-[40px] border border-muted-foreground bg-background/80 backdrop-blur-sm p-1">
                   <CarouselPrevious variant="ghost" size="icon" className="static translate-y-0 h-8 w-8 border-none text-foreground/70 disabled:text-foreground/30 hover:text-foreground hover:bg-transparent" />
                   <CarouselNext variant="ghost" size="icon" className="static translate-y-0 h-8 w-8 border-none text-foreground/70 disabled:text-foreground/30 hover:text-foreground hover:bg-transparent" />
                 </div>
