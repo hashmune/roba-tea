@@ -90,9 +90,9 @@ export default function Home() {
               ))}
             </CarouselContent>
             <div className="flex justify-end mt-4">
-              <div className="inline-flex items-center justify-center rounded-full border border-border bg-background p-1">
-                <CarouselPrevious variant="ghost" size="icon" className="static translate-y-0 border-none h-8 w-8" />
-                <CarouselNext variant="ghost" size="icon" className="static translate-y-0 border-none h-8 w-8" />
+              <div className="inline-flex items-center justify-center rounded-tl-[40px] rounded-tr-[12px] rounded-br-[40px] rounded-bl-[40px] border border-border bg-background p-1">
+                <CarouselPrevious variant="ghost" size="icon" className="static translate-y-0 border-none h-8 w-8 text-foreground/70 disabled:text-foreground/30 hover:text-foreground" />
+                <CarouselNext variant="ghost" size="icon" className="static translate-y-0 border-none h-8 w-8 text-foreground/70 disabled:text-foreground/30 hover:text-foreground" />
               </div>
             </div>
           </Carousel>
