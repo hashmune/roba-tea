@@ -42,7 +42,6 @@ export function ShoppingBagProvider({ children }: { children: React.ReactNode })
         title: "Added to Bag",
         description: `${product.name} is now in your shopping bag.`,
     });
-    setBagOpen(true);
   };
 
   const removeFromBag = (productId: string) => {
