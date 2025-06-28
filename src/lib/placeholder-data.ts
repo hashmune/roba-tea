@@ -327,24 +327,24 @@ export const heroSlides: HeroSlide[] = [
     title: 'The Soul of Ceylon, in a Cup',
     buttonText: 'Explore Our Teas',
     buttonLink: '/store',
-    imageUrl: 'https://images.unsplash.com/photo-1522747776116-64ee03be1dad',
-    dataAiHint: 'tea leaves'
+    imageUrl: '/images/hero-1.jpg',
+    dataAiHint: 'tea plantation'
   },
   {
     tag: 'Timeless',
     title: 'A Legacy of Unmatched Quality',
     buttonText: 'Read Our Story',
     buttonLink: '/our-story',
-    imageUrl: 'https://images.unsplash.com/photo-1522747776116-64ee03be1dad',
-    dataAiHint: 'tea leaves'
+    imageUrl: '/images/hero-2.jpg',
+    dataAiHint: 'tea ceremony'
   },
   {
     tag: 'Exquisite',
     title: 'Handpicked for Pure Perfection',
     buttonText: 'View Tea Varieties',
     buttonLink: '/tea-varieties',
-    imageUrl: 'https://images.unsplash.com/photo-1522747776116-64ee03be1dad',
-    dataAiHint: 'tea leaves'
+    imageUrl: '/images/hero-3.jpg',
+    dataAiHint: 'tea leaves closeup'
   }
 ];
 
