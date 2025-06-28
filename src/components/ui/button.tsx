@@ -4,12 +4,12 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "relative overflow-hidden inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-semibold uppercase ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 before:content-[''] before:absolute before:z-0 before:h-0 before:w-0 before:rounded-full before:transition-all before:duration-500 before:ease-out hover:before:h-56 hover:before:w-56 [&>*]:relative [&>*]:z-10 [&>svg]:pointer-events-none [&>svg]:shrink-0 [&>i]:pointer-events-none [&>i]:leading-none [&>i]:shrink-0",
+  "relative overflow-hidden inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-semibold uppercase ring-offset-background transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-30 before:content-[''] before:absolute before:z-0 before:top-0 before:bottom-0 before:right-0 before:h-full before:w-0 before:transition-all before:duration-500 before:ease-out hover:before:w-full hover:before:right-0 [&>*]:relative [&>*]:z-10 [&>svg]:pointer-events-none [&>svg]:shrink-0 [&>i]:pointer-events-none [&>i]:leading-none [&>i]:shrink-0",
   {
     variants: {
       variant: {
-        "filled-light": "bg-white text-black before:bg-gray-200 hover:text-black",
-        "filled-outline": "bg-black text-white before:bg-gray-700 hover:text-white",
+        "filled-light": "bg-white text-black before:bg-secondary hover:text-black",
+        "filled-dark": "bg-black text-white before:bg-secondary hover:text-white",
         "outline-light": "border-2 border-white bg-transparent text-white before:bg-white hover:text-black",
         "outline-dark": "border-2 border-black bg-transparent text-black before:bg-black hover:text-white",
         // Keep existing variants for backward compatibility
@@ -44,7 +44,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     
     // Special rounded styles for specific variants.
     const roundedStyles = size !== 'icon' && 
-      (variant === 'filled-light' || variant === 'filled-outline' || variant === 'outline-light' || variant === 'outline-dark' || variant === 'filled') && 
+      (variant === 'filled-light' || variant === 'filled-dark' || variant === 'outline-light' || variant === 'outline-dark' || variant === 'filled') && 
       !className?.includes('rounded')
       ? "rounded-tl-[40px] rounded-tr-[12px] rounded-br-[40px] rounded-bl-[40px]"
       : "";
