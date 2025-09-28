@@ -67,7 +67,7 @@ export function VideoPlayer({
   return (
     <div 
       ref={containerRef}
-      className="relative aspect-video w-full max-w-5xl mx-auto overflow-hidden group"
+      className="relative aspect-video w-full max-w-6xl mx-auto overflow-hidden group"
     >
       <video
         ref={videoRef}
@@ -80,7 +80,7 @@ export function VideoPlayer({
         onPause={() => setIsPlaying(false)}
         onEnded={() => setIsPlaying(false)}
         onClick={togglePlay}
-        className="w-full h-full object-cover cursor-pointer"
+        className="w-full h-full object-cover cursor-pointer transform scale-110"
       />
       
       {!isPlaying && (
