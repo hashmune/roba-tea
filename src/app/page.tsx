@@ -108,8 +108,8 @@ export default function Home() {
             </Button>
           </div>
           <VideoPlayer 
-             src="https://videos.pexels.com/video-files/3568312/3568312-hd_1280_720_24fps.mp4"
-             poster="https://images.unsplash.com/photo-1522747776116-64ee03be1dad"
+             src="/videos/home_video.webm"
+             poster="/images/carousel-1.jpg"
           />
         </div>
       </section>

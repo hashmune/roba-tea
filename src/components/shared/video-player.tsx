@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 
 export function VideoPlayer({
@@ -11,7 +11,10 @@ export function VideoPlayer({
     poster: string;
 }) {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isMuted, setIsMuted] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
 
   const togglePlay = () => {
     const video = videoRef.current;
@@ -24,8 +27,46 @@ export function VideoPlayer({
     }
   };
 
+  const toggleMute = () => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.muted = !video.muted;
+    setIsMuted(video.muted);
+  };
+
+  const toggleFullscreen = async () => {
+    const container = containerRef.current;
+    if (!container) return;
+
+    try {
+      if (!document.fullscreenElement) {
+        await container.requestFullscreen();
+        setIsFullscreen(true);
+      } else {
+        await document.exitFullscreen();
+        setIsFullscreen(false);
+      }
+    } catch (error) {
+      console.error('Error toggling fullscreen:', error);
+    }
+  };
+
+  // Listen for fullscreen changes
+  useEffect(() => {
+    const handleFullscreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    return () => {
+      document.removeEventListener('fullscreenchange', handleFullscreenChange);
+    };
+  }, []);
+
   return (
     <div 
+      ref={containerRef}
       className="relative aspect-video w-full max-w-5xl mx-auto overflow-hidden group"
     >
       <video
@@ -34,6 +75,7 @@ export function VideoPlayer({
         poster={poster}
         data-ai-hint="tea pouring"
         playsInline
+        muted={isMuted}
         onPlay={() => setIsPlaying(true)}
         onPause={() => setIsPlaying(false)}
         onEnded={() => setIsPlaying(false)}
@@ -54,6 +96,37 @@ export function VideoPlayer({
             aria-label="Play video"
           >
             <i className="ri-play-line text-2xl"></i>
+          </Button>
+        </div>
+      )}
+
+      {/* Control buttons - only show when video is playing */}
+      {isPlaying && (
+        <div className="absolute bottom-4 right-4 flex gap-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+          <Button
+            variant="filled"
+            size="icon"
+            className="h-10 w-10 rounded-tl-[20px] rounded-tr-[6px] rounded-br-[20px] rounded-bl-[20px] bg-black/50 hover:bg-black/70"
+            onClick={(e) => {
+              e.stopPropagation();
+              toggleMute();
+            }}
+            aria-label={isMuted ? "Unmute video" : "Mute video"}
+          >
+            <i className={isMuted ? "ri-volume-mute-line text-lg" : "ri-volume-up-line text-lg"}></i>
+          </Button>
+          
+          <Button
+            variant="filled"
+            size="icon"
+            className="h-10 w-10 rounded-tl-[20px] rounded-tr-[6px] rounded-br-[20px] rounded-bl-[20px] bg-black/50 hover:bg-black/70"
+            onClick={(e) => {
+              e.stopPropagation();
+              toggleFullscreen();
+            }}
+            aria-label={isFullscreen ? "Exit fullscreen" : "Enter fullscreen"}
+          >
+            <i className={isFullscreen ? "ri-fullscreen-exit-line text-lg" : "ri-fullscreen-line text-lg"}></i>
           </Button>
         </div>
       )}
