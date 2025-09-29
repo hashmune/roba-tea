@@ -107,9 +107,9 @@ export default function Home() {
               <Link href="/our-story">Discover estate</Link>
             </Button>
           </div>
-          <VideoPlayer 
-             src="https://videos.pexels.com/video-files/3568312/3568312-hd_1280_720_24fps.mp4"
-             poster="https://images.unsplash.com/photo-1522747776116-64ee03be1dad"
+          <VideoPlayer   
+             src="/videos/home_video.mp4"
+             poster="/images/video_thumbnail.png"
           />
         </div>
       </section>

@@ -12,9 +12,9 @@ import { useEffect, useState } from "react";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/tea-varieties", label: "Tea Varieties" },
   { href: "/our-story", label: "Our Story" },
-  { href: "/store", label: "Store" },
+  { href: "/tea-varieties", label: "Tea Varieties (Coming soon...)", disabled: true },
+  { href: "/store", label: "Store (Coming soon...)", disabled: true },
   { href: "/gallery", label: "Gallery" },
 ];
 
@@ -54,15 +54,25 @@ export function Header() {
                     <nav className="flex mt-16 flex-grow flex-col space-y-8 px-8 sm:px-12">
                     {navLinks.map((link) => (
                         <SheetClose asChild key={link.href}>
-                          <Link
-                            href={link.href}
-                            className={cn(
-                              "font-medium transition-colors hover:text-accent text-4xl font-light tracking-wide",
-                              pathname === link.href ? "text-accent font-semibold" : "text-foreground/80"
-                            )}
-                          >
-                            {link.label}
-                          </Link>
+                          {link.disabled ? (
+                            <span
+                              className={cn(
+                                "text-4xl font-light tracking-wide text-muted-foreground/50 pointer-events-none"
+                              )}
+                            >
+                              {link.label}
+                            </span>
+                          ) : (
+                            <Link
+                              href={link.href}
+                              className={cn(
+                                "transition-colors hover:text-accent text-4xl font-light tracking-wide",
+                                pathname === link.href ? "text-accent font-semibold" : "text-foreground/80"
+                              )}
+                            >
+                              {link.label}
+                            </Link>
+                          )}
                         </SheetClose>
                     ))}
                     </nav>
