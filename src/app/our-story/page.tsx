@@ -91,7 +91,7 @@ export default function OurStoryPage() {
 					<div className="grid grid-cols-2 gap-4">
 						<div className="relative aspect-[3/4]">
 							<Image
-								src="https://images.unsplash.com/photo-1522747776116-64ee03be1dad"
+								src="/images/pioneer_spirit_1.png"
 								data-ai-hint="tea leaves"
 								alt="Vintage photo of the original tea factory"
 								fill
@@ -100,7 +100,7 @@ export default function OurStoryPage() {
 						</div>
 						<div className="relative mt-12 aspect-[3/4]">
 							<Image
-								src="https://images.unsplash.com/photo-1522747776116-64ee03be1dad"
+								src="/images/pioneer_spirit_2.png"
 								data-ai-hint="tea leaves"
 								alt="Vintage photo of tea workers on the estate"
 								fill
@@ -117,10 +117,10 @@ export default function OurStoryPage() {
 					<div className="text-center mb-12 max-w-3xl mx-auto">
 						<p className="text-sm font-bold uppercase text-muted-foreground mb-4">OUR PHILOSOPHY</p>
 						<h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground">
-							THE SIX PILLARS
+							THE FIVE PILLARS
 						</h2>
 						<p className="text-lg text-muted-foreground mt-4">
-							Our commitment to excellence is guided by six fundamental principles. These pillars
+							Our commitment to excellence is guided by five fundamental principles. These pillars
 							define our approach to tea making, from the nurturing of our estate to the final cup
 							you enjoy.
 						</p>
@@ -182,7 +182,7 @@ export default function OurStoryPage() {
 					<div className="grid grid-cols-2 gap-4">
 						<div className="relative aspect-[3/4]">
 							<Image
-								src="https://images.unsplash.com/photo-1522747776116-64ee03be1dad"
+								src="/images/tea_garden_1.png"
 								data-ai-hint="tea leaves"
 								alt="Vintage photo of the original tea factory"
 								fill
@@ -191,7 +191,7 @@ export default function OurStoryPage() {
 						</div>
 						<div className="relative mt-12 aspect-[3/4]">
 							<Image
-								src="https://images.unsplash.com/photo-1522747776116-64ee03be1dad"
+								src="/images/tea_garden_2.png"
 								data-ai-hint="tea leaves"
 								alt="Vintage photo of tea workers on the estate"
 								fill

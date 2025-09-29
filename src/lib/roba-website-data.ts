@@ -240,35 +240,35 @@ export const sixPillars: SixPillar[] = [
 		title: "Tea Gardens",
 		description:
 			"Our tea gardens are the heart of our operations. The unique microclimate and rich soil provide the perfect conditions for growing tea of the highest quality.",
-		imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
+		imageUrl: "/images/pillars_1.png",
 		dataAiHint: "tea leaves",
 	},
 	{
 		title: "Artisanal Craft",
 		description:
 			"We honor time-tested traditions of tea craftsmanship. Our leaves are meticulously hand-plucked and processed by skilled artisans who have perfected their craft over generations.",
-		imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
+		imageUrl: "/images/pillars_2.png",
 		dataAiHint: "tea leaves",
 	},
 	{
 		title: "Exceptional Quality",
 		description:
 			"From leaf to cup, our commitment to quality is unwavering. We meticulously grade and taste each batch to ensure a consistently exceptional experience.",
-		imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
+		imageUrl: "/images/pillars_3.png",
 		dataAiHint: "tea leaves",
 	},
 	{
 		title: "Sustainability",
 		description:
 			"We are committed to sustainable practices that protect our environment. From water conservation to organic farming, we strive to be responsible stewards of the land.",
-		imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
+		imageUrl: "/images/pillars_4.png",
 		dataAiHint: "tea leaves",
 	},
 	{
 		title: "Community",
 		description:
 			"We believe in nurturing the community that nurtures our tea. We are dedicated to fair labor practices and investing in the well-being of our estate families.",
-		imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
+		imageUrl: "/images/pillars_5.png",
 		dataAiHint: "tea leaves",
 	},
 ];
@@ -509,7 +509,7 @@ export const heroSlides: HeroSlide[] = [
 		title: "The Soul of Ceylon, in a Cup",
 		buttonText: "Explore Our Teas",
 		buttonLink: "/store",
-		imageUrl: "/images/carousel-1.jpg",
+		imageUrl: "/images/soul_of_ceylon.png",
 		dataAiHint: "tea plantation",
 	},
 	{
@@ -517,7 +517,7 @@ export const heroSlides: HeroSlide[] = [
 		title: "A Legacy of Unmatched Quality",
 		buttonText: "Read Our Story",
 		buttonLink: "/our-story",
-		imageUrl: "/images/carousel-2.jpg",
+		imageUrl: "/images/legacy_unmatched.png",
 		dataAiHint: "tea ceremony",
 	},
 	{
@@ -525,7 +525,7 @@ export const heroSlides: HeroSlide[] = [
 		title: "Handpicked for Pure Perfection",
 		buttonText: "View Tea Varieties",
 		buttonLink: "/tea-varieties",
-		imageUrl: "/images/carousel-3.jpg",
+		imageUrl: "/images/hand_picked.png",
 		dataAiHint: "tea leaves closeup",
 	},
 ];
