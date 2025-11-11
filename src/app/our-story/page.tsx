@@ -27,9 +27,9 @@ export default function OurStoryPage() {
 			{/* Hero Section */}
 			<section className="relative h-[60vh] w-full">
 				<Image
-					src="https://images.unsplash.com/photo-1522747776116-64ee03be1dad"
-					data-ai-hint="tea leaves"
-					alt="Lush tea estate in the highlands"
+					src="/images/our_history_top.png"
+					data-ai-hint="our history top"
+					alt="Our history hero banner"
 					fill
 					className="object-cover"
 				/>
@@ -38,7 +38,7 @@ export default function OurStoryPage() {
 					<div className="container mx-auto px-4 pb-16 md:pb-24">
 						<div className="max-w-2xl">
 							<p className="mb-2 text-sm font-bold uppercase tracking-widest">
-								ROBA CEYLON TEA ESTATE
+								ROBA CEYLON TEA
 							</p>
 							<h1 className="text-4xl font-bold uppercase tracking-tight md:text-5xl">
 								A Legacy of Perfection
@@ -306,9 +306,9 @@ export default function OurStoryPage() {
 			{/* Final CTA */}
 			<section className="relative h-[50vh] w-full bg-secondary/20">
 				<Image
-					src="https://images.unsplash.com/photo-1522747776116-64ee03be1dad"
-					data-ai-hint="tea leaves"
-					alt="Aerial view of the lush tea estate"
+					src="/images/our_history_bottom.png"
+					data-ai-hint="our history bottom"
+					alt="Our history bottom banner"
 					fill
 					className="object-cover"
 				/>
@@ -317,14 +317,14 @@ export default function OurStoryPage() {
 					<div className="container mx-auto px-4 pb-16 md:pb-24">
 						<div className="max-w-2xl">
 							<h2 className="mb-6 text-3xl font-bold uppercase tracking-tight md:text-4xl">
-								Book An Estate Experience
+								Experience Our Legacy
 							</h2>
 							<Button
 								asChild
 								size="lg"
 								variant="outline-light"
 							>
-								<Link href="/find-a-store">Explore</Link>
+								<Link href="/tea-varieties">Explore Our Teas</Link>
 							</Button>
 						</div>
 					</div>

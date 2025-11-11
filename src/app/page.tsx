@@ -48,11 +48,11 @@ export default function Home() {
       <section className="py-16 md:py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground">Our signature varieties</h2>
-            <p className="text-lg text-muted-foreground mt-2">From our Timeless Collections enjoyed around the world to our rare, limited-edition teas—each blend tells a unique story. Every cup of our single-origin or artisan tea reflects our unwavering dedication to the craft of leaf and flavor mastery, honed since 1824.</p>
+            <h2 className="text-3xl md:text-4xl font-headline font-bold text-foreground">Our tea varieties</h2>
+            <p className="text-lg text-muted-foreground mt-2">From our timeless collections enjoyed around the world to our tea varieties, each blend tells a unique story. Every cup of our Legacy Brew or Luxury Redefined tea reflects our unwavering dedication to the craft of leaf and flavor mastery, honed since 2000.</p>
             <div className="mt-8">
               <Button asChild variant="outline-dark" size="lg">
-                <Link href="/tea-varieties">Explore signature varieties</Link>
+                <Link href="/tea-varieties">Explore tea varieties</Link>
               </Button>
             </div>
           </div>
