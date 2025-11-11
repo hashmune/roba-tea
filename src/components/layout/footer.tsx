@@ -5,11 +5,13 @@ import { useEffect, useState } from "react";
 import { Logo } from "./logo";
 
 const collectionsLinks = [
-  { href: "/store", label: "Timeless Collections" },
-  { href: "/store", label: "Travel Exclusive" },
-  { href: "/store", label: "Limited Releases" },
-  { href: "/store", label: "Lifestyle & Accessories" },
-  { href: "#", label: "Archive" },
+  { href: "/tea-varieties#english-breakfast", label: "Roba's English Breakfast" },
+  { href: "/tea-varieties#opa", label: "Roba's OPA" },
+  { href: "/tea-varieties#pekoe", label: "Roba's Pekoe" },
+  { href: "/tea-varieties#broken-orange", label: "Roba's Broken Orange" },
+  { href: "/tea-varieties#green-tea", label: "Roba's Green Tea" },
+  { href: "/tea-varieties#legacy-brew", label: "Roba's Legacy Brew" },
+  { href: "/tea-varieties#luxury-redefined", label: "Roba's Luxury Redefined" },
 ];
 
 const aboutLinks = [
@@ -38,8 +40,8 @@ export function Footer() {
 
   const FooterLinkColumn = ({ title, links }: { title: string, links: { href: string, label: string }[] }) => (
     <div>
-      <h3 className="font-semibold uppercase tracking-wider mb-6 text-sm text-foreground/80">{title}</h3>
-      <ul className="space-y-4">
+      <h3 className="font-semibold uppercase tracking-wider mb-3 text-sm text-foreground/80">{title}</h3>
+      <ul className="space-y-2">
         {links.map(link => (
           <li key={link.label}>
             <Link href={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors">
@@ -77,7 +79,7 @@ export function Footer() {
           </div>
 
           <div className="md:col-span-1">
-             <FooterLinkColumn title="Collections" links={collectionsLinks} />
+             <FooterLinkColumn title="Tea Varieties" links={collectionsLinks} />
           </div>
           <div className="md:col-span-1">
              <FooterLinkColumn title="About" links={aboutLinks} />

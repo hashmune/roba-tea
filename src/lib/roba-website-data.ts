@@ -43,6 +43,7 @@ export type ExperienceCard = {
 export type TeaCollectionProduct = {
 	name: string;
 	imageUrl: string;
+	imageUrl2?: string;
 	dataAiHint: string;
 	status: "Available" | "Coming Soon" | "Unavailable";
 };
@@ -275,197 +276,120 @@ export const sixPillars: SixPillar[] = [
 
 export const teaCollections: TeaCollection[] = [
 	{
-		id: "timeless-collections",
-		title: "Timeless Collections",
+		id: "english-breakfast",
+		title: "Roba's English Breakfast",
 		description:
-			"An exquisite selection of our most cherished and enduring teas, celebrated for their consistent quality and classic character.",
-		navImage: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-		dataAiHintNav: "tea leaves",
+			"Roba's English Breakfast Tea is more than just a morning ritual — it's a bold, flavorful experience. Crafted from a unique blend of our finest low-country teas and the rich, aromatic leaves of the upcountry, this premium combination delivers the perfect balance of strength and smoothness. Known for its full-bodied character and robust flavor, English Breakfast Tea is a classic favorite.",
+		navImage: "/images/english_breakfast.png",
+		dataAiHintNav: "english breakfast tea",
 		products: [
 			{
-				name: "Heritage Black",
-				imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-				dataAiHint: "tea leaves",
-				status: "Available",
-			},
-			{
-				name: "Golden Pekoe",
-				imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-				dataAiHint: "tea leaves",
-				status: "Available",
-			},
-			{
-				name: "Ancient Green",
-				imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-				dataAiHint: "tea leaves",
-				status: "Coming Soon",
-			},
-			{
-				name: "White Orchid",
-				imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-				dataAiHint: "tea leaves",
-				status: "Unavailable",
-			},
-			{
-				name: "Spiced Chai",
-				imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-				dataAiHint: "tea leaves",
+				name: "Roba's English Breakfast",
+				imageUrl: "/images/english_breakfast.png",
+				imageUrl2: "/images/english_breakfast.png",
+				dataAiHint: "english breakfast tea",
 				status: "Available",
 			},
 		],
 	},
 	{
-		id: "classic-range",
-		title: "Classic Range",
-		description: "Our signature blends, time-tested and adored.",
-		navImage: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-		dataAiHintNav: "tea leaves",
+		id: "opa",
+		title: "Roba's OPA",
+		description:
+			"Roba's Refreshing OPA Tea is a single-origin masterpiece, made from carefully selected, top quality tea leaves. Light, smooth, and full of character, this tea offers a perfectly balanced flavor that lifts your mood and recharges your energy whether it's morning, noon, or night. Every sip is a clean, refreshing experience.",
+		navImage: "/images/opa.png",
+		dataAiHintNav: "opa tea",
 		products: [
 			{
-				name: "Roba OP Grade",
-				imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-				dataAiHint: "tea leaves",
-				status: "Available",
-			},
-			{
-				name: "Roba BOP1 Estate Reserve",
-				imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-				dataAiHint: "tea leaves",
-				status: "Available",
-			},
-			{
-				name: "Roba Flowery Pekoe",
-				imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-				dataAiHint: "tea leaves",
-				status: "Coming Soon",
-			},
-			{
-				name: "Silver Kandy",
-				imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-				dataAiHint: "tea leaves",
-				status: "Unavailable",
-			},
-			{
-				name: "Uva Highlands BOP",
-				imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-				dataAiHint: "tea leaves",
+				name: "Roba's OPA",
+				imageUrl: "/images/opa.png",
+				imageUrl2: "/images/opa.png",
+				dataAiHint: "opa tea",
 				status: "Available",
 			},
 		],
 	},
 	{
-		id: "limited-releases",
-		title: "Limited Releases",
-		description: "Rare selections harvested in micro-lots.",
-		navImage: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-		dataAiHintNav: "tea leaves",
+		id: "pekoe",
+		title: "Roba's Pekoe",
+		description:
+			"Roba's Pekoe is not just a tea it's a quiet symphony of Sri Lanka's soil and soul. From the hands of master artisans at Adam's View, its delicately curled leaves unfurl into a golden-reddish glow, offering a whisper of amber and a taste of timeless tradition.",
+		navImage: "/images/pekoe.png",
+		dataAiHintNav: "pekoe tea",
 		products: [
 			{
-				name: "Roba Silver Tips (Moonlight Harvest)",
-				imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-				dataAiHint: "tea leaves",
-				status: "Available",
-			},
-			{
-				name: "Highland Gold OP Select",
-				imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-				dataAiHint: "tea leaves",
-				status: "Available",
-			},
-			{
-				name: "Roba Twilight BOP Reserve",
-				imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-				dataAiHint: "tea leaves",
-				status: "Coming Soon",
-			},
-			{
-				name: "First Flush Darjeeling",
-				imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-				dataAiHint: "tea leaves",
-				status: "Unavailable",
-			},
-			{
-				name: "Golden Monkey Paw",
-				imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-				dataAiHint: "tea leaves",
+				name: "Roba's Pekoe",
+				imageUrl: "/images/pekoe.png",
+				imageUrl2: "/images/pekoe.png",
+				dataAiHint: "pekoe tea",
 				status: "Available",
 			},
 		],
 	},
 	{
-		id: "travel-exclusive",
-		title: "Travel Exclusive",
-		description: "Curated packs for discerning global travellers.",
-		navImage: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-		dataAiHintNav: "tea leaves",
+		id: "broken-orange",
+		title: "Roba's Broken Orange",
+		description:
+			"Roba's Broken Orange Pekoe Tea is strong, bold, and seriously flavorful. It is a single origin tea that brews into a rich reddish color cup and packs a punch with its sharp taste. It's full-bodied and super satisfying, perfect if you like your tea with a bit more kick. One sip, and you'll know this isn't your average cup of tea",
+		navImage: "/images/broken_orange.png",
+		dataAiHintNav: "broken orange tea",
 		products: [
 			{
-				name: "Roba Voyager’s Pick",
-				imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-				dataAiHint: "tea leaves",
-				status: "Available",
-			},
-			{
-				name: "Sunrise Trails OP Select",
-				imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-				dataAiHint: "tea leaves",
-				status: "Available",
-			},
-			{
-				name: "Dusk Valley Highland Reserve",
-				imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-				dataAiHint: "tea leaves",
-				status: "Coming Soon",
-			},
-			{
-				name: "Jetsetter's Green",
-				imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-				dataAiHint: "tea leaves",
-				status: "Unavailable",
-			},
-			{
-				name: "Metropolis Black",
-				imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-				dataAiHint: "tea leaves",
+				name: "Roba's Broken Orange",
+				imageUrl: "/images/broken_orange.png",
+				imageUrl2: "/images/broken_orange.png",
+				dataAiHint: "broken orange tea",
 				status: "Available",
 			},
 		],
 	},
 	{
-		id: "gifts-accessories",
-		title: "Gift & Accessories",
-		description: "Gifting-worthy blends and steeping essentials.",
-		navImage: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-		dataAiHintNav: "tea leaves",
+		id: "green-tea",
+		title: "Roba's Green Tea",
+		description:
+			"Produced at the serene Park Tea Factory in Kandapola, this mellow, soothing infusion is crafted from the finest Ceylon leaves. Its gentle character and refreshing aroma bring a sense of calm and clarity, making it the perfect companion at any time of the day. Experience the tranquil elegance of true Ceylon Green Tea in every sip.",
+		navImage: "/images/green_tea.png",
+		dataAiHintNav: "green tea",
 		products: [
 			{
-				name: "Roba Collectors Gift Set",
-				imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-				dataAiHint: "tea leaves",
+				name: "Roba's Green Tea",
+				imageUrl: "/images/green_tea.png",
+				imageUrl2: "/images/green_tea.png",
+				dataAiHint: "green tea",
 				status: "Available",
 			},
+		],
+	},
+	{
+		id: "legacy-brew",
+		title: "Roba's Legacy Brew",
+		description:
+			"Crafted at the renowned Adams View Tea Factory, Legacy Brew captures the bold spirit of Sabaragamuwa. Its rich, brisk cup carries the signature astringency unique to the region a true mark of heritage and mastery. A timeless Ceylon tea that delivers strength, character, and an unforgettable legacy in every sip.",
+		navImage: "/images/legacy_brew.png",
+		dataAiHintNav: "legacy brew tea",
+		products: [
 			{
-				name: "Steep & Sip Mug",
-				imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-				dataAiHint: "tea leaves",
+				name: "Roba's Legacy Brew",
+				imageUrl: "/images/legacy_brew.png",
+				imageUrl2: "/images/legacy_brew.png",
+				dataAiHint: "legacy brew tea",
 				status: "Available",
 			},
+		],
+	},
+	{
+		id: "luxury-redefined",
+		title: "Roba's Luxury Redefined",
+		description:
+			"Luxury redefined tea is a lavish product with Roba's FBOP tea which has a bold and beautifully balanced blend, crafted from broken tea leaves mixed with delicate golden tips. This tea brews into a rich, coppery liquor with a smooth yet robust flavor profile - perfect for those who enjoy a cup that's both strong and refined. With its subtle floral notes and full-bodied character, Roba's FBOP delivers a satisfying experience from the very first sip. Ideal with or without milk, it's a timeless favorite for true tea lovers.",
+		navImage: "/images/luxury_redefined.png",
+		dataAiHintNav: "luxury redefined tea",
+		products: [
 			{
-				name: "Signature Roba Tray",
-				imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-				dataAiHint: "tea leaves",
-				status: "Coming Soon",
-			},
-			{
-				name: "Tea Infuser Ball",
-				imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-				dataAiHint: "tea leaves",
-				status: "Unavailable",
-			},
-			{
-				name: "Matcha Whisk Set",
-				imageUrl: "https://images.unsplash.com/photo-1522747776116-64ee03be1dad",
-				dataAiHint: "tea leaves",
+				name: "Roba's Luxury Redefined",
+				imageUrl: "/images/luxury_redefined.png",
+				imageUrl2: "/images/luxury_redefined.png",
+				dataAiHint: "luxury redefined tea",
 				status: "Available",
 			},
 		],
