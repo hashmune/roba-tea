@@ -114,8 +114,8 @@ export default function TeaVarietiesPage() {
               </div>
 
               <div className="mt-12 flex gap-8">
-                {collection.products.slice(0, 5).map((product, index) => (
-                    <div className="flex gap-2 w-full">
+                {collection.products.slice(0, 5).map((product) => (
+                    <div key={product.name} className="flex gap-2 w-full">
                       <div className="group relative w-[400px] flex-shrink-0 overflow-hidden h-[50vh]">
                         <Image
                           src={product.imageUrl}
